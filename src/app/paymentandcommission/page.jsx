@@ -14,6 +14,7 @@ import { useTheme } from "../context/ThemeContext";
 import Userfooter from "../components/Userfooter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  
   faChevronRight,
   faAngleDown,
   faCircleCheck, faCircleExclamation, faCopy,
@@ -257,7 +258,7 @@ const merchantPage = () => {
               <div className="paymentandcommission-expired-card">
                 <div
                   className="paymentandcommission-expired-header"
-                  onClick={() => setIsEthOpen((prev) => !prev)}
+                  onClick={() => setIsBtcOpen((prev) => !prev)}
                 >
                   <div className="paymentandcommission-expired-coin">
 
@@ -1233,8 +1234,8 @@ const merchantPage = () => {
           </Tab.Container>
         </div>
         <div className="form-group d-flex mb-0 gap-2 mt-2">
-          <Link href="/" className="borderbtn btn-block text-center text-decoration-none">Cancel</Link>
-          <Button type="button" className="sitebtn btn-block" id="submitbtn">Create Payment</Button>
+          <Link href="/" className="borderbtn btn-block text-center text-decoration-none">Clear all</Link>
+          <Button type="button" className="sitebtn btn-block" id="submitbtn">Apply filters</Button>
         </div>
       </div>
       <Userfooter />

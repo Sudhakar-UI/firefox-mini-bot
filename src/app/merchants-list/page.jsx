@@ -16,16 +16,19 @@ const merchantPage = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openDrawerone, setOpenDrawerone] = useState(false);
   const [openDrawertwo, setOpenDrawertwo] = useState(false);
+    const [openDrawerthree, setOpenDrawerthree] = useState(false);
 
   const handleClose = () => setShowModal(false);
   const handleCloseone = () => setShowModalone(false);
+    const handleClosethree = () => setShowModalthree(false);
   const handleOpenDrawer = () => setOpenDrawer(true);
   const handleCloseDrawer = () => setOpenDrawer(false);
   const handleOpenDrawerone = () => setOpenDrawerone(true);
   const handleCloseDrawerone = () => setOpenDrawerone(false);
   const handleOpenDrawertwo = () => setOpenDrawertwo(true);
   const handleCloseDrawertwo = () => setOpenDrawertwo(false);
-
+ const handleOpenDrawerthree = () => setOpenDrawerthree(true);
+  const handleCloseDrawerthree = () => setOpenDrawerthree(false);
 
   return (
     <div className="merchantPage merchantlist">
@@ -206,6 +209,12 @@ const merchantPage = () => {
 
           </Link>
         </div>
+          {/* <div>
+              <span className="sub-head deleteicon" onClick={() => handleOpenDrawerthree(true)}>
+                <FontAwesomeIcon icon={faTrash} className="me-1" />
+                Delete
+              </span>
+            </div> */}
         <div className="mer-set-bot">
           <Link href="/" className="set-bot-y mt-2">
             <div className="d-flex align-items-center">
@@ -221,6 +230,7 @@ const merchantPage = () => {
               </Badge>
             </div>
           </Link>
+          
           <Link href="/" className="set-bot-y">
             <div className="d-flex align-items-center">
               <Image src="/assets/images/mer-wallet.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
@@ -238,6 +248,7 @@ const merchantPage = () => {
               </div>
             </div>
           </Link>
+        
           <Link href="/" className="set-bot-y d-flex justify-content-around">
 
             <div>
@@ -248,7 +259,7 @@ const merchantPage = () => {
             </div>
 
             <div>
-              <span className="sub-head deleteicon" onClick={() => handleOpenDrawerone(true)}>
+              <span className="sub-head deleteicon">
                 <FontAwesomeIcon icon={faTrash} className="me-1" />
                 Delete
               </span>
@@ -290,6 +301,38 @@ const merchantPage = () => {
           <Button className="sitebtn">Create Merchant</Button>
         </div>
       </div>
+         <div className={`phone-draw-overlay ${openDrawerthree ? 'open' : ''}`} onClick={handleCloseDrawerthree}></div>
+      <div className={`phone-draw ${openDrawerthree ? 'open' : ''}`}>
+        <div className="phone-draw-handle"></div>
+        <div className="text-center position-relative">
+          <div className="phone-draw-close">
+            <Button onClick={handleCloseDrawerthree} className="phone-draw-close-btn">
+              <FontAwesomeIcon icon={faTimes} />
+            </Button>
+          </div>
+          <Image src={isNightMode ? "/assets/images/email-ver.svg" : "/assets/images/email-ver.svg"} alt="user" className="mobile-iconing" />
+          <h2 className="heading">Email Verification</h2>
+        </div>
+        <div className="mt-2 mb-2">
+          <Row>
+            <Col xl={12} >
+              <Form className="siteformbg">
+                <div className="supportsearch p-0">
+                  <Form.Group className="mb-0">
+                    <Form.Label>Email<span className="t-red">*</span>
+                    </Form.Label>
+                    <Form.Control placeholder="Enter email code" id="search" />
+                  </Form.Group>
+                </div>
+              </Form>
+              <p className="mt-2 mb-2">Mail not received click resend link, <span className="txt-clor">Resend Code</span></p>
+            </Col>
+          </Row>
+        </div>
+        <div href="/#">
+          <Button className="sitebtn">Confirm</Button>
+        </div>
+      </div>
       <div className={`phone-draw-overlay ${openDrawertwo ? 'open' : ''}`} onClick={handleCloseDrawertwo}></div>
       <div className={`phone-draw ${openDrawertwo ? 'open' : ''}`}>
         <div className="phone-draw-handle"></div>
@@ -329,7 +372,7 @@ const merchantPage = () => {
           <h2 className="heading">Delete Merchant</h2>
           <p>All merchant data will be permanently deleted and can't be restored. Are you sure you want to delete this merchant?</p>
         </div>
-        <div className="alert alert-danger mb-2" role="alert">
+        <div className="alert alert-danger mb-2 mt-2" role="alert">
           <div className="d-flex gap-2">
             <Image src={isNightMode ? "/assets/images/danger-icon.svg" : "/assets/images/danger-icon.svg"} alt="user" className="danger-icon" /> <p>
               Deleting this merchant account will remove its Invoice or Static Wallet and API keys. Future deposits to the existing wallet address may not be tracked. Do not send new deposits to associated address.

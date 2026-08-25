@@ -69,6 +69,7 @@ const merchantPage = () => {
                   <p>
                     Click ‘Check’ after adding description
                   </p>
+                  
                   <button
                     type="button"
                     className="borderbtn btn-sm"
