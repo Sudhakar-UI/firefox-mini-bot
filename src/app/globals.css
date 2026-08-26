@@ -3795,7 +3795,6 @@ p {
   background: #9a9898a6;
 }
 
-/* Chart CSS */
 
 .ethcoin-chart-card {
   background: #f5f5f5;
@@ -9096,6 +9095,13 @@ body.has-home-footer .page-content {
 }
 
 @media (max-width: 450px) {
+  .paymentandcommission-expired-coin-name h5, .paymentandcommission-expired-amount h5 {
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+.paymentandcommission-expired-coin-name p, .paymentandcommission-expired-amount p {
+    font-size: 11px;
+}
   .merchant-tabs.hisall {
     font-size: 10px !important;
   }
@@ -9117,11 +9123,6 @@ body.has-home-footer .page-content {
   .commission-card .coin-info h5 {
     font-size: 13px;
   }
-
-  .sub-head {
-    font-size: 14px;
-  }
-
   .footer-item.active {
     padding: 9px 5px;
   }
@@ -9143,6 +9144,12 @@ body.has-home-footer .page-content {
 }
 
 @media (max-width: 380px) {
+  .mert-sett-step-line {
+    margin-top: -11px;
+}
+    .loc-cury-icons {
+    max-width: 26px !important;
+  }
   .modal.show .modal-dialog {
     max-width: 340px;
   }
@@ -9157,9 +9164,6 @@ body.has-home-footer .page-content {
     font-size: 20px;
   }
 }
-
-/* Nightmode css */
-
 
 .nightmode .wallet-page-assets-title {
   color: #44a3dd;
@@ -10909,8 +10913,7 @@ body.has-home-footer .page-content {
 
 .merchantPage.merchantlist .phone-draw-close-btn,
 .paymentandcommission .phone-draw-close-btn,
-.merchant-settings-page .phone-draw-close-btn
- {
+.merchant-settings-page .phone-draw-close-btn {
   border-radius: 50%;
   font-size: 16px;
   line-height: 1;
@@ -10922,7 +10925,7 @@ body.has-home-footer .page-content {
 
 .nightmode .merchantPage.merchantlist .phone-draw-close-btn,
 .nightmode .paymentandcommission .phone-draw-close-btn,
-.nightmode .merchant-settings-page .phone-draw-close-btn  {
+.nightmode .merchant-settings-page .phone-draw-close-btn {
   color: #9a9899 !important;
   border: 1px solid #384452 !important;
   padding: 9px !important;
@@ -10930,7 +10933,7 @@ body.has-home-footer .page-content {
 
 .merchantPage.merchantlist .phone-draw-close,
 .paymentandcommission .phone-draw-close,
-.merchant-settings-page .phone-draw-close  {
+.merchant-settings-page .phone-draw-close {
   z-index: 10;
   position: absolute;
   top: -20px;
@@ -11375,7 +11378,7 @@ body.has-home-footer .page-content {
 }
 
 .serrch-flt-action>div:last-child {
-  width: 10%;
+  width: auto;
 }
 
 .filtering {
@@ -11867,7 +11870,296 @@ body.has-home-footer .page-content {
   border: 1px solid #384452;
 }
 
-.merchant-settings-page.mertn .mert-sett-step { 
+.merchant-settings-page.mertn .mert-sett-step {
   align-items: flex-start !important;
 }
 
+.borderbtn.reg {
+  color: #C89300 !important;
+  background-color: #FFF9EA !important;
+  border: 1px solid #C89300 !important;
+  border-radius: 20px !important;
+}
+
+.nightmode .borderbtn.reg {
+  color: #E6B93D !important;
+  background-color: transparent !important;
+  border: 1px solid #E6B93D !important;
+  border-radius: 20px !important;
+}
+
+.bulkapply {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.bulkapply-search {
+  width: 75%;
+}
+
+.bulkapply-action {
+  width: 25%;
+}
+
+.bulkapply-btn {
+  width: 100%;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  white-space: nowrap;
+  background-color: #FFF3EA;
+  color: #FF3C00;
+  border: 0;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.nightmode .bulkapply-btn {
+  background-color: #302925 !important;
+  color: #FF6B3D !important;
+  border: 0 !important;
+}
+
+.expired-card {
+  background: #F7F7F8;
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 15px auto;
+  padding: 12px 16px;
+  font-family: inherit;
+  overflow: hidden;
+  box-shadow: 0 1px 4px #0000000a;
+}
+
+.nightmode .expired-card {
+  box-shadow: none;
+  background: #2b3542;
+  border-color: #384452;
+}
+
+.paymentandcommission.coin-manage .sub-heading {
+  font-size: 14px;
+}
+
+.merchant-tabs.coinmanagetabs .nav-link.active {
+  background-color: #FFF3EA;
+  border: 1px solid #ff3c00;
+  color: #ff3c00 !important;
+  border-radius: 8px;
+}
+
+.merchant-tabs.coinmanagetabs .nav-link {
+  color: #525252;
+  background-color: #fff;
+  padding: 8px 12px;
+}
+
+.merchant-tabs.coinmanagetabs {
+  border-bottom: 0;
+  justify-content: space-between;
+  display: flex;
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+
+.nightmode .merchant-tabs.coinmanagetabs {
+  background: #222e3c;
+}
+
+.nightmode .merchant-tabs.coinmanagetabs .nav-link {
+  color: #B8B8B8;
+  background-color: #222e3c;
+}
+
+.nightmode .merchant-tabs.coinmanagetabs .nav-link.active {
+  background-color: #3A2923;
+  border: 1px solid #FF7043;
+  color: #FF7043 !important;
+  border-radius: 8px;
+}
+
+.coin-search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.coin-search-primary {
+  width: calc(90% - 5px);
+}
+
+.coin-search-secondary {
+  width: 10%;
+  margin-left: auto;
+}
+
+.paymentandcommission.coin-manage .siteformbg .input-group-text {
+  color: #1e1e1e;
+  background: #ffffff;
+}
+
+.nightmode .paymentandcommission.coin-manage .siteformbg .input-group-text {
+  color: #b8b8b8;
+  background: #222e3c;
+}
+
+.paymentandcommission.auto-convert .sub-heading {
+  font-size: 16px;
+}
+
+.auto-conver-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 6px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.nightmode .auto-conver-card {
+  border-bottom: 1px solid #384452;
+}
+
+.merchantview-page.auto-convert-history .merviw-icon {
+  width: 100%;
+  max-width: 44px !important;
+  height: 100%;
+}
+
+.merchantview-page.auto-convert-history .payment-card {
+  padding: 12px;
+}
+
+.merchant-settings-page.mertn .mert-sett-steps {
+  position: relative;
+  width: 100%;
+}
+
+.merchant-settings-page.mertn .mert-sett-step {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.merchant-settings-page.mertn .mert-sett-step-active {
+  background: #3bb486;
+  color: #fff;
+}
+
+.merchant-settings-page.mertn .mert-sett-step-inactive {
+  background: #b8b8b9;
+  color: #fff;
+}
+
+.merchant-settings-page.mertn .mert-sett-step-content {
+  flex: 1;
+  min-width: 0;
+  margin-left: 9px;
+}
+
+.merchant-settings-page.mertn .mert-sett-step-content .sub-head+p {
+  margin-bottom: 8px;
+}
+
+.merchant-settings-page.mertn .mert-sett-step-line {
+  position: absolute;
+  left: 0px;
+  top: 13px;
+  bottom: 13px;
+  width: 2px;
+  height: auto;
+  background: #b8b8b9;
+  z-index: 1;
+}
+
+.merchant-settings-page.mertn .mertn-project-type-group {
+  margin: 0;
+}
+
+.merchant-settings-page.mertn .mertn-project-type-label {
+  display: block;
+  color: #444;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.merchant-settings-page.mertn .mertn-project-type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.merchant-settings-page.mertn .mertn-project-type-radio {
+  min-height: auto;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.merchant-settings-page.mertn .mertn-project-type-radio .form-check-input {
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  margin-left: -22px;
+  border: 2px solid #777;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.merchant-settings-page.mertn .mertn-project-type-radio .form-check-input:checked {
+  background-color: #fff;
+  border-color: #ff542f;
+  box-shadow: 0 0 0 2px #ff542f inset;
+}
+
+.merchant-settings-page.mertn .mertn-project-type-radio .form-check-label {
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  cursor: pointer;
+  margin-left: 15px;
+
+}
+
+.nightmode .merchant-settings-page.mertn .mertn-project-type-label {
+  color: #d7dbe0;
+}
+
+.nightmode .merchant-settings-page.mertn .mertn-project-type-radio .form-check-label {
+  color: #e2e5e8;
+}
+
+.nightmode .merchant-settings-page.mertn .mertn-project-type-radio .form-check-input {
+  background-color: transparent;
+  border-color: #89939e;
+}
+
+.nightmode .merchant-settings-page.mertn .mertn-project-type-radio .form-check-input:checked {
+  background-color: #2b3542;
+  border-color: #ff542f;
+  box-shadow: 0 0 0 2px #ff542f inset;
+}
+
+.merchant-settings-page.mertn .form-check-input:checked[type="radio"] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23FF3C00'/%3e%3c/svg%3e");
+}
+
+.merchant-settings-page.leave-request-chose .mert-sett-step { 
+  align-items: initial  !important;
+}
+
+
+.nightmode .merchant-settings-page.leave-request-chose .siteformbg .input-group-text {
+    color: #fff;
+    background: #222e3c;
+    border: 1px solid #384452;
+}

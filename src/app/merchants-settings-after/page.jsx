@@ -5,7 +5,7 @@ import { Image, Container, Badge, Button, Form, Row, Col, Tab, Nav, InputGroup }
 import { useTheme } from "../context/ThemeContext";
 import Userfooter from "../components/Userfooter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faEye, faTrash, faCirclePlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faEye, faTrash, faCirclePlus, faTimes, faCopy } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { BookMarkCircleIcon, RecieveIcon, SendIcon, SwapIcon, TransReportIcon, DiscountIcon, ScannerIcon, AccountCircleIcon } from "../components/Icons";
 import Slider from "./Slider";
@@ -47,35 +47,83 @@ const merchantPage = () => {
             Leave a request for Firefox.VIP integration on your website or Telegram.
             Get an API key to replenish your merchant
           </p>
-          <div className="mert-sett-steps mt-3">
-            <div className="mert-sett-step">
-              <div className="mert-sett-step-number mert-sett-step-active">
-                1
-              </div>
-              <div className="mert-sett-step-content">
-                <span className="sub-head">Add project URL</span>
-                <p>
-                  Link to your website or Telegram bot
-                </p>
-              </div>
-            </div>
-            <div className="mert-sett-step-line"></div>
-            <div className="mert-sett-step">
-              <div className="mert-sett-step-number mert-sett-step-inactive">
-                2
-              </div>
-
-              <div className="mert-sett-step-content">
-                <span className="sub-head">Confirm domain</span>
-                <p>
-                  Confirm your domain
-                </p>
-              </div>
+          <div className="d-flex align-items-center gap-1 mt-2">
+            <Image src="/assets/images/fftesting.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+            <div className="">
+              <span className="sub-head">Project Name</span>
+              <p>
+                FF Testing
+              </p>
             </div>
           </div>
-          <button type="button" className="sitebtn">
-            Leave a request
-          </button>
+          <div className="d-flex align-items-center gap-1 mt-2">
+            <Image src="/assets/images/project-url.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+            <div className="">
+              <span className="sub-head">Project URL</span>
+              <p>
+                https://t.me/demofirefox_bot
+              </p>
+            </div>
+          </div>
+          <div className="d-flex align-items-center gap-1 mt-2">
+            <Image src="/assets/images/mer-id.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+            <div className="">
+              <span className="sub-head">Merchant ID<FontAwesomeIcon
+                icon={faCopy}
+                className="facheriticon txt-gry"
+              /></span>
+              <p>
+                4c6a4cdbf06becb2de4f68855ef98b2e
+              </p>
+            </div>
+          </div>
+          <div className="d-flex align-items-center justify-content-between gap-2 mt-2">
+             <div className="d-flex gap-1">
+            <Image src="/assets/images/pay-api.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+           
+              <span className="sub-head">Payment API Key<FontAwesomeIcon
+                icon={faCopy}
+                className="facheriticon txt-gry"
+              />
+                <p>
+               pi_b9a7***************d095b9
+              </p>
+              </span>
+            
+            </div>
+            <div>
+           <button
+                type="button"
+                className="borderbtn reg btn-sm w-40"
+              >
+               Regenerate
+              </button>
+            </div>
+  
+          </div>
+          <div className="d-flex align-items-center justify-content-between gap-1 mt-2">
+              <div className="d-flex gap-1">
+            <Image src="/assets/images/pay-api-grn.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+              <span className="sub-head">Payment API Key<FontAwesomeIcon
+                icon={faCopy}
+                className="facheriticon txt-gry"
+              />
+                 <p>
+               pi_b9a7***************d095b9
+              </p>
+              </span>
+           
+            </div>
+            <div>
+          <button
+                type="button"
+                className="borderbtn reg btn-sm w-40"
+              >
+               Regenerate
+              </button>
+            </div>
+   
+          </div>
         </div>
         <div className="mert-sett">
           <Form className="siteformbg">
@@ -209,7 +257,7 @@ const merchantPage = () => {
           <h2 className="heading">Payment Accuracy</h2>
           <p>The invoice is marked as Paid even if the client has not paid 24% of the amount.</p>
         </div>
-         <Slider />
+        <Slider />
         <form action="" className='siteformbg mt-2 mb-2'>
           <Form.Group className="form-group">
             <InputGroup>
@@ -219,7 +267,7 @@ const merchantPage = () => {
         </form>
         <p>Anything below this value will be marked as a
           Partially paid.</p>
-           <div className="form-group mt-2">
+        <div className="form-group mt-2">
           <Button type="button" className="sitebtn btn-block" id="submitbtn">Save</Button>
         </div>
       </div>

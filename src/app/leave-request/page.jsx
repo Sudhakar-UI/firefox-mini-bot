@@ -12,7 +12,7 @@ import { BookMarkCircleIcon, RecieveIcon, SendIcon, SwapIcon, TransReportIcon, D
 
 const merchantPage = () => {
   const [value, setValue] = useState(1.6);
-
+const [projectType, setProjectType] = useState("website");
 
   return (
     <div className="merchant-settings-page mertn">
@@ -40,31 +40,58 @@ const merchantPage = () => {
                 <p>
                   Link to your website or Telegram bot
                 </p>
-                <span className="sub-head">Type</span>
-                <p>
-                  Once you've selected the type of project you want to submit, enter the correct project URL and name. Please note that it will not be possible to change the information you have entered.
-                </p>
-                <p>Telegram</p>
-                <p>Website</p>
-                <Form className="siteformbg">
-                  <Form.Group className="form-group mt-2">
+                <div className="merchant-settings-page mertn-project-type">
+                  <Form.Group className="mertn-project-type-group">
+
+                   <h6 className="sub-head mt-2">Type</h6>
+                    <p className="mt-2">Once you've selected the type of project you want to submit, enter the correct project URL and name. Please note that it will not be possible to change the information you have entered.</p>
+
+                    <div className="mertn-project-type-options mt-2">
+                      <Form.Check
+                        type="radio"
+                        id="mertn-telegram-bot"
+                        name="projectType"
+                        value="telegram"
+                        label="Telegram Bot"
+                        checked={projectType === "telegram"}
+                        onChange={(e) => setProjectType(e.target.value)}
+                        className="mertn-project-type-radio"
+                      />
+
+                      <Form.Check
+                        type="radio"
+                        id="mertn-website"
+                        name="projectType"
+                        value="website"
+                        label="Website"
+                        checked={projectType === "website"}
+                        onChange={(e) => setProjectType(e.target.value)}
+                        className="mertn-project-type-radio mt-2"
+                      />
+
+                    </div>
+
+                  </Form.Group>
+                </div>
+                <Form className="siteformbg" mt-3>
+                  <Form.Group className="form-group mt-3">
                     <Form.Label>Project URL</Form.Label>
                     <InputGroup>
-                      <Form.Control placeholder="0.000000" id='amount' />
+                      <Form.Control placeholder="Enter your project url" id='amount' />
                       <InputGroup.Text>All</InputGroup.Text>
                     </InputGroup>
                   </Form.Group>
-                  <Form.Group className="form-group mt-2">
-                    <Form.Label>Project URL</Form.Label>
+                  <Form.Group className="form-group mt-3">
+                    <Form.Label>Project Name</Form.Label>
                     <InputGroup>
-                      <Form.Control placeholder="0.000000" id='amount' />
+                      <Form.Control placeholder="Enter your project Name" id='amount' />
                       <InputGroup.Text>All</InputGroup.Text>
                     </InputGroup>
                   </Form.Group>
                 </Form>
 
 
-                <Button type="button" className="sitebtn btn-block mt-2">Submit</Button>
+                <Button type="button" className="sitebtn btn-block mt-3 mb-3">Submit</Button>
               </div>
             </div>
             <div className="mert-sett-step-line"></div>

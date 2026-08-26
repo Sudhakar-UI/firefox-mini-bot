@@ -15,7 +15,7 @@ const merchantPage = () => {
 
 
   return (
-    <div className="merchant-settings-page mertn">
+    <div className="merchant-settings-page leave-request-chose">
       <Container>
         <span className="heading">Merchants Settings</span>
         <div className="mert-sett">
@@ -69,6 +69,7 @@ const merchantPage = () => {
                   <p>
                     Click ‘Check’ after adding description
                   </p>
+                  
                   <button
                     type="button"
                     className="borderbtn btn-sm"
