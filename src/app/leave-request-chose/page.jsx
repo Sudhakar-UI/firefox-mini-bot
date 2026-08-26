@@ -15,7 +15,7 @@ const merchantPage = () => {
 
 
   return (
-    <div className="merchant-settings-page mertn">
+    <div className="merchant-settings-page leave-request-chose">
       <Container>
         <span className="heading">Merchants Settings</span>
         <div className="mert-sett">
