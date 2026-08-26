@@ -2303,6 +2303,7 @@ p {
   border-radius: 10px;
   margin-bottom: 8px;
   padding: 10px;
+  background-color: #F7F7F8;
 }
 
 .merchantPage p {
@@ -9095,13 +9096,24 @@ body.has-home-footer .page-content {
 }
 
 @media (max-width: 450px) {
-  .paymentandcommission-expired-coin-name h5, .paymentandcommission-expired-amount h5 {
+  .regn-wrap {
+    flex-wrap: wrap !important;
+  }
+.ret-btn {
+text-align: center !important;
+
+}
+  .paymentandcommission-expired-coin-name h5,
+  .paymentandcommission-expired-amount h5 {
     font-size: 12px !important;
     line-height: 16px !important;
-}
-.paymentandcommission-expired-coin-name p, .paymentandcommission-expired-amount p {
+  }
+
+  .paymentandcommission-expired-coin-name p,
+  .paymentandcommission-expired-amount p {
     font-size: 11px;
-}
+  }
+
   .merchant-tabs.hisall {
     font-size: 10px !important;
   }
@@ -9123,6 +9135,7 @@ body.has-home-footer .page-content {
   .commission-card .coin-info h5 {
     font-size: 13px;
   }
+
   .footer-item.active {
     padding: 9px 5px;
   }
@@ -9146,10 +9159,21 @@ body.has-home-footer .page-content {
 @media (max-width: 380px) {
   .mert-sett-step-line {
     margin-top: -11px;
-}
-    .loc-cury-icons {
-    max-width: 26px !important;
   }
+
+  /* .loc-cury-icons {
+    max-width: 26px !important;
+  } */
+  .locicons {
+    max-width: 26px !important;
+
+  }
+
+  .locicons {
+    max-width: 26px !important;
+
+  }
+
   .modal.show .modal-dialog {
     max-width: 340px;
   }
@@ -9312,6 +9336,7 @@ body.has-home-footer .page-content {
 
 .nightmode .mer-set-bot {
   border: 1px solid #384452;
+  background-color: #2b3542;
 }
 
 .nightmode .mer-verticalline {
@@ -11009,6 +11034,12 @@ body.has-home-footer .page-content {
 .loc-cury-icons {
   height: 100%;
   width: 100%;
+  max-width: 65px;
+}
+
+.locicons {
+  height: 100%;
+  width: 100%;
   max-width: 30px;
 }
 
@@ -12153,13 +12184,18 @@ body.has-home-footer .page-content {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23FF3C00'/%3e%3c/svg%3e");
 }
 
-.merchant-settings-page.leave-request-chose .mert-sett-step { 
-  align-items: initial  !important;
+.merchant-settings-page.leave-request-chose .mert-sett-step {
+  align-items: initial !important;
 }
 
 
 .nightmode .merchant-settings-page.leave-request-chose .siteformbg .input-group-text {
-    color: #fff;
-    background: #222e3c;
-    border: 1px solid #384452;
+  color: #fff;
+  background: #222e3c;
+  border: 1px solid #384452;
+}
+
+.country-residence-page .set-bot-y:after, 
+.country-residence-page .set-boted:after {
+    bottom: -2px;
 }

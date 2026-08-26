@@ -52,7 +52,7 @@ const contactus = () => {
                 </Container>
             </div>
 
-            <div className="text-center px-2 mt-auto">
+            <div className="text-center px-2 mt-2">
                 <Button className="sitebtn" onClick={handleOpenDrawer}>Continue</Button>
             </div>
 

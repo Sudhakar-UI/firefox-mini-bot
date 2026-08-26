@@ -14,7 +14,7 @@ import { useTheme } from "../context/ThemeContext";
 import Userfooter from "../components/Userfooter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  
+
   faChevronRight,
   faAngleDown,
   faCircleCheck, faCircleExclamation, faCopy,
@@ -87,23 +87,29 @@ const merchantPage = () => {
         <div className="d-flex mt-3 mb-2 gap-2">
           <div className="blue-card">
             <div>
-              <Image src="/assets/images/mer-icon.svg" width={50} height={50} alt="" className="loc-cury-icons" />
+              <Image src="/assets/images/mer-icon.svg" width={50} height={50} alt="" className="loc-cury-iconing" />
             </div>
-            <div>
-              <h6 className="sub-heading mert">Merchant Settings</h6>
-              <p className="mge-all">Manage your preference</p>
+            <div className="d-flex gap-1 align-items-center">
+              <div>
+                <h6 className="sub-heading mert">Merchant Settings</h6>
+                <p className="mge-all">Manage your preference</p>
+              </div>
+              <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
             </div>
-            <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
+
           </div>
           <div className="blue-card">
             <div>
-              <Image src="/assets/images/payment-icon.svg" width={50} height={50} alt="" className="loc-cury-icons" />
+              <Image src="/assets/images/payment-icon.svg" width={50} height={50} alt="" className="loc-cury-iconing" />
             </div>
-            <div>
-              <h6 className="sub-heading">Payment by Link</h6>
-              <p className="mge-all">Create & share payment link</p>
+            <div className="d-flex gap-1 align-items-center">
+              <div>
+                <h6 className="sub-heading">Payment by Link</h6>
+                <p className="mge-all">Create & share payment link</p>
+              </div>
+              <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
             </div>
-            <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
+
           </div>
         </div>
 
@@ -130,10 +136,10 @@ const merchantPage = () => {
                 </div>
                 <div className="d-flex justify-content-between align-items-center gap-1">
                   <div className="" onClick={() => handleOpenDrawer(true)}>
-                    <Image src="/assets/images/mer-filtericon.svg" width={50} height={50} alt="" className="loc-cury-icons" />
+                    <Image src="/assets/images/mer-filtericon.svg" width={50} height={50} alt="" className="locicons" />
                   </div>
 
-                  <Image src="/assets/images/dow-mericon.svg" width={50} height={50} alt="" className="loc-cury-icons" />
+                  <Image src="/assets/images/dow-mericon.svg" width={50} height={50} alt="" className="locicons" />
                 </div>
               </div>
 
@@ -164,11 +170,6 @@ const merchantPage = () => {
 
                   </div>
 
-                  <div className="paymentandcommission-expired-amount">
-                    <h5>5 TON</h5>
-                    <p>Amount</p>
-                  </div>
-
                   <div className="paymentandcommission-expired-status">
                     <span>Expired</span>
                   </div>
@@ -182,8 +183,6 @@ const merchantPage = () => {
                 </div>
                 {isOpen && (
                   <div className="paymentandcommission-expired-body">
-
-                    {/* Expired Alert */}
                     <div className="paymentandcommission-expired-alert">
                       <div className="paymentandcommission-expired-alert-icon">
                         <FontAwesomeIcon icon={faCircleExclamation} />
@@ -197,9 +196,7 @@ const merchantPage = () => {
                       </div>
                     </div>
 
-                    {/* Merchant / Date */}
                     <div className="paymentandcommission-expired-info-row">
-
                       <div className="paymentandcommission-expired-info">
                         <span>Merchant</span>
                         <strong>Testing_Venky</strong>
@@ -212,7 +209,7 @@ const merchantPage = () => {
 
                     </div>
 
-                    {/* Type */}
+  
                     <div className="paymentandcommission-expired-detail-row">
 
                       <div>
@@ -226,8 +223,14 @@ const merchantPage = () => {
                       </div>
 
                     </div>
-
-                    {/* Payment ID */}
+                    <div className="paymentandcommission-expired-detail-row">
+                      <div>
+                         <span>Amount</span>
+                      </div>
+                      <div className="text-end">
+                        <strong>5 TON</strong>
+                      </div>
+                    </div>
                     <div className="paymentandcommission-expired-payment-id">
 
                       <div>
@@ -280,11 +283,6 @@ const merchantPage = () => {
                       <p>Network</p>
                     </div>
 
-                  </div>
-
-                  <div className="paymentandcommission-expired-amount">
-                    <h5>5 BTC</h5>
-                    <p>Amount</p>
                   </div>
 
                   <div className="paymentandcommission-expired-status">
@@ -344,7 +342,14 @@ const merchantPage = () => {
                       </div>
 
                     </div>
-
+                  <div className="paymentandcommission-expired-detail-row">
+                      <div>
+                         <span>Amount</span>
+                      </div>
+                      <div className="text-end">
+                        <strong>5 BTC</strong>
+                      </div>
+                    </div>
                     {/* Payment ID */}
                     <div className="paymentandcommission-expired-payment-id">
 
@@ -398,11 +403,6 @@ const merchantPage = () => {
                       <p>Network</p>
                     </div>
 
-                  </div>
-
-                  <div className="paymentandcommission-expired-amount">
-                    <h5>5 ETH</h5>
-                    <p>Amount</p>
                   </div>
 
                   <div className="paymentandcommission-expired-status">
@@ -462,8 +462,14 @@ const merchantPage = () => {
                       </div>
 
                     </div>
-
-                    {/* Payment ID */}
+                  <div className="paymentandcommission-expired-detail-row">
+                      <div>
+                         <span>Amount</span>
+                      </div>
+                      <div className="text-end">
+                        <strong>5 ETH</strong>
+                      </div>
+                    </div>
                     <div className="paymentandcommission-expired-payment-id">
 
                       <div>
@@ -516,11 +522,6 @@ const merchantPage = () => {
                       <p>Network</p>
                     </div>
 
-                  </div>
-
-                  <div className="paymentandcommission-expired-amount">
-                    <h5>5 LTC</h5>
-                    <p>Amount</p>
                   </div>
 
                   <div className="paymentandcommission-expired-status">
@@ -578,6 +579,14 @@ const merchantPage = () => {
                       </div>
 
                     </div>
+                                      <div className="paymentandcommission-expired-detail-row">
+                      <div>
+                         <span>Amount</span>
+                      </div>
+                      <div className="text-end">
+                        <strong>5 LTC</strong>
+                      </div>
+                    </div>
 
                     {/* Payment ID */}
                     <div className="paymentandcommission-expired-payment-id">
@@ -620,10 +629,10 @@ const merchantPage = () => {
                 </div>
                 <div className="d-flex justify-content-between align-items-center gap-1">
                   <div className="" onClick={() => handleOpenDrawer(true)}>
-                    <Image src="/assets/images/mer-filtericon.svg" width={50} height={50} alt="" className="loc-cury-icons" />
+                    <Image src="/assets/images/mer-filtericon.svg" width={50} height={50} alt="" className="locicons" />
                   </div>
 
-                  <Image src="/assets/images/dow-mericon.svg" width={50} height={50} alt="" className="loc-cury-icons" />
+                  <Image src="/assets/images/dow-mericon.svg" width={50} height={50} alt="" className="locicons" />
                 </div>
               </div>
               <div className="paymentandcommission-expired-card">

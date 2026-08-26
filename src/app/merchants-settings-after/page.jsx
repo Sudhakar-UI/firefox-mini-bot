@@ -77,7 +77,7 @@ const merchantPage = () => {
               </p>
             </div>
           </div>
-          <div className="d-flex align-items-center justify-content-between gap-2 mt-2">
+          <div className="d-flex align-items-center justify-content-between gap-2 mt-2 regn-wrap">
              <div className="d-flex gap-1">
             <Image src="/assets/images/pay-api.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
            
@@ -91,7 +91,7 @@ const merchantPage = () => {
               </span>
             
             </div>
-            <div>
+            <div className="ret-btn">
            <button
                 type="button"
                 className="borderbtn reg btn-sm w-40"
@@ -101,7 +101,7 @@ const merchantPage = () => {
             </div>
   
           </div>
-          <div className="d-flex align-items-center justify-content-between gap-1 mt-2">
+          <div className="d-flex align-items-center justify-content-between gap-1 mt-2 regn-wrap">
               <div className="d-flex gap-1">
             <Image src="/assets/images/pay-api-grn.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
               <span className="sub-head">Payment API Key<FontAwesomeIcon
@@ -114,7 +114,7 @@ const merchantPage = () => {
               </span>
            
             </div>
-            <div>
+            <div className="ret-btn">
           <button
                 type="button"
                 className="borderbtn reg btn-sm w-40"

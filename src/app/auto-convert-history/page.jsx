@@ -92,7 +92,7 @@ export default function Merchantview() {
         <div className="payment-card mt-2">
           <div
             className="payment-header"
-            onClick={() => setOpenRow(openRow === "btc" ? null : "btc")}
+            onClick={() => setOpenRow(openRow === "eth" ? null : "eth")}
           >
             <div className="coin-info">
               <Image src={isNightMode ? "/assets/images/color/eth.svg" : "/assets/images/color/eth.svg"} width="100" height="100" alt="user" className="merviw-icon" />
@@ -117,7 +117,7 @@ export default function Merchantview() {
               </div>
             </div>
           </div>
-          {openRow === "btc" && (
+          {openRow === "eth" && (
             <div className="payment-body">
               <div className="d-flex justify-content-between">
                 <div className="d-flex flex-column gap-2">
@@ -148,7 +148,7 @@ export default function Merchantview() {
         <div className="payment-card mt-2">
           <div
             className="payment-header"
-            onClick={() => setOpenRow(openRow === "btc" ? null : "btc")}
+            onClick={() => setOpenRow(openRow === "ton" ? null : "ton")}
           >
             <div className="coin-info">
               <Image src={isNightMode ? "/assets/images/color/ton.svg" : "/assets/images/color/ton.svg"} width="100" height="100" alt="user" className="merviw-icon" />
@@ -173,7 +173,7 @@ export default function Merchantview() {
               </div>
             </div>
           </div>
-          {openRow === "btc" && (
+          {openRow === "ton" && (
             <div className="payment-body">
               <div className="d-flex justify-content-between">
                 <div className="d-flex flex-column gap-2">
@@ -204,7 +204,7 @@ export default function Merchantview() {
         <div className="payment-card mt-2">
           <div
             className="payment-header"
-            onClick={() => setOpenRow(openRow === "btc" ? null : "btc")}
+            onClick={() => setOpenRow(openRow === "sol" ? null : "sol")}
           >
             <div className="coin-info">
               <Image src={isNightMode ? "/assets/images/color/sol.svg" : "/assets/images/color/sol.svg"} width="100" height="100" alt="user" className="merviw-icon" />
@@ -229,7 +229,7 @@ export default function Merchantview() {
               </div>
             </div>
           </div>
-          {openRow === "btc" && (
+          {openRow === "sol" && (
             <div className="payment-body">
               <div className="d-flex justify-content-between">
                 <div className="d-flex flex-column gap-2">
