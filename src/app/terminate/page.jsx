@@ -21,11 +21,12 @@ export default function Terminate() {
                             <p>All sessions except the current one <br /> will be terminated.</p>
                         </div>
                     </div>
+                    <div className='mt-2'>
+                        <Button className='terminate-btn'>Terminate</Button>
+                    </div>
                 </Container>
             </div>
-            <div className='mt-auto'>
-                <Button className='terminate-btn'>Terminate</Button>
-            </div>
+
         </>
 
     )

@@ -106,7 +106,7 @@ const merchantPage = () => {
                 }
                 alt="BTC"
                 width={45}
-                height={45}
+                height={45} className="rit-arrw"
               />
             </div>
             <div className="d-flex flex-coloum gap-2">
@@ -175,7 +175,7 @@ const merchantPage = () => {
                 }
                 alt="BTC"
                 width={45}
-                height={45}
+                height={45} className="rit-arrw"
               />
             </div>
             <div className="d-flex flex-coloum gap-2">
@@ -238,7 +238,7 @@ const merchantPage = () => {
                 }
                 alt="BTC"
                 width={45}
-                height={45}
+                height={45} className="rit-arrw"
               />
             </div>
             <div className="d-flex flex-coloum gap-2">
@@ -285,7 +285,7 @@ const merchantPage = () => {
                 }
                 alt="BTC"
                 width={45}
-                height={45}
+                height={45} 
               />
               <div className="">
                 <h5 className="sub-heading">LTC</h5>
@@ -301,7 +301,7 @@ const merchantPage = () => {
                 }
                 alt="BTC"
                 width={45}
-                height={45}
+                height={45} className="rit-arrw"
               />
             </div>
             <div className="d-flex flex-coloum gap-2">

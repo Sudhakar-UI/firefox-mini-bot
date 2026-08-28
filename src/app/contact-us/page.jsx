@@ -49,14 +49,11 @@ const contactus = () => {
                             <p className="m-0"></p>
                         </Form.Group>
                     </Form>
+                    <div className="mt-3">
+                        <Button className="sitebtn" onClick={handleOpenDrawer}>Continue</Button>
+                    </div>
                 </Container>
             </div>
-
-            <div className="text-center px-2 mt-2">
-                <Button className="sitebtn" onClick={handleOpenDrawer}>Continue</Button>
-            </div>
-
-
             <div className={`phone-draw-overlay ${openDrawer ? 'open' : ''}`} onClick={handleCloseDrawer}></div>
             <div className={`phone-draw ${openDrawer ? 'open' : ''}`}>
                 <div className="phone-draw-handle"></div>

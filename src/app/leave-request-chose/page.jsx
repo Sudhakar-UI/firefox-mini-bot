@@ -12,8 +12,12 @@ import { BookMarkCircleIcon, RecieveIcon, SendIcon, SwapIcon, TransReportIcon, D
 
 const merchantPage = () => {
   const [value, setValue] = useState(1.6);
+const [currentStep, setCurrentStep] = useState(1);
+const handleStepOne = (e) => {
+  e.preventDefault();
 
-
+  setCurrentStep(2);
+};
   return (
     <div className="merchant-settings-page leave-request-chose">
       <Container>
@@ -36,24 +40,26 @@ const merchantPage = () => {
                 1
               </div>
               <div className="mert-sett-step-content">
-                <span className="sub-head">Choose type and add project URL</span>
-                <p>
+                <span className="sub-head mb-2">Choose type and add project URL</span>
+                <p className="mb-2">
                   Link to your website or Telegram bot
                 </p>
               </div>
             </div>
-            <div className="mert-sett-step-line"></div>
-            <div className="mert-sett-step">
+            <div
+              className={`mert-sett-step-line ${currentStep > 1 ? "mert-sett-step-line-active" : ""
+                }`}
+            ></div>            <div className="mert-sett-step">
               <div className="mert-sett-step-number mert-sett-step-inactive">
                 2
               </div>
 
-              <div className="mert-sett-step-content">
+              <div className="mert-sett-step-content mb-2">
                 <span className="sub-head">Confirm Telegram Bot</span>
-                <p>
+                <p className="mb-2">
                   Verify your Telegram bot
                 </p>
-                <span className="sub-head mt-2">Step 1</span>
+                <span className="sub-head mt-2 mb-2">Step 1</span>
                 <p>
                   Add this code to your Telegram bot description
                 </p>
@@ -65,25 +71,27 @@ const merchantPage = () => {
                   </Form.Group>
                 </form>
                 <span className="sub-head mt-2">Project Name</span>
-                <div className="d-flex justify-content-between align-items-center gap-2">
+                <div className="clickcheck">
                   <p>
                     Click ‘Check’ after adding description
                   </p>
-                  
+
                   <button
                     type="button"
                     className="borderbtn btn-sm"
                   >
-                   check
+                    check
                   </button>
                 </div>
-
+                <div className="w-20 mt-2">
+                  <button type="button" className="sitebtn btn-sm sbt">
+                    Submit
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <button type="button" className="sitebtn btn-sm w-20">
-            Submit
-          </button>
+
         </div>
 
       </Container>

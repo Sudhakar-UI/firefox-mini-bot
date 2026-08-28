@@ -18,7 +18,7 @@ export default function Terminate() {
                         <p>To continue,provide your information.<br /> it will take a couple of mintutes</p>
                     </div>
                 </div>
-                <div className="mt-3 savbtn">
+                <div className="mt-3">
                     <Link href="/">
                         <Button className="sitebtn ">Set Up Account</Button>
                     </Link>

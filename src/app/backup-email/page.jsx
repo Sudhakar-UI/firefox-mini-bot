@@ -29,17 +29,17 @@ export default function Terminate() {
                                 if you have forgotten it.</p>
                         </div>
                     </div>
-
+                    <div className="px-2 d-flex flex-column gap-2 mt-3">
+                        <Link href="/">
+                            <Button className="sitebtn w-100">Change Email</Button>
+                        </Link>
+                        <Link href="/">
+                            <Button className="borderbtn w-100">Close</Button>
+                        </Link>
+                    </div>
                 </Container>
             </div>
-  <div className="mt-auto px-2 d-flex flex-column gap-2">
-    <Link href="/">
-        <Button className="sitebtn w-100">Change Email</Button>
-    </Link>
-    <Link href="/">
-        <Button className="borderbtn w-100">Close</Button>
-    </Link>
-</div>
+
         </>
 
     )

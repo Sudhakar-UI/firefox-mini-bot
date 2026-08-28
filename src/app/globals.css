@@ -1548,14 +1548,6 @@ p {
   font-weight: 700;
 }
 
-.staticwallet-page .container {
-  --bs-gutter-x: 2.5rem;
-}
-
-.site-container.container {
-  --bs-gutter-x: 2.5rem;
-  height: auto;
-}
 
 .sendamount-group {
   border: 1px solid #e6e6e6;
@@ -1891,8 +1883,25 @@ p {
 }
 
 .merchantview-page .container,
-.historyall-page .container {
-  --bs-gutter-x: 2.5rem;
+.historyall-page .container,
+.accountsuspended-page .container,
+.address-book-page .container,
+.all-addresses-page .container,
+.all-transactions-page .container .paymentandcommission.auto-convert .container .backup-email-page .container .basic-info-page .container,
+.add-token-page .container,
+.trade-page .container .historys-page .container,
+.merchant-settings-page .container,
+.staticwallet-page .container,
+.site-container.container,
+.merchantPage .container,
+.tradehistory-page .container,
+.wallet-page .container {
+  --bs-gutter-x: 3rem;
+}
+
+.local-currency-page .set-bot-y:after,
+.local-currency-page.set-boted:after {
+  bottom: -3px;
 }
 
 .stc-wat-pge .stc-timer-box {
@@ -2307,7 +2316,7 @@ p {
 }
 
 .merchantPage p {
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .mer-verticalline {
@@ -3802,7 +3811,7 @@ p {
   border-radius: 20px;
   padding: 16px;
   width: 100%;
-  max-width: 420px;
+  max-width: 1024px;
   margin: auto;
 }
 
@@ -4233,7 +4242,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 150px 0px;
+  margin: 20px 0px;
 }
 
 .set-up-act {
@@ -7219,11 +7228,6 @@ p {
   font-weight: 600;
 }
 
-.trade-page .container {
-  --bs-gutter-x: 1.2rem;
-  width: 100%;
-  max-width: 100%;
-}
 
 .pairDropdownTrigger {
   display: flex;
@@ -8352,10 +8356,6 @@ p {
   font-size: 15px;
 }
 
-.tradehistory-page .container {
-  --bs-gutter-x: 2.5rem
-}
-
 .footer-content a {
   text-decoration: none !important;
 }
@@ -8367,10 +8367,6 @@ p {
 .tradehistory-page .coinicon {
   max-width: 32px;
   height: 32px;
-}
-
-.wallet-page .container {
-  --bs-gutter-x: 2.5rem;
 }
 
 .wallet-page .siteformbg .input-group-text {
@@ -8711,10 +8707,6 @@ p {
   padding: 30px 0;
 }
 
-.merchantPage .container {
-  --bs-gutter-x: 2.5rem
-}
-
 body.has-user-footer .page-content,
 body.has-home-footer .page-content {
   padding-bottom: 90px;
@@ -8815,10 +8807,6 @@ body.has-home-footer .page-content {
   bottom: -12px;
 }
 
-.historys-page .container {
-  --bs-gutter-x: 2.5rem;
-}
-
 .nightmode .hisfilter-search {
   background: #44a3dd;
 }
@@ -8910,7 +8898,6 @@ body.has-home-footer .page-content {
   cursor: pointer;
   z-index: 999;
   background-color: #ff3c00;
-  /* background-image: url("../media/closeicon.06hzde7ak7e_b.svg"); */
   border: 0;
   border-radius: 50px;
   width: 25px;
@@ -8948,7 +8935,7 @@ body.has-home-footer .page-content {
   width: 35%;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .set-up-act.set-up-acctt .message-box {
     margin-top: 0px !important;
   }
@@ -9099,10 +9086,19 @@ body.has-home-footer .page-content {
   .regn-wrap {
     flex-wrap: wrap !important;
   }
-.ret-btn {
-text-align: center !important;
 
-}
+  .regn-wrap .ret-btn {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    text-align: center !important;
+  }
+
+  .regn-wrap .ret-btn .borderbtn {
+    margin: 0 !important;
+  }
+
   .paymentandcommission-expired-coin-name h5,
   .paymentandcommission-expired-amount h5 {
     font-size: 12px !important;
@@ -9142,6 +9138,14 @@ text-align: center !important;
 }
 
 @media(max-width: 440px) {
+  .rit-arrw {
+    width: 100%;
+    height: 100%;
+    max-width: 40px;
+  }
+  .bulkapply-action {
+    width: 36% !important;
+  }
 
   .modal.show .modal-dialog {
     max-width: 360px;
@@ -9154,16 +9158,25 @@ text-align: center !important;
   .blue-card-img {
     margin-top: 0;
   }
+
+  .clickcheck {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 380px) {
+  .merchant-tabs.coinmanagetabs {
+    font-size: 12px;
+  }
+
+  .clickcheck p {
+    text-wrap: wrap !important;
+  }
+
   .mert-sett-step-line {
     margin-top: -11px;
   }
 
-  /* .loc-cury-icons {
-    max-width: 26px !important;
-  } */
   .locicons {
     max-width: 26px !important;
 
@@ -9882,9 +9895,6 @@ text-align: center !important;
   color: #c5ccd4;
 }
 
-
-
-
 .nightmode .tradeHistoryCard {
   background: #222e3c;
   border-color: #384452;
@@ -9907,20 +9917,6 @@ text-align: center !important;
   border-color: #384452;
 }
 
-.tradeHistoryCard {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.tradeHistoryCard {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  overflow: hidden;
-}
 
 .tradeHistoryCard {
   border-bottom: 1px solid #E8E8E8;
@@ -10997,7 +10993,7 @@ text-align: center !important;
 }
 
 .invoice-static-wallet hr {
-  border: 1px solid #e8e8e8;
+  border: 1px solid #bdacac;
 }
 
 .nightmode .invoice-static-wallet hr {
@@ -11661,10 +11657,6 @@ text-align: center !important;
 
 }
 
-.merchant-settings-page .container {
-  --bs-gutter-x: 2.5rem;
-}
-
 .mert-sett {
   background: #f7f7f8;
   border: 1px solid #e8e8e8;
@@ -12030,6 +12022,7 @@ text-align: center !important;
 .coin-search-secondary {
   width: 10%;
   margin-left: auto;
+  margin-top: 7px;
 }
 
 .paymentandcommission.coin-manage .siteformbg .input-group-text {
@@ -12158,7 +12151,6 @@ text-align: center !important;
   line-height: 17px;
   cursor: pointer;
   margin-left: 15px;
-
 }
 
 .nightmode .merchant-settings-page.mertn .mertn-project-type-label {
@@ -12184,9 +12176,7 @@ text-align: center !important;
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23FF3C00'/%3e%3c/svg%3e");
 }
 
-.merchant-settings-page.leave-request-chose .mert-sett-step {
-  align-items: initial !important;
-}
+
 
 
 .nightmode .merchant-settings-page.leave-request-chose .siteformbg .input-group-text {
@@ -12195,7 +12185,155 @@ text-align: center !important;
   border: 1px solid #384452;
 }
 
-.country-residence-page .set-bot-y:after, 
+.country-residence-page .set-bot-y:after,
 .country-residence-page .set-boted:after {
-    bottom: -2px;
+  bottom: -2px;
+}
+
+.tradeallHistoryPage .tradeHistoryCard {
+  padding: 15px 20px;
+}
+
+.merchant-settings-page .btn-sm {
+  border-radius: 50px !important;
+  padding: 3px 14px !important;
+  font-size: 13px !important;
+}
+
+.clickcheck {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.clickcheck p {
+  white-space: nowrap;
+}
+
+.merchant-settings-page.leave-request-chose .sitebtn.sbt {
+  width: 35% !important;
+}
+
+.merchant-settings-page.leave-request-chose .btn-sm.sbt {
+  border-radius: 8px !important;
+}
+  .rit-arrw {
+    width: 100%;
+    height: 100%;
+    max-width: 47px;
+  }
+
+
+
+.merchant-settings-page.leave-request-chose .mert-sett-steps {
+  position: relative;
+  width: 100%;
+}
+
+.merchant-settings-page.leave-request-chose .mert-sett-step {
+  display: flex;
+  align-items: flex-end !important;
+  position: relative;
+  z-index: 2;
+}
+
+.merchant-settings-page.leave-request-chose .mert-sett-step:first-child {
+  align-items: flex-start !important;
+}
+
+/* .merchant-settings-page.leave-request-chose
+  .mert-sett-step {
+  align-items: end !important;
+} */
+
+.merchant-settings-page.leave-request-chose
+  .mert-sett-step-active {
+  background: #3bb486;
+  color: #fff;
+}
+
+.merchant-settings-page.leave-request-chose
+  .mert-sett-step-inactive {
+  background: #b8b8b9;
+  color: #fff;
+}
+
+
+.merchant-settings-page.leave-request-chose
+  .mert-sett-step-content {
+  flex: 1;
+  min-width: 0;
+  margin-left: 9px;
+}
+
+.merchant-settings-page.leave-request-chose
+  .mert-sett-step-content
+  .sub-head + p {
+  margin-bottom: 8px;
+}
+
+.merchant-settings-page.leave-request-chose
+  .mert-sett-step-line {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  bottom: 13px;
+  width: 2px;
+  height: auto;
+  background: #b8b8b9;
+  z-index: 1;
+
+  transition:
+    background-color 0.3s ease,
+    height 0.3s ease;
+}
+
+
+.merchant-settings-page.leave-request-chose
+  .mert-sett-step-line.mert-sett-step-line-active {
+  background: #3bb486;
+}
+
+
+.merchant-settings-page.leave-request-chose 
+.borderbtn {
+    width: 27%;
+}
+
+.nightmode
+  .merchant-settings-page.leave-request-chose
+  .mert-sett-step-line {
+  background: #4a535e;
+}
+
+.nightmode
+  .merchant-settings-page.leave-request-chose
+  .mert-sett-step-line.mert-sett-step-line-active {
+  background: #3bb486;
+}
+
+
+.nightmode
+  .merchant-settings-page.leave-request-chose
+  .mert-sett-step-active {
+  background: #3bb486;
+  color: #fff;
+}
+
+.nightmode
+  .merchant-settings-page.leave-request-chose
+  .mert-sett-step-inactive {
+  background: #4b535c;
+  color: #fff;
+}
+
+
+.nightmode
+  .merchant-settings-page.leave-request-chose
+  .siteformbg
+  .input-group-text {
+  color: #fff;
+  background: #222e3c;
+  border: 1px solid #384452;
 }

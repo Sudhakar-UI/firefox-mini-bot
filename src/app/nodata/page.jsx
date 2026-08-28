@@ -18,12 +18,11 @@ const addtoken = () => {
                         </div>
                         <p>No Saved Addresses yet.</p>
                     </div>
-                    <div className="mt-3 savbtn">
+                    <div className="mt-3">
                         <Link href="/">
                             <Button className="sitebtn ">Add Address</Button>
                         </Link>
                     </div>
-
                 </Container>
             </div>
         </>

@@ -78,19 +78,15 @@ const [projectType, setProjectType] = useState("website");
                     <Form.Label>Project URL</Form.Label>
                     <InputGroup>
                       <Form.Control placeholder="Enter your project url" id='amount' />
-                      <InputGroup.Text>All</InputGroup.Text>
                     </InputGroup>
                   </Form.Group>
                   <Form.Group className="form-group mt-3">
                     <Form.Label>Project Name</Form.Label>
                     <InputGroup>
                       <Form.Control placeholder="Enter your project Name" id='amount' />
-                      <InputGroup.Text>All</InputGroup.Text>
                     </InputGroup>
                   </Form.Group>
                 </Form>
-
-
                 <Button type="button" className="sitebtn btn-block mt-3 mb-3">Submit</Button>
               </div>
             </div>

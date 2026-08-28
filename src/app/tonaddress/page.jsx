@@ -52,7 +52,7 @@ const addtoken = () => {
                             </Col>
                         </Row>
                     </div>
-                    <div className="mt-3 savbtn">
+                    <div className="mt-3">
                         <Link href="/">
                             <Button className="sitebtn ">Save</Button>
                         </Link>

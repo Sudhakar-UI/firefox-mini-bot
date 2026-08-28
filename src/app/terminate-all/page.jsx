@@ -20,12 +20,11 @@ export default function Terminate() {
                             <h2 className='heading mb-0'>All Sessions was terminated</h2>
                         </div>
                     </div>
+                    <div className="mt-2">
+                        <Button className='terminate-btn'>Close</Button>
+                    </div>
                 </Container>
             </div>
-            <div className="mt-auto">
-                <Button className='terminate-btn'>Close</Button>
-            </div>
-
         </>
 
     )

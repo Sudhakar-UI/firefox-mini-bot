@@ -30,14 +30,14 @@ export default function Terminate() {
                             <h2 className="heading">Session Expired</h2>
                             <p>Repoen the Mini App for reauthorization</p>
                         </div>
-                    </div>
 
+                    </div>
+                    <div className="mt-1">
+                        <Link href="/">
+                            <Button className="sitebtn">Close</Button>
+                        </Link>
+                    </div>
                 </Container>
-            </div>
-            <div className="mt-auto px-2 d-flex flex-column gap-2">
-                <Link href="/">
-                    <Button className="sitebtn w-100">Close</Button>
-                </Link>
             </div>
         </>
 

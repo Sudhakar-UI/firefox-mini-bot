@@ -165,11 +165,12 @@ const confirmswap = () => {
                             </Link>
                         </div>
                     )}
-                </Container>
-            </div>
-            <div className="mt-auto px-2">
+                                <div className="mt-3">
                 <Button className="swap-btn">Swap ETH to USDT</Button>
             </div>
+                </Container>
+            </div>
+
         </>
     )
 }

@@ -24,23 +24,23 @@ export default function Terminate() {
                                     <LockIcon size={65} />
                                 </div>
                             </div>
-                           
-                        </div>
-                         <div className='timer'>
-                                 <h6 className='subhead mb-0'><LockIcon size={16} /> 00.00.15</h6>
-                            </div>
-                            <div className="text-center">
-                                 <p>Enter your passcode to continue</p>
-                            </div>
-                    </div>
 
+                        </div>
+                        <div className='timer'>
+                            <h6 className='subhead mb-0'><LockIcon size={16} /> 00.00.15</h6>
+                        </div>
+                        <div className="text-center">
+                            <p>Enter your passcode to continue</p>
+                        </div>
+                    </div>
+                    <div className="mt-2">
+                        <Link href="/">
+                            <Button className="borderbtn w-100">Reset passcode</Button>
+                        </Link>
+                    </div>
                 </Container>
             </div>
-            <div className="mt-auto px-2 d-flex flex-column gap-2">
-                <Link href="/">
-                    <Button className="borderbtn w-100">Reset passcode</Button>
-                </Link>
-            </div>
+
         </>
 
     )

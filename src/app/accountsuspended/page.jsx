@@ -27,10 +27,7 @@ export default function Accountsuspended() {
                                 withdraw your funds until 15 Apr 18.01.</p>
                         </div>
                     </div>
-
-                </Container>
-            </div>
-            <div className="mt-auto px-2 d-flex flex-column gap-2">
+                      <div className="mt-auto px-2 d-flex flex-column gap-2">
                 <Link href="/">
                     <Button className="sitebtn w-100">Open wallet</Button>
                 </Link>
@@ -38,6 +35,10 @@ export default function Accountsuspended() {
                     <Button className="borderbtn w-100">Close</Button>
                 </Link>
             </div>
+
+                </Container>
+            </div>
+          
         </>
 
     )

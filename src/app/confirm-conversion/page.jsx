@@ -57,13 +57,14 @@ const confirmConversion = () => {
                     </div>
                     <div className="d-flex justify-content-between align-items-center mt-4">
                         <p>Fee</p>
-                         <span className="badge">2.00%</span>
+                        <span className="badge">2.00%</span>
+                    </div>
+                    <div className="mt-3 px-2">
+                        <Button className="swap-btn mt-4">Confirm Conversion (13s)</Button>
                     </div>
                 </Container>
             </div>
-            <div className="mt-auto px-2">
-                 <Button className="swap-btn mt-4">Confirm Conversion (13s)</Button>
-            </div>
+
         </>
     )
 }

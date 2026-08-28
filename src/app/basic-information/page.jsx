@@ -65,12 +65,14 @@ const addtoken = () => {
                             </Form.Select>
                         </Form.Group>
                     </Form>
+                    <div className="text-center px-2 mt-3">
+                        <Button className="sitebtn" onClick={handleOpenDrawer}>Continue</Button>
+                    </div>
                 </Container>
+
             </div>
 
-            <div className="text-center px-2 mt-auto">
-                <Button className="sitebtn" onClick={handleOpenDrawer}>Continue</Button>
-            </div>
+
 
 
             <div className={`phone-draw-overlay ${openDrawer ? 'open' : ''}`} onClick={handleCloseDrawer}></div>
