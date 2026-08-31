@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faMagnifyingGlass,
     faCircleCheck,
-    faAngleDown, faAngleUp, faTimes, faChevronLeft,
-    faChevronRight
+    faAngleDown, faAngleUp, faTimes, faChevronLeft, faAnglesRight,  faAnglesLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "../context/ThemeContext";
 import Link from "next/link";
@@ -35,16 +34,47 @@ export default function OpenOrder({ bottomTab, setBottomTab, trades }) {
 
     const tabsRef = useRef(null);
 
-    const scrollTabs = (direction) => {
-        if (!tabsRef.current) return;
+    const [showLeftArrow, setShowLeftArrow] = useState(false);
+    const [showRightArrow, setShowRightArrow] = useState(false);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(false);
+const checkTabScroll = () => {
+    const el = tabsRef.current;
 
-        const scrollAmount = 120;
+    if (!el) return;
 
-        tabsRef.current.scrollBy({
-            left: direction === "left" ? -scrollAmount : scrollAmount,
-            behavior: "smooth"
-        });
+    const leftAvailable = el.scrollLeft > 2;
+
+    const rightAvailable =
+        el.scrollLeft + el.clientWidth < el.scrollWidth - 2;
+
+    setCanScrollLeft(leftAvailable);
+    setCanScrollRight(rightAvailable);
+};
+const scrollTabs = (direction) => {
+    const el = tabsRef.current;
+
+    if (!el) return;
+
+    el.scrollBy({
+        left: direction === "left" ? -140 : 140,
+        behavior: "smooth",
+    });
+};
+
+useEffect(() => {
+    checkTabScroll();
+
+    const handleResize = () => {
+        checkTabScroll();
     };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+        window.removeEventListener("resize", handleResize);
+    };
+}, []);
     return (
         <Tab.Container
             activeKey={bottomTab}
@@ -55,16 +85,19 @@ export default function OpenOrder({ bottomTab, setBottomTab, trades }) {
 
                     <button
                         type="button"
-                        className="bottomTabsArrow bottomTabsArrowLeft"
-                        onClick={() => scrollTabs("left")}
+                        className={`bottomTabsArrow bottomTabsArrowLeft ${!canScrollLeft ? "arrowDisabled" : ""
+                            }`}
+                        onClick={() => canScrollLeft && scrollTabs("left")}
                         aria-label="Scroll left"
+                        disabled={!canScrollLeft}
                     >
-                        <FontAwesomeIcon icon={faChevronLeft} />
+                        <FontAwesomeIcon icon={faAnglesLeft} />
                     </button>
 
                     <Nav
                         ref={tabsRef}
                         className="bottomTabs"
+                        onScroll={checkTabScroll}
                     >
                         <Nav.Item>
                             <Nav.Link eventKey="positions" className="bottomTab">
@@ -99,11 +132,13 @@ export default function OpenOrder({ bottomTab, setBottomTab, trades }) {
 
                     <button
                         type="button"
-                        className="bottomTabsArrow bottomTabsArrowRight"
-                        onClick={() => scrollTabs("right")}
+                        className={`bottomTabsArrow bottomTabsArrowRight ${!canScrollRight ? "arrowDisabled" : ""
+                            }`}
+                        onClick={() => canScrollRight && scrollTabs("right")}
                         aria-label="Scroll right"
+                        disabled={!canScrollRight}
                     >
-                        <FontAwesomeIcon icon={faChevronRight} />
+                        <FontAwesomeIcon icon={faAnglesRight} />
                     </button>
                 </div>
                 <Tab.Content>

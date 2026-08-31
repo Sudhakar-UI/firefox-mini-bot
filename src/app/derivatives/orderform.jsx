@@ -130,9 +130,13 @@ export default function OrderForm() {
                             </span>
                         </div>
                         <div className="balancewlt">
-                            <span className="avmodal" onClick={handleOpenLeverageDrawerForth}>
-                                <FontAwesomeIcon icon={faInfoCircle} />
-                            </span>
+                            <Image
+                  src="/assets/images/transfer-one.svg"
+                  width={14}
+                  height={14}
+                  alt="hand-icon"
+                  className=""
+                />
                         </div>
                         {/* <ul className="ruleslist">
                         <li>

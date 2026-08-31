@@ -84,7 +84,7 @@ const merchantPage = () => {
             </div>
           </div>
         </div>
-        <div className="d-flex mt-3 mb-2 gap-2">
+        <div className="merch-ant-cards">
           <div className="blue-card">
             <div>
               <Image src="/assets/images/mer-icon.svg" width={50} height={50} alt="" className="loc-cury-iconing" />
@@ -94,7 +94,9 @@ const merchantPage = () => {
                 <h6 className="sub-heading mert">Merchant Settings</h6>
                 <p className="mge-all">Manage your preference</p>
               </div>
-              <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
+              <div className="arrow-right">
+                <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
+              </div>
             </div>
 
           </div>
@@ -107,7 +109,10 @@ const merchantPage = () => {
                 <h6 className="sub-heading">Payment by Link</h6>
                 <p className="mge-all">Create & share payment link</p>
               </div>
-              <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
+              <div className="arrow-right">
+                <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
+              </div>
+
             </div>
 
           </div>
@@ -209,7 +214,7 @@ const merchantPage = () => {
 
                     </div>
 
-  
+
                     <div className="paymentandcommission-expired-detail-row">
 
                       <div>
@@ -225,7 +230,7 @@ const merchantPage = () => {
                     </div>
                     <div className="paymentandcommission-expired-detail-row">
                       <div>
-                         <span>Amount</span>
+                        <span>Amount</span>
                       </div>
                       <div className="text-end">
                         <strong>5 TON</strong>
@@ -342,9 +347,9 @@ const merchantPage = () => {
                       </div>
 
                     </div>
-                  <div className="paymentandcommission-expired-detail-row">
+                    <div className="paymentandcommission-expired-detail-row">
                       <div>
-                         <span>Amount</span>
+                        <span>Amount</span>
                       </div>
                       <div className="text-end">
                         <strong>5 BTC</strong>
@@ -462,9 +467,9 @@ const merchantPage = () => {
                       </div>
 
                     </div>
-                  <div className="paymentandcommission-expired-detail-row">
+                    <div className="paymentandcommission-expired-detail-row">
                       <div>
-                         <span>Amount</span>
+                        <span>Amount</span>
                       </div>
                       <div className="text-end">
                         <strong>5 ETH</strong>
@@ -579,9 +584,9 @@ const merchantPage = () => {
                       </div>
 
                     </div>
-                                      <div className="paymentandcommission-expired-detail-row">
+                    <div className="paymentandcommission-expired-detail-row">
                       <div>
-                         <span>Amount</span>
+                        <span>Amount</span>
                       </div>
                       <div className="text-end">
                         <strong>5 LTC</strong>

@@ -280,7 +280,7 @@ const merchantPage = () => {
           </div>
           <Image src={isNightMode ? "/assets/images/mer-icon-new.svg" : "/assets/images/mer-icon-new.svg"} alt="user" className="mobile-iconing" />
           <h2 className="heading">Create New Merchant</h2>
-          <h2 className="sub-head">Add merchant details to get started</h2>
+          <p>Add merchant details to get started</p>
         </div>
         <div className="mt-2 mb-2">
           <Row>

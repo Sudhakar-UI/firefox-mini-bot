@@ -1896,7 +1896,7 @@ p {
 .merchantPage .container,
 .tradehistory-page .container,
 .wallet-page .container {
-  --bs-gutter-x: 3rem;
+  --bs-gutter-x: 2.5rem;
 }
 
 .local-currency-page .set-bot-y:after,
@@ -8815,6 +8815,19 @@ body.has-home-footer .page-content {
   font-size: 14px;
   color: #000000;
   background-color: #fff;
+  border-radius: 50% !important;
+}
+
+.page-item:last-child .page-link {
+  border: 0px !important;
+}
+
+.page-item:first-child .page-link {
+  border: 0px !important;
+}
+
+.pagination .disabled .page-link {
+  border: 0px !important;
 }
 
 .nightmode .pagination .page-item.active .page-link {
@@ -8989,6 +9002,10 @@ body.has-home-footer .page-content {
 }
 
 @media (max-width: 500px) {
+  .paymentandcommission .merch-ant-cards {
+    flex-wrap: wrap !important;
+  }
+
   .serrch-flt-action>div:first-child {
     width: 80% !important;
   }
@@ -8999,17 +9016,14 @@ body.has-home-footer .page-content {
 
   .paymentandcommission .blue-card {
     gap: 10px;
-    flex-direction: column !important;
-  }
-
-  .paymentandcommission .sub-heading {
-    text-align: center;
   }
 
   .paymentandcommission .mge-all {
     white-space: nowrap;
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
+
+ 
 
   .innerpagetab.historytab .input-group-text {
     font-size: 12px;
@@ -9143,6 +9157,7 @@ body.has-home-footer .page-content {
     height: 100%;
     max-width: 40px;
   }
+
   .bulkapply-action {
     width: 36% !important;
   }
@@ -10720,22 +10735,16 @@ body.has-home-footer .page-content {
   margin-bottom: 8px !important;
 }
 
-.paymentandcommission .mge-all {
-  color: #8f9098 !important;
-  font-size: 12px;
-  font-weight: 400 !important;
-  line-height: 12px !important;
-  margin-bottom: 8px !important;
-}
 
 .merchantPage .sub-heading {
   font-size: 14px;
   font-weight: 600;
   font-family: Inter, sans-serif !important;
+  line-height: 12px;
 }
 
 .paymentandcommission .sub-heading {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   font-family: Inter, sans-serif !important;
 }
@@ -10744,8 +10753,7 @@ body.has-home-footer .page-content {
   margin-top: 0px;
 }
 
-.merchantPage .blue-card,
-.paymentandcommission .blue-card {
+.merchantPage .blue-card {
   background: #f7f7f8;
   border: 1px solid #e8e8e8;
   border-radius: 8px;
@@ -10757,6 +10765,21 @@ body.has-home-footer .page-content {
   padding: 8px 11px;
   flex-direction: row;
   display: flex !important;
+}
+
+.paymentandcommission .blue-card {
+  background: #f7f7f8;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  padding: 8px 11px;
+  flex-direction: row;
+  display: flex !important;
+  justify-content: start !important;
+
 }
 
 .nightmode .merchantPage .blue-card,
@@ -10818,6 +10841,13 @@ body.has-home-footer .page-content {
   position: relative;
 }
 
+.bottomTabsWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
 .bottomTabs {
   display: flex;
   flex-wrap: nowrap;
@@ -10838,50 +10868,96 @@ body.has-home-footer .page-content {
 }
 
 .bottomTabsArrow {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
   color: #ff3c00;
   cursor: pointer;
-  z-index: 2;
-  background: #e8e8e8;
-  border: 0;
-  border-radius: 50%;
-  flex: 0 0 28px;
-  justify-content: center;
-  align-items: center;
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  display: flex;
-}
-
-.nightmode .bottomTabsArrow {
-  color: #44a3dd;
-  background: #283a4e;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .bottomTabsArrow svg {
-  width: 10px;
-  height: 10px;
-}
-
-
-
-.bottomTabsArrow i {
-  font-size: 11px;
+  width: 18px;
+  height: 18px;
 }
 
 .bottomTabsArrowLeft {
-  margin-right: 5px;
+  margin-right: 3px;
+}
+
+.bottomTabsArrowLeft:not(.arrowDisabled) {
+  animation: arrowLeftMove 1s ease-in-out infinite;
 }
 
 .bottomTabsArrowRight {
-  margin-left: 5px;
+  margin-left: 3px;
+}
+
+.bottomTabsArrowRight:not(.arrowDisabled) {
+  animation: arrowRightMove 1s ease-in-out infinite;
+}
+
+@keyframes arrowLeftMove {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes arrowRightMove {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.bottomTabsArrow.arrowDisabled {
+  opacity: 0.25;
+  cursor: default;
+  pointer-events: none;
+  animation: none;
+}
+
+.bottomTabsArrow:not(.arrowDisabled):hover {
+  color: #238dcc;
+}
+
+.nightmode .bottomTabsArrow {
+  background: transparent;
+  color: #61b6e8;
+}
+
+.nightmode .bottomTabsArrow:not(.arrowDisabled):hover {
+  color: #8bd3ff;
+}
+
+.nightmode .bottomTabsArrow.arrowDisabled {
+  opacity: 0.25;
 }
 
 @media (max-width: 746px) {
-  .bottomTabsArrow svg {
-    width: 8px;
-    height: 8px;
-  }
 
   .bottomTabsWrapper {
     gap: 3px;
@@ -11037,10 +11113,6 @@ body.has-home-footer .page-content {
   height: 100%;
   width: 100%;
   max-width: 30px;
-}
-
-.sub-heading.mert {
-  line-height: 24px;
 }
 
 .trade-page.dir-page .statBlock {
@@ -12218,11 +12290,12 @@ body.has-home-footer .page-content {
 .merchant-settings-page.leave-request-chose .btn-sm.sbt {
   border-radius: 8px !important;
 }
-  .rit-arrw {
-    width: 100%;
-    height: 100%;
-    max-width: 47px;
-  }
+
+.rit-arrw {
+  width: 100%;
+  height: 100%;
+  max-width: 47px;
+}
 
 
 
@@ -12247,34 +12320,28 @@ body.has-home-footer .page-content {
   align-items: end !important;
 } */
 
-.merchant-settings-page.leave-request-chose
-  .mert-sett-step-active {
+.merchant-settings-page.leave-request-chose .mert-sett-step-active {
   background: #3bb486;
   color: #fff;
 }
 
-.merchant-settings-page.leave-request-chose
-  .mert-sett-step-inactive {
+.merchant-settings-page.leave-request-chose .mert-sett-step-inactive {
   background: #b8b8b9;
   color: #fff;
 }
 
 
-.merchant-settings-page.leave-request-chose
-  .mert-sett-step-content {
+.merchant-settings-page.leave-request-chose .mert-sett-step-content {
   flex: 1;
   min-width: 0;
   margin-left: 9px;
 }
 
-.merchant-settings-page.leave-request-chose
-  .mert-sett-step-content
-  .sub-head + p {
+.merchant-settings-page.leave-request-chose .mert-sett-step-content .sub-head+p {
   margin-bottom: 8px;
 }
 
-.merchant-settings-page.leave-request-chose
-  .mert-sett-step-line {
+.merchant-settings-page.leave-request-chose .mert-sett-step-line {
   position: absolute;
   left: 0;
   top: 13px;
@@ -12290,50 +12357,64 @@ body.has-home-footer .page-content {
 }
 
 
-.merchant-settings-page.leave-request-chose
-  .mert-sett-step-line.mert-sett-step-line-active {
+.merchant-settings-page.leave-request-chose .mert-sett-step-line.mert-sett-step-line-active {
   background: #3bb486;
 }
 
 
-.merchant-settings-page.leave-request-chose 
-.borderbtn {
-    width: 27%;
+.merchant-settings-page.leave-request-chose .borderbtn {
+  width: 27%;
 }
 
-.nightmode
-  .merchant-settings-page.leave-request-chose
-  .mert-sett-step-line {
+.nightmode .merchant-settings-page.leave-request-chose .mert-sett-step-line {
   background: #4a535e;
 }
 
-.nightmode
-  .merchant-settings-page.leave-request-chose
-  .mert-sett-step-line.mert-sett-step-line-active {
+.nightmode .merchant-settings-page.leave-request-chose .mert-sett-step-line.mert-sett-step-line-active {
   background: #3bb486;
 }
 
 
-.nightmode
-  .merchant-settings-page.leave-request-chose
-  .mert-sett-step-active {
+.nightmode .merchant-settings-page.leave-request-chose .mert-sett-step-active {
   background: #3bb486;
   color: #fff;
 }
 
-.nightmode
-  .merchant-settings-page.leave-request-chose
-  .mert-sett-step-inactive {
+.nightmode .merchant-settings-page.leave-request-chose .mert-sett-step-inactive {
   background: #4b535c;
   color: #fff;
 }
 
 
-.nightmode
-  .merchant-settings-page.leave-request-chose
-  .siteformbg
-  .input-group-text {
+.nightmode .merchant-settings-page.leave-request-chose .siteformbg .input-group-text {
   color: #fff;
   background: #222e3c;
   border: 1px solid #384452;
 }
+
+.address-wrap-y {
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  text-wrap: wrap !important;
+}
+
+.paymentandcommission .merch-ant-cards {
+  display: flex;
+  margin: 10px 0px;
+  gap: 8px;
+}
+.merch-ant-cards .blue-card {
+  background-color: #fff !important;
+}
+
+.nightmode .merch-ant-cards .blue-card {
+    background-color: #222e3c !important;
+}
+
+ .merch-ant-cards .blue-card>div:nth-child(2) {
+    width: 100%;
+  }
+
+  .merch-ant-cards .arrow-right {
+    margin-left: auto !important;
+  }
