@@ -282,7 +282,8 @@ const Merchantlink = () => {
 
                   <Form.Group className="form-group d-flex dflexbtn mb-0 mt-4">
                     <Button type="button" className="borderbtn btn-block me-2" id='cancelbtn'>Cancel</Button>
-                    <Button type="button" className="sitebtn btn-block" id="submitbtn">Transfer</Button>
+                    <Button type="button" as={Link}
+                      href="/deposit-qr" className="sitebtn btn-block" id="submitbtn">Transfer</Button>
                   </Form.Group>
                 </Col>
               </Row>

@@ -97,6 +97,7 @@ const addtoken = () => {
                             type="checkbox"
                             label="Yes, I confirm"
                             id="confirm"
+                            className="confirm-check-box"
                         />
                     </div>
                 </div>

@@ -43,7 +43,7 @@ const merchantPage = () => {
         <span className="heading">Merchants Settings</span>
         <div className="mert-sett">
           <span className="sub-head">API Integration</span>
-          <p>
+          <p className="mt-1">
             Leave a request for Firefox.VIP integration on your website or Telegram.
             Get an API key to replenish your merchant
           </p>
@@ -51,78 +51,73 @@ const merchantPage = () => {
             <Image src="/assets/images/fftesting.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
             <div className="">
               <span className="sub-head">Project Name</span>
-              <p>
+              <p className="mb-0">
                 FF Testing
               </p>
             </div>
           </div>
-          <div className="d-flex align-items-center gap-1 mt-2">
+          <div className="d-flex align-items-center gap-1 mt-3">
             <Image src="/assets/images/project-url.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
             <div className="">
               <span className="sub-head">Project URL</span>
-              <p>
+              <p className="mb-0">
                 https://t.me/demofirefox_bot
               </p>
             </div>
           </div>
-          <div className="d-flex align-items-center gap-1 mt-2">
+          <div className="d-flex align-items-center gap-1 mt-3">
             <Image src="/assets/images/mer-id.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
             <div className="">
-              <span className="sub-head">Merchant ID<FontAwesomeIcon
-                icon={faCopy}
-                className="facheriticon txt-gry"
-              /></span>
-              <p>
-                4c6a4cdbf06becb2de4f68855ef98b2e
+              <span className="sub-head">Merchant ID
+              <Image src="/assets/images/fa-copy.svg" width={100} height={100} alt="" className="fa-copy-icon ms-2" /> 
+              </span>
+              <p className="mb-0">
+                4c6a4cdbf06becb2de4f68855ef
               </p>
             </div>
           </div>
-          <div className="d-flex align-items-center justify-content-between gap-2 mt-2 regn-wrap">
-             <div className="d-flex gap-1">
-            <Image src="/assets/images/pay-api.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
-           
-              <span className="sub-head">Payment API Key<FontAwesomeIcon
-                icon={faCopy}
-                className="facheriticon txt-gry"
-              />
-                <p>
-               pi_b9a7***************d095b9
-              </p>
+          <div className="d-flex align-items-center justify-content-between gap-2 mt-3 regn-wrap">
+            <div className="d-flex gap-1">
+              <Image src="/assets/images/pay-api.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+
+              <span className="sub-head">Payment API Key
+               <Image src="/assets/images/fa-copy.svg" width={100} height={100} alt="" className="fa-copy-icon ms-2" /> 
+                <p className="m-0">
+                  pi_b9a7***************d095b9
+                </p>
               </span>
-            
+
             </div>
-            <div className="ret-btn">
-           <button
+            <div className="ret-btn mt-2">
+              <button
                 type="button"
-                className="borderbtn reg btn-sm w-40"
+                className="borderbtn reg btn-sm"
               >
-               Regenerate
+                Regenerate
               </button>
             </div>
-  
+
           </div>
-          <div className="d-flex align-items-center justify-content-between gap-1 mt-2 regn-wrap">
-              <div className="d-flex gap-1">
-            <Image src="/assets/images/pay-api-grn.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
-              <span className="sub-head">Payment API Key<FontAwesomeIcon
-                icon={faCopy}
-                className="facheriticon txt-gry"
-              />
-                 <p>
-               pi_b9a7***************d095b9
-              </p>
+          <div className="d-flex align-items-center justify-content-between gap-1 mt-3 regn-wrap">
+            <div className="d-flex gap-1">
+              <Image src="/assets/images/pay-api-grn.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+              <span className="sub-head">Payment API Key
+                <Image src="/assets/images/fa-copy.svg" width={100} height={100} alt="" className="fa-copy-icon ms-2" /> 
+                <p className="m-0">
+                  pi_b9a7***************d095b9
+                </p>
               </span>
-           
+
             </div>
-            <div className="ret-btn">
-          <button
+            <div className="ret-btn mt-2">
+              <button
                 type="button"
-                className="borderbtn reg btn-sm w-40"
+                className="borderbtn reg btn-sm"
               >
-               Regenerate
+                Regenerate
               </button>
             </div>
-   
+
           </div>
         </div>
         <div className="mert-sett">
@@ -210,27 +205,30 @@ const merchantPage = () => {
                 Enable or disable currencies. Add a discount
                 or increase the commission
               </p>
-              <button
-                type="button"
-                className="borderbtn btn-sm w-50"
-              >
-                Manage
-              </button>
+              <div className="mt-2">
+                <button
+                  type="button"
+                  className="borderbtn btn-sm"
+                >
+                  Manage
+                </button>
+              </div>
+
             </div>
           </Form>
         </div>
         <div className="mert-sett">
           <div className="d-flex justify-content-between align-items-center">
             <div className="mert-sett-header">
-              <Image src="/assets/images/auto-convert.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+              <Image src="/assets/images/auto-converting.svg" width={100} height={100} alt="" className="loc-cury-icon me-2" />
               <span className="sub-head">
                 Auto Convert
               </span>
             </div>
-            <div>
+            <div className="mt-2">
               <button
                 type="button"
-                className="borderbtn btn-sm w-30"
+                className="borderbtn btn-sm"
               >
                 Manage
               </button>
@@ -238,7 +236,7 @@ const merchantPage = () => {
 
 
           </div>
-          <p>
+          <p className="mb-1 mt-1">
             Once the invoice has been paid, we will automatically convert the funds received into the coin of your choice.
           </p>
 
@@ -255,17 +253,17 @@ const merchantPage = () => {
           </div>
           <Image src={isNightMode ? "/assets/images/pay-accry.svg" : "/assets/images/pay-accry.svg"} alt="user" className="mobile-iconing" />
           <h2 className="heading">Payment Accuracy</h2>
-          <p>The invoice is marked as Paid even if the client has not paid 24% of the amount.</p>
+          <p className="mb-2">The invoice is marked as Paid even if the client has not paid 24% of the amount.</p>
         </div>
         <Slider />
-        <form action="" className='siteformbg mt-2 mb-2'>
+        <form action="" className='siteformbg mt-3 mb-2'>
           <Form.Group className="form-group">
             <InputGroup>
-              <Form.Control type="text" id="merchantid" placeholder="32" />
+              <Form.Control type="text" id="pay-ment-id" placeholder="32" />
             </InputGroup>
           </Form.Group>
         </form>
-        <p>Anything below this value will be marked as a
+        <p className="mt-2 mb-1">Anything below this value will be marked as a
           Partially paid.</p>
         <div className="form-group mt-2">
           <Button type="button" className="sitebtn btn-block" id="submitbtn">Save</Button>

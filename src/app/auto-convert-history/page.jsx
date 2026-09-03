@@ -33,7 +33,7 @@ export default function Merchantview() {
             <Form.Control placeholder="Search coin" />
           </InputGroup>
         </div>
-        <div className="payment-card mt-2">
+        <div className="payment-card mt-4">
           <div
             className="payment-header"
             onClick={() => setOpenRow(openRow === "btc" ? null : "btc")}
@@ -69,22 +69,24 @@ export default function Merchantview() {
                   <h6 className="sub-head">19.0000000</h6>
                 </div>
 
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-2 align-items-end">
                   <p>To Amount</p>
                   <h6 className="sub-head">1655534.1385</h6>
                 </div>
               </div>
+
               <div className="d-flex justify-content-between">
                 <div className="d-flex flex-column gap-2">
                   <p>Conversion Fee</p>
                   <h6 className="sub-head">33786.41098039</h6>
                 </div>
 
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-2 align-items-end">
                   <p>Status</p>
-                  <h6 className="sub-head t-green">1655534.1385</h6>
+                  <h6 className="sub-head t-green">Completed</h6>
                 </div>
               </div>
+              
             </div>
 
           )}
@@ -125,7 +127,7 @@ export default function Merchantview() {
                   <h6 className="sub-head">19.0000000</h6>
                 </div>
 
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-2 align-items-end">
                   <p>To Amount</p>
                   <h6 className="sub-head">1655534.1385</h6>
                 </div>
@@ -136,9 +138,9 @@ export default function Merchantview() {
                   <h6 className="sub-head">33786.41098039</h6>
                 </div>
 
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-2 align-items-end">
                   <p>Status</p>
-                  <h6 className="sub-head t-green">1655534.1385</h6>
+                  <h6 className="sub-head t-green">Completed</h6>
                 </div>
               </div>
             </div>
@@ -181,7 +183,7 @@ export default function Merchantview() {
                   <h6 className="sub-head">19.0000000</h6>
                 </div>
 
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-2 align-items-end">
                   <p>To Amount</p>
                   <h6 className="sub-head">1655534.1385</h6>
                 </div>
@@ -192,9 +194,9 @@ export default function Merchantview() {
                   <h6 className="sub-head">33786.41098039</h6>
                 </div>
 
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-2 align-items-end">
                   <p>Status</p>
-                  <h6 className="sub-head t-green">1655534.1385</h6>
+                  <h6 className="sub-head t-green">Completed</h6>
                 </div>
               </div>
             </div>
@@ -237,7 +239,7 @@ export default function Merchantview() {
                   <h6 className="sub-head">19.0000000</h6>
                 </div>
 
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-2 align-items-end">
                   <p>To Amount</p>
                   <h6 className="sub-head">1655534.1385</h6>
                 </div>
@@ -248,9 +250,9 @@ export default function Merchantview() {
                   <h6 className="sub-head">33786.41098039</h6>
                 </div>
 
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-2 align-items-end">
                   <p>Status</p>
-                  <h6 className="sub-head t-green">1655534.1385</h6>
+                  <h6 className="sub-head t-green">Completed</h6>
                 </div>
               </div>
             </div>

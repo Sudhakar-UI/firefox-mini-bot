@@ -163,6 +163,255 @@ const merchantPage = () => {
             </Tab.Content>
           </Tab.Container>
         </div>
+             {/* <div className="expired-card">
+          <div className="d-flex justify-content-between">
+            <div className="d-flex flex-coloum gap-2">
+              <Image
+                src={
+                  isNightMode
+                    ? "/assets/images/color/btc.svg"
+                    : "/assets/images/color/btc.svg"
+                }
+                alt="BTC"
+                width={45}
+                height={45}
+              />
+              <div className="">
+                <h5 className="sub-heading">BTC</h5>
+                <p>Bitcoin</p>
+              </div>
+            </div>
+            <div
+              className={`toggle-switch ${isSoundOn ? "active" : ""}`}
+              onClick={() => setIsSoundOn(!isSoundOn)}
+            >
+              <div className="toggle-circle"></div>
+            </div>
+          </div>
+          <Tab.Container defaultActiveKey="discount">
+            <Nav className="merchant-tabs coinmanagetabs mt-2 mb-2">
+              <Nav.Item>
+                <Nav.Link eventKey="novalue">No Value</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="discount">Discount</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="additional">Additional</Nav.Link>
+              </Nav.Item>
+            </Nav>
+            <Tab.Content>
+              <Tab.Pane eventKey="novalue">
+              </Tab.Pane>
+              <Tab.Pane eventKey="discount">
+                <div className="coin-search-wrapper">
+                  <div className="coin-search-primary">
+                    <div className="siteformbg">
+                      <Form.Label>Discount value</Form.Label>
+                      <InputGroup>
+                        <Form.Control placeholder="0.6" />
+                      </InputGroup>
+                    </div>
+                  </div>
+                  <div className="coin-search-secondary">
+                    <div className="siteformbg">
+                      <Form.Label></Form.Label>
+                      <InputGroup>
+                        <InputGroup.Text>%</InputGroup.Text>
+                      </InputGroup>
+                    </div>
+                  </div>
+                </div>
+              </Tab.Pane>
+              <Tab.Pane eventKey="additional">
+                <div className="coin-search-wrapper">
+                  <div className="coin-search-primary">
+                    <div className="siteformbg">
+                      <Form.Label>Additional Commission</Form.Label>
+                      <InputGroup>
+                        <Form.Control placeholder="0.6" />
+                      </InputGroup>
+                    </div>
+                  </div>
+                  <div className="coin-search-secondary">
+                    <div className="siteformbg">
+                      <Form.Label></Form.Label>
+                      <InputGroup>
+                        <InputGroup.Text>%</InputGroup.Text>
+                      </InputGroup>
+                    </div>
+                  </div>
+                </div>
+              </Tab.Pane>
+            </Tab.Content>
+          </Tab.Container>
+        </div>
+             <div className="expired-card">
+          <div className="d-flex justify-content-between">
+            <div className="d-flex flex-coloum gap-2">
+              <Image
+                src={
+                  isNightMode
+                    ? "/assets/images/color/btc.svg"
+                    : "/assets/images/color/btc.svg"
+                }
+                alt="BTC"
+                width={45}
+                height={45}
+              />
+              <div className="">
+                <h5 className="sub-heading">BTC</h5>
+                <p>Bitcoin</p>
+              </div>
+            </div>
+            <div
+              className={`toggle-switch ${isSoundOn ? "active" : ""}`}
+              onClick={() => setIsSoundOn(!isSoundOn)}
+            >
+              <div className="toggle-circle"></div>
+            </div>
+          </div>
+          <Tab.Container defaultActiveKey="discount">
+            <Nav className="merchant-tabs coinmanagetabs mt-2 mb-2">
+              <Nav.Item>
+                <Nav.Link eventKey="novalue">No Value</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="discount">Discount</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="additional">Additional</Nav.Link>
+              </Nav.Item>
+            </Nav>
+            <Tab.Content>
+              <Tab.Pane eventKey="novalue">
+              </Tab.Pane>
+              <Tab.Pane eventKey="discount">
+                <div className="coin-search-wrapper">
+                  <div className="coin-search-primary">
+                    <div className="siteformbg">
+                      <Form.Label>Discount value</Form.Label>
+                      <InputGroup>
+                        <Form.Control placeholder="0.6" />
+                      </InputGroup>
+                    </div>
+                  </div>
+                  <div className="coin-search-secondary">
+                    <div className="siteformbg">
+                      <Form.Label></Form.Label>
+                      <InputGroup>
+                        <InputGroup.Text>%</InputGroup.Text>
+                      </InputGroup>
+                    </div>
+                  </div>
+                </div>
+              </Tab.Pane>
+              <Tab.Pane eventKey="additional">
+                <div className="coin-search-wrapper">
+                  <div className="coin-search-primary">
+                    <div className="siteformbg">
+                      <Form.Label>Additional Commission</Form.Label>
+                      <InputGroup>
+                        <Form.Control placeholder="0.6" />
+                      </InputGroup>
+                    </div>
+                  </div>
+                  <div className="coin-search-secondary">
+                    <div className="siteformbg">
+                      <Form.Label></Form.Label>
+                      <InputGroup>
+                        <InputGroup.Text>%</InputGroup.Text>
+                      </InputGroup>
+                    </div>
+                  </div>
+                </div>
+              </Tab.Pane>
+            </Tab.Content>
+          </Tab.Container>
+        </div>
+             <div className="expired-card">
+          <div className="d-flex justify-content-between">
+            <div className="d-flex flex-coloum gap-2">
+              <Image
+                src={
+                  isNightMode
+                    ? "/assets/images/color/btc.svg"
+                    : "/assets/images/color/btc.svg"
+                }
+                alt="BTC"
+                width={45}
+                height={45}
+              />
+              <div className="">
+                <h5 className="sub-heading">BTC</h5>
+                <p>Bitcoin</p>
+              </div>
+            </div>
+            <div
+              className={`toggle-switch ${isSoundOn ? "active" : ""}`}
+              onClick={() => setIsSoundOn(!isSoundOn)}
+            >
+              <div className="toggle-circle"></div>
+            </div>
+          </div>
+          <Tab.Container defaultActiveKey="discount">
+            <Nav className="merchant-tabs coinmanagetabs mt-2 mb-2">
+              <Nav.Item>
+                <Nav.Link eventKey="novalue">No Value</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="discount">Discount</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="additional">Additional</Nav.Link>
+              </Nav.Item>
+            </Nav>
+            <Tab.Content>
+              <Tab.Pane eventKey="novalue">
+              </Tab.Pane>
+              <Tab.Pane eventKey="discount">
+                <div className="coin-search-wrapper">
+                  <div className="coin-search-primary">
+                    <div className="siteformbg">
+                      <Form.Label>Discount value</Form.Label>
+                      <InputGroup>
+                        <Form.Control placeholder="0.6" />
+                      </InputGroup>
+                    </div>
+                  </div>
+                  <div className="coin-search-secondary">
+                    <div className="siteformbg">
+                      <Form.Label></Form.Label>
+                      <InputGroup>
+                        <InputGroup.Text>%</InputGroup.Text>
+                      </InputGroup>
+                    </div>
+                  </div>
+                </div>
+              </Tab.Pane>
+              <Tab.Pane eventKey="additional">
+                <div className="coin-search-wrapper">
+                  <div className="coin-search-primary">
+                    <div className="siteformbg">
+                      <Form.Label>Additional Commission</Form.Label>
+                      <InputGroup>
+                        <Form.Control placeholder="0.6" />
+                      </InputGroup>
+                    </div>
+                  </div>
+                  <div className="coin-search-secondary">
+                    <div className="siteformbg">
+                      <Form.Label></Form.Label>
+                      <InputGroup>
+                        <InputGroup.Text>%</InputGroup.Text>
+                      </InputGroup>
+                    </div>
+                  </div>
+                </div>
+              </Tab.Pane>
+            </Tab.Content>
+          </Tab.Container>
+        </div> */}
       </Container>
       <div className={`phone-draw-overlay ${openDrawer ? 'open' : ''}`} onClick={handleCloseDrawer}></div>
       <div className={`phone-draw ${openDrawer ? 'open' : ''}`}>
@@ -175,7 +424,7 @@ const merchantPage = () => {
           </div>
           <Image src={isNightMode ? "/assets/images/blk-apply-drw.svg" : "/assets/images/blk-apply-drw.svg"} alt="user" className="mobile-iconing" />
           <h2 className="heading">Bulk Apply</h2>
-          <p>Apply value, discount or additional commission to multiple coins at once.</p>
+          <p className="mt-2">Apply value, discount or additional commission to multiple coins at once.</p>
         </div>
         <div className="mt-2 mb-2 px-2">
           <div className="expired-card">
@@ -238,7 +487,7 @@ const merchantPage = () => {
                     </div>
                   </div>
                   <Tab.Container defaultActiveKey="twentfive">
-                    <Nav className="merchant-tabs coinmanagetabs mt-2 mb-2">
+                    <Nav className="merchant-tabs coinmanagetabs percent mt-2 mb-2">
                       <Nav.Item>
                         <Nav.Link eventKey="five">5%</Nav.Link>
                       </Nav.Item>
@@ -256,8 +505,6 @@ const merchantPage = () => {
                       </Nav.Item>
                     </Nav>
                   </Tab.Container>
-
-
                 </Tab.Pane>
                 <Tab.Pane eventKey="additional">
                   <div className="coin-search-wrapper">
@@ -283,7 +530,7 @@ const merchantPage = () => {
             </Tab.Container>
           </div>
         </div>
-        <div className="form-group d-flex mb-0 gap-2 mt-2 px-2">
+        <div className="form-group d-flex mb-0 gap-2 mt-4 px-2">
           <Link href="/" className="borderbtn btn-block text-center text-decoration-none">Clear all</Link>
           <Button type="button" className="sitebtn btn-block" id="submitbtn">Apply</Button>
         </div>

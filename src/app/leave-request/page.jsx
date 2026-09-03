@@ -19,13 +19,15 @@ const [projectType, setProjectType] = useState("website");
       <Container>
         <span className="heading">Merchants Settings</span>
         <div className="mert-sett">
-          <form action="" className='siteformbg '>
-            <Form.Group className="form-group">
+          <form className='siteformbg'>
+           <Form.Group className="form-group">
               <Form.Label>Merchant ID</Form.Label>
               <InputGroup>
-                <Form.Control type="text" id="merchantid" placeholder="TXf8aUAZqRUwT6M2zk75kVgtfRK7yRaDby..." />
+                <Form.Control type="text" id="" className="met-id" placeholder="9e9b985e3bf9a2ee1a023ededaecfa9e..." />
                 <div className="input-group-append">
-                  <InputGroup.Text id="copybtn"> <FontAwesomeIcon icon={faCopy} /> </InputGroup.Text>
+                  <InputGroup.Text id="copybtn"> 
+                   <Image src="/assets/images/fa-copy.svg" width={100} height={100} alt="" className="fa-copy-icon" /> 
+                  </InputGroup.Text>
                 </div>
               </InputGroup>
             </Form.Group>
@@ -73,7 +75,7 @@ const [projectType, setProjectType] = useState("website");
 
                   </Form.Group>
                 </div>
-                <Form className="siteformbg" mt-3>
+                <Form className="siteformbg mt-3">
                   <Form.Group className="form-group mt-3">
                     <Form.Label>Project URL</Form.Label>
                     <InputGroup>

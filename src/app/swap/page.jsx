@@ -80,9 +80,15 @@ const addtoken = () => {
                             1ETH = 2167.94 USDT
                         </p>
                     </div>
-            <div className="mt-4">
-                <Button className="swap-btn">Continue</Button>
-            </div>
+                    <div className="mt-4">
+                        <Button
+                            as={Link}
+                            href="/confirm-swap"
+                            className="swap-btn"
+                        >
+                            Continue
+                        </Button>
+                    </div>
                 </Container>
             </div>
 

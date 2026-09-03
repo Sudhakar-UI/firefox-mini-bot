@@ -131,12 +131,12 @@ export default function OrderForm() {
                         </div>
                         <div className="balancewlt">
                             <Image
-                  src="/assets/images/transfer-one.svg"
-                  width={14}
-                  height={14}
-                  alt="hand-icon"
-                  className=""
-                />
+                                src="/assets/images/transfer-three.svg"
+                                width={14}
+                                height={14}
+                                alt="hand-icon"
+                                className=""
+                            />
                         </div>
                         {/* <ul className="ruleslist">
                         <li>

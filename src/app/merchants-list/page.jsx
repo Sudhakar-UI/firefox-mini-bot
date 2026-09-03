@@ -16,18 +16,18 @@ const merchantPage = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openDrawerone, setOpenDrawerone] = useState(false);
   const [openDrawertwo, setOpenDrawertwo] = useState(false);
-    const [openDrawerthree, setOpenDrawerthree] = useState(false);
+  const [openDrawerthree, setOpenDrawerthree] = useState(false);
 
   const handleClose = () => setShowModal(false);
   const handleCloseone = () => setShowModalone(false);
-    const handleClosethree = () => setShowModalthree(false);
+  const handleClosethree = () => setShowModalthree(false);
   const handleOpenDrawer = () => setOpenDrawer(true);
   const handleCloseDrawer = () => setOpenDrawer(false);
   const handleOpenDrawerone = () => setOpenDrawerone(true);
   const handleCloseDrawerone = () => setOpenDrawerone(false);
   const handleOpenDrawertwo = () => setOpenDrawertwo(true);
   const handleCloseDrawertwo = () => setOpenDrawertwo(false);
- const handleOpenDrawerthree = () => setOpenDrawerthree(true);
+  const handleOpenDrawerthree = () => setOpenDrawerthree(true);
   const handleCloseDrawerthree = () => setOpenDrawerthree(false);
 
   return (
@@ -56,7 +56,7 @@ const merchantPage = () => {
           </div>
         </div>
         <Button className="setup-acc-btn mt-1 mb-2" onClick={() => handleOpenDrawer(true)}>
-          <FontAwesomeIcon icon={faCirclePlus} className="wall-circle-icon me-1" />
+          <FontAwesomeIcon icon={faCirclePlus} className="wall-circle-icons me-1" />
           Create Merchant
         </Button>
         <div className="mer-set-bot">
@@ -74,11 +74,11 @@ const merchantPage = () => {
               </Badge>
             </div>
           </Link>
-          <Link href="/" className="set-bot-y">
+          <Link href="/" className="set-bot-y set">
             <div className="d-flex align-items-center">
               <Image src="/assets/images/mer-wallet.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
               <div className="d-flex flex-column">
-                <p>Total Turnover</p>
+                <p className="mb-1">Total Turnover</p>
                 <span className="sub-head">₹1,000,000</span>
               </div>
             </div>
@@ -86,7 +86,54 @@ const merchantPage = () => {
             <div className="d-flex align-items-center">
               <Image src="/assets/images/mer-graph.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
               <div className="d-flex flex-column">
-                <p>Today’s Income</p>
+                <p className="mb-1">Today’s Income</p>
+                <span className="sub-head">₹25,430</span>
+              </div>
+            </div>
+          </Link>
+          <div href="/" className="set-bot-y d-flex justify-content-around">
+            <div>
+              <span className="sub-head buleicon">
+                <FontAwesomeIcon icon={faEye} className="me-1" />
+                View
+              </span>
+            </div>
+            {/* <div>
+              <span className="sub-head deleteicon" onClick={() => handleOpenDrawerone(true)}>
+                <FontAwesomeIcon icon={faTrash} className="me-1" />
+                Delete
+              </span>
+            </div> */}
+          </div>
+        </div>
+        <div className="mer-set-bot">
+          <Link href="/" className="set-bot-y mt-2">
+            <div className="d-flex align-items-center">
+              <Image src="/assets/images/r.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+              <div className="d-flex flex-column">
+                <span className="sub-head">Roshini</span>
+              </div>
+            </div>
+            <div className="d-flex align-items-center gap-1">
+              <Badge bg="warning" className="mb-2 d-flex align-items-center">
+                <span className="warning-dot me-1"></span>
+                New
+              </Badge>
+            </div>
+          </Link>
+          <Link href="/" className="set-bot-y set">
+            <div className="d-flex align-items-center">
+              <Image src="/assets/images/mer-wallet.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+              <div className="d-flex flex-column">
+                <p className="mb-1">Total Turnover</p>
+                <span className="sub-head">₹1,000,000</span>
+              </div>
+            </div>
+            <div className="mer-verticalline"></div>
+            <div className="d-flex align-items-center">
+              <Image src="/assets/images/mer-graph.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+              <div className="d-flex flex-column">
+                <p className="mb-1">Today’s Income</p>
                 <span className="sub-head">₹25,430</span>
               </div>
             </div>
@@ -105,57 +152,6 @@ const merchantPage = () => {
               </span>
             </div>
           </div>
-        </div>
-        <div className="mer-set-bot">
-          <Link href="/" className="set-bot-y mt-2">
-            <div className="d-flex align-items-center">
-              <Image src="/assets/images/r.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
-              <div className="d-flex flex-column">
-                <span className="sub-head">Roshini</span>
-              </div>
-            </div>
-            <div className="d-flex align-items-center gap-1">
-              <Badge bg="warning" className="mb-2 d-flex align-items-center">
-                <span className="warning-dot me-1"></span>
-                New
-              </Badge>
-            </div>
-          </Link>
-          <Link href="/" className="set-bot-y">
-            <div className="d-flex align-items-center">
-              <Image src="/assets/images/mer-wallet.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
-              <div className="d-flex flex-column">
-                <p>Total Turnover</p>
-                <span className="sub-head">₹1,000,000</span>
-              </div>
-            </div>
-            <div className="mer-verticalline"></div>
-            <div className="d-flex align-items-center">
-              <Image src="/assets/images/mer-graph.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
-              <div className="d-flex flex-column">
-                <p>Today’s Income</p>
-                <span className="sub-head">₹25,430</span>
-              </div>
-            </div>
-          </Link>
-          <Link href="/" className="set-bot-y d-flex justify-content-around">
-
-            <div>
-              <span className="sub-head buleicon" onClick={() => handleOpenDrawerone(true)}>
-                <FontAwesomeIcon icon={faEye} className="me-1" />
-                View
-              </span>
-            </div>
-
-            <div>
-              <span className="sub-head deleteicon">
-                <FontAwesomeIcon icon={faTrash} className="me-1" />
-                Delete
-              </span>
-            </div>
-
-
-          </Link>
 
         </div>
         <div className="mer-set-bot">
@@ -174,11 +170,11 @@ const merchantPage = () => {
 
             </div>
           </Link>
-          <Link href="/" className="set-bot-y">
+          <Link href="/" className="set-bot-y set">
             <div className="d-flex align-items-center">
               <Image src="/assets/images/mer-wallet.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
               <div className="d-flex flex-column">
-                <p>Total Turnover</p>
+                <p className="mb-1">Total Turnover</p>
                 <span className="sub-head">₹1,000,000</span>
               </div>
             </div>
@@ -186,35 +182,32 @@ const merchantPage = () => {
             <div className="d-flex align-items-center">
               <Image src="/assets/images/mer-graph.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
               <div className="d-flex flex-column">
-                <p>Today’s Income</p>
+                <p className="mb-1">Today’s Income</p>
                 <span className="sub-head">₹25,430</span>
               </div>
             </div>
           </Link>
-          <Link href="/" className="set-bot-y d-flex justify-content-around">
-
+     <div href="/" className="set-bot-y d-flex justify-content-around">
             <div>
               <span className="sub-head buleicon">
                 <FontAwesomeIcon icon={faEye} className="me-1" />
                 View
               </span>
             </div>
-
             <div>
               <span className="sub-head deleteicon" onClick={() => handleOpenDrawerone(true)}>
                 <FontAwesomeIcon icon={faTrash} className="me-1" />
                 Delete
               </span>
             </div>
-
-          </Link>
+          </div>
         </div>
-          {/* <div>
+        <div>
               <span className="sub-head deleteicon" onClick={() => handleOpenDrawerthree(true)}>
                 <FontAwesomeIcon icon={faTrash} className="me-1" />
                 Delete
               </span>
-            </div> */}
+            </div>
         <div className="mer-set-bot">
           <Link href="/" className="set-bot-y mt-2">
             <div className="d-flex align-items-center">
@@ -230,12 +223,12 @@ const merchantPage = () => {
               </Badge>
             </div>
           </Link>
-          
-          <Link href="/" className="set-bot-y">
+
+          <Link href="/" className="set-bot-y set-bot-y set">
             <div className="d-flex align-items-center">
               <Image src="/assets/images/mer-wallet.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
               <div className="d-flex flex-column">
-                <p>Total Turnover</p>
+                <p className="mb-1">Total Turnover</p>
                 <span className="sub-head">₹1,000,000</span>
               </div>
             </div>
@@ -243,29 +236,26 @@ const merchantPage = () => {
             <div className="d-flex align-items-center">
               <Image src="/assets/images/mer-graph.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
               <div className="d-flex flex-column">
-                <p>Today’s Income</p>
+                <p className="mb-1">Today’s Income</p>
                 <span className="sub-head">₹25,430</span>
               </div>
             </div>
           </Link>
-        
-          <Link href="/" className="set-bot-y d-flex justify-content-around">
 
+          <div href="/" className="set-bot-y d-flex justify-content-around">
             <div>
               <span className="sub-head buleicon">
                 <FontAwesomeIcon icon={faEye} className="me-1" />
                 View
               </span>
             </div>
-
             <div>
-              <span className="sub-head deleteicon">
+              <span className="sub-head deleteicon" onClick={() => handleOpenDrawerone(true)}>
                 <FontAwesomeIcon icon={faTrash} className="me-1" />
                 Delete
               </span>
             </div>
-
-          </Link>
+          </div>
 
         </div>
       </Container>
@@ -297,11 +287,11 @@ const merchantPage = () => {
             </Col>
           </Row>
         </div>
-        <div href="/#" onClick={() => handleOpenDrawertwo(true)}>
+        <div href="/#" onClick={() => handleOpenDrawertwo(true)} className="mt-3 mb-2">
           <Button className="sitebtn">Create Merchant</Button>
         </div>
       </div>
-         <div className={`phone-draw-overlay ${openDrawerthree ? 'open' : ''}`} onClick={handleCloseDrawerthree}></div>
+      <div className={`phone-draw-overlay ${openDrawerthree ? 'open' : ''}`} onClick={handleCloseDrawerthree}></div>
       <div className={`phone-draw ${openDrawerthree ? 'open' : ''}`}>
         <div className="phone-draw-handle"></div>
         <div className="text-center position-relative">
@@ -356,7 +346,7 @@ const merchantPage = () => {
         </div>
 
         <Link href="/account-passcode">
-          <Button className="sitebtn mb-3">Go To Setup</Button>
+          <Button className="sitebtn mb-3 mt-2">Go To Setup</Button>
         </Link>
       </div>
       <div className={`phone-draw-overlay ${openDrawerone ? 'open' : ''}`} onClick={handleCloseDrawerone}></div>
@@ -369,26 +359,27 @@ const merchantPage = () => {
             </Button>
           </div>
           <Image src={isNightMode ? "/assets/images/mer-del-icon.svg" : "/assets/images/mer-del-icon.svg"} alt="user" className="mobile-iconing" />
-          <h2 className="heading">Delete Merchant</h2>
-          <p>All merchant data will be permanently deleted and can't be restored. Are you sure you want to delete this merchant?</p>
+          <h2 className="heading del-heading">Delete Merchant</h2>
+          <p className="del-text">All merchant data will be permanently deleted and can't be restored. Are you sure you want to delete this merchant?</p>
         </div>
         <div className="alert alert-danger mb-2 mt-2" role="alert">
           <div className="d-flex gap-2">
-            <Image src={isNightMode ? "/assets/images/danger-icon.svg" : "/assets/images/danger-icon.svg"} alt="user" className="danger-icon" /> <p>
+            <Image src={isNightMode ? "/assets/images/danger-icon.svg" : "/assets/images/danger-icon.svg"} alt="user" className="danger-icon" /> <p className="del-text">
               Deleting this merchant account will remove its Invoice or Static Wallet and API keys. Future deposits to the existing wallet address may not be tracked. Do not send new deposits to associated address.
             </p>
           </div>
         </div>
-        <div className="text-center">
+
+        <div className="remove-associated-title mb-2 mt-3">
           <h2 className="sub-head">Remove Associated</h2>
         </div>
 
-        <div className="invoice-static-wallet">
+        <div className="invoice-static-wallet mt-3 mb-3">
 
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between align-items-center">
             <div>
               <h2 className="sub-head">Invoice Wallet</h2>
-              <p>Remove invoice wallet and history</p>
+              <p className="del-text mb-0">Remove invoice wallet and history</p>
             </div>
             <div>
               <span className="">
@@ -398,10 +389,10 @@ const merchantPage = () => {
 
           </div>
           <hr />
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between align-items-center">
             <div>
               <h2 className="sub-head">Static Wallet</h2>
-              <p>Remove invoice wallet and history</p>
+              <p className="del-text">Remove static wallet and history</p>
             </div>
             <div>
               <span className="">
@@ -413,17 +404,16 @@ const merchantPage = () => {
 
         </div>
 
-        <div className="invoice-static-wallet wall">
+        <div className="invoice-static-wallet wall mt-2 mb-2">
 
-          <div className="d-flex gap-2">
+          <div className="d-flex gap-2 align-items-center">
             <div>
               <span className="">
                 <input type="checkbox" className="merchant-checkbox" />
               </span>
             </div>
             <div>
-
-              <p>I accept all terms and understand this action cannot be undone</p>
+              <p className="accept-all">I accept all terms and understand this action cannot be undone</p>
             </div>
 
           </div>
@@ -431,7 +421,10 @@ const merchantPage = () => {
 
 
         <Link href="/account-passcode">
-          <Button className="sitebtn">Create Merchant</Button>
+          <Button className="sitebtn mt-3">
+            <FontAwesomeIcon icon={faTrash} className="me-2" />
+            Delete Merchant
+          </Button>
         </Link>
       </div>
       <Userfooter />

@@ -43,35 +43,36 @@ const merchantPage = () => {
         <span className="heading">Merchants Settings</span>
         <div className="mert-sett">
           <span className="sub-head">API Integration</span>
-          <p>
+          <p className="mt-1">
             Leave a request for Firefox.VIP integration on your website or Telegram.
             Get an API key to replenish your merchant
           </p>
           <div className="mert-sett-steps mt-3">
+
             <div className="mert-sett-step">
               <div className="mert-sett-step-number mert-sett-step-active">
                 1
               </div>
-              <div className="mert-sett-step-content">
+
+              <div className="mert-sett-step-content mb-3">
                 <span className="sub-head">Add project URL</span>
-                <p>
-                  Link to your website or Telegram bot
-                </p>
+                <p>Link to your website or Telegram bot</p>
               </div>
             </div>
+
             <div className="mert-sett-step-line"></div>
+
             <div className="mert-sett-step">
               <div className="mert-sett-step-number mert-sett-step-inactive">
                 2
               </div>
 
-              <div className="mert-sett-step-content">
+              <div className="mert-sett-step-content mt-3">
                 <span className="sub-head">Confirm domain</span>
-                <p>
-                  Confirm your domain
-                </p>
+                <p>Confirm your domain</p>
               </div>
             </div>
+
           </div>
           <button type="button" className="sitebtn">
             Leave a request
@@ -80,7 +81,7 @@ const merchantPage = () => {
         <div className="mert-sett">
           <Form className="siteformbg">
             <div className="mert-sett-header">
-              <Image src="/assets/images/payment-accury.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+              <Image src="/assets/images/payment-accury.svg" width={100} height={100} alt="" className="loc-cury-icon me-2" />
               <span className="sub-head">
                 Payment Accuracy
               </span>
@@ -173,8 +174,8 @@ const merchantPage = () => {
         </div>
         <div className="mert-sett">
           <div className="d-flex justify-content-between align-items-center">
-            <div className="mert-sett-header">
-              <Image src="/assets/images/auto-convert.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
+            <div className="mert-sett-header mb-2">
+              <Image src="/assets/images/auto-convert.svg" width={100} height={100} alt="" className="loc-cury-icon me-2" />
               <span className="sub-head">
                 Auto Convert
               </span>
@@ -190,7 +191,7 @@ const merchantPage = () => {
 
 
           </div>
-          <p>
+          <p className="mb-1">
             Once the invoice has been paid, we will automatically convert the funds received into the coin of your choice.
           </p>
 
@@ -209,17 +210,17 @@ const merchantPage = () => {
           <h2 className="heading">Payment Accuracy</h2>
           <p>The invoice is marked as Paid even if the client has not paid 24% of the amount.</p>
         </div>
-         <Slider />
-        <form action="" className='siteformbg mt-2 mb-2'>
+        <Slider />
+        <form action="" className='siteformbg mt-4 mb-2'>
           <Form.Group className="form-group">
             <InputGroup>
-              <Form.Control type="text" id="merchantid" placeholder="32" />
+              <Form.Control type="text" id="payment-accuracy-id" placeholder="32" />
             </InputGroup>
           </Form.Group>
         </form>
         <p>Anything below this value will be marked as a
           Partially paid.</p>
-           <div className="form-group mt-2">
+        <div className="form-group mt-3">
           <Button type="button" className="sitebtn btn-block" id="submitbtn">Save</Button>
         </div>
       </div>

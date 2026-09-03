@@ -88,7 +88,7 @@ const addtoken = () => {
                         </Row>
                     </div>
                     <div className="mt-3">
-                        <Link href="/">
+                        <Link href="/widthdraw-confirmation">
                             <Button className="sitebtn">Widthdraw</Button>
                         </Link>
 

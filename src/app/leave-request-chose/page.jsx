@@ -12,12 +12,12 @@ import { BookMarkCircleIcon, RecieveIcon, SendIcon, SwapIcon, TransReportIcon, D
 
 const merchantPage = () => {
   const [value, setValue] = useState(1.6);
-const [currentStep, setCurrentStep] = useState(1);
-const handleStepOne = (e) => {
-  e.preventDefault();
+  const [currentStep, setCurrentStep] = useState(1);
+  const handleStepOne = (e) => {
+    e.preventDefault();
 
-  setCurrentStep(2);
-};
+    setCurrentStep(2);
+  };
   return (
     <div className="merchant-settings-page leave-request-chose">
       <Container>
@@ -27,9 +27,11 @@ const handleStepOne = (e) => {
             <Form.Group className="form-group">
               <Form.Label>Merchant ID</Form.Label>
               <InputGroup>
-                <Form.Control type="text" id="merchantid" placeholder="9e9b985e3bf9a2ee1a023ededaecfa9e..." />
+                <Form.Control type="text" id="" className="met-id" placeholder="9e9b985e3bf9a2ee1a023ededaecfa9e..." />
                 <div className="input-group-append">
-                  <InputGroup.Text id="copybtn"> <FontAwesomeIcon icon={faCopy} /> </InputGroup.Text>
+                  <InputGroup.Text id="copybtn">
+                    <Image src="/assets/images/fa-copy.svg" width={100} height={100} alt="" className="fa-copy-icon" />
+                  </InputGroup.Text>
                 </div>
               </InputGroup>
             </Form.Group>
@@ -39,61 +41,56 @@ const handleStepOne = (e) => {
               <div className="mert-sett-step-number mert-sett-step-active">
                 1
               </div>
-              <div className="mert-sett-step-content">
-                <span className="sub-head mb-2">Choose type and add project URL</span>
-                <p className="mb-2">
-                  Link to your website or Telegram bot
-                </p>
+              <div className="mert-sett-step-content mb-3">
+                <span className="sub-head">Choose type and add project URL</span>
+                <p>Link to your website or Telegram bot</p>
               </div>
             </div>
-            <div
-              className={`mert-sett-step-line ${currentStep > 1 ? "mert-sett-step-line-active" : ""
-                }`}
-            ></div>            <div className="mert-sett-step">
+            <div className="mert-sett-step-line"></div>
+            <div className="mert-sett-step">
               <div className="mert-sett-step-number mert-sett-step-inactive">
                 2
               </div>
-
-              <div className="mert-sett-step-content mb-2">
+              <div className="mert-sett-step-content mt-3">
                 <span className="sub-head">Confirm Telegram Bot</span>
-                <p className="mb-2">
-                  Verify your Telegram bot
-                </p>
-                <span className="sub-head mt-2 mb-2">Step 1</span>
-                <p>
-                  Add this code to your Telegram bot description
-                </p>
-                <form action="" className='siteformbg mt-1'>
-                  <Form.Group className="form-group">
-                    <InputGroup>
-                      <Form.Control type="text" id="merchantid" placeholder="c3c7f7..." />
-                    </InputGroup>
-                  </Form.Group>
-                </form>
-                <span className="sub-head mt-2">Project Name</span>
-                <div className="clickcheck">
-                  <p>
-                    Click ‘Check’ after adding description
-                  </p>
-
-                  <button
-                    type="button"
-                    className="borderbtn btn-sm"
-                  >
-                    check
-                  </button>
-                </div>
-                <div className="w-20 mt-2">
-                  <button type="button" className="sitebtn btn-sm sbt">
-                    Submit
-                  </button>
-                </div>
+                <p>Verify your Telegram bot</p>
+                
               </div>
+              
             </div>
           </div>
-
+                 <div className="mert-sett-step-content stp-cont mb-2">
+            <span className="sub-head step mt-1 mb-2">Step 1</span>
+            <p>
+              Add this code to your Telegram bot description
+            </p>
+            <form action="" className='siteformbg mt-1'>
+              <Form.Group className="form-group">
+                <InputGroup>
+                  <Form.Control type="text" id="merchantid" placeholder="c3c7f7..." />
+                </InputGroup>
+              </Form.Group>
+            </form>
+            <span className="sub-head step mt-2">Project Name</span>
+            <div className="clickcheck">
+              <p>
+                Click ‘Check’ after adding description
+              </p>
+              <button
+                type="button"
+                className="borderbtn btn-sm"
+              >
+                check
+              </button>
+            </div>
+            <div className="w-20 mt-2">
+              <button type="button" className="sitebtn btn-sm sbt">
+                Submit
+              </button>
+            </div>
+          </div>
+   
         </div>
-
       </Container>
 
       <Userfooter />

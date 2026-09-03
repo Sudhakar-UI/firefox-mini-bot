@@ -93,8 +93,8 @@ const merchantPage = () => {
                 height={45}
               />
               <div className="">
-                <h5 className="sub-heading">BTC</h5>
-                <p>Bitcoin</p>
+                <h5 className="sub-heading mb-0">BTC</h5>
+                <p className="mb-1">Bitcoin</p>
               </div>
             </div>
             <div>
@@ -121,8 +121,8 @@ const merchantPage = () => {
                 height={45}
               />
               <div className="">
-                <h5 className="sub-heading">USDT</h5>
-                <p>Tether</p>
+                <h5 className="sub-heading ">USDT</h5>
+                <p className="mb-1">Tether</p>
               </div>
             </div>
             {/* <div
@@ -132,10 +132,10 @@ const merchantPage = () => {
               <div className="toggle-circle"></div>
             </div> */}
           </div>
-          <div className="d-flex justify-content-between mt-3">
+          <div className="d-flex justify-content-between mt-2 align-items-center">
             <div className="">
               <div className="">
-                <p>Conversion commission </p>
+                <p className="mb-1">Conversion commission </p>
                 <h5 className="sub-heading">1.000000%</h5>
               </div>
             </div>
@@ -162,8 +162,8 @@ const merchantPage = () => {
                 height={45}
               />
               <div className="">
-                <h5 className="sub-heading">ETH</h5>
-                <p>Ethereum</p>
+                <h5 className="sub-heading mb-0">ETH</h5>
+                <p className="mb-1">Ethereum</p>
               </div>
             </div>
             <div>
@@ -191,14 +191,14 @@ const merchantPage = () => {
               />
               <div className="">
                 <h5 className="sub-heading">USDT</h5>
-                <p>Tether</p>
+                <p className="mb-1">Tether</p>
               </div>
             </div>
           </div>
-          <div className="d-flex justify-content-between mt-3">
+          <div className="d-flex justify-content-between mt-2 align-items-center">
             <div className="">
               <div className="">
-                <p>Conversion commission </p>
+                <p className="mb-1">Conversion commission </p>
                 <h5 className="sub-heading">1.000000%</h5>
               </div>
             </div>
@@ -225,8 +225,8 @@ const merchantPage = () => {
                 height={45}
               />
               <div className="">
-                <h5 className="sub-heading">SOL</h5>
-                <p>Solona</p>
+                <h5 className="sub-heading mb-0">SOL</h5>
+                <p className="mb-1">Solona</p>
               </div>
             </div>
             <div>
@@ -254,14 +254,14 @@ const merchantPage = () => {
               />
               <div className="">
                 <h5 className="sub-heading">USDT</h5>
-                <p>Tether</p>
+                <p className="mb-1">Tether</p>
               </div>
             </div>
           </div>
-          <div className="d-flex justify-content-between mt-3">
+          <div className="d-flex justify-content-between mt-2 align-items-center">
             <div className="">
               <div className="">
-                <p>Conversion commission </p>
+                <p className="mb-1">Conversion commission </p>
                 <h5 className="sub-heading">1.000000%</h5>
               </div>
             </div>
@@ -288,8 +288,8 @@ const merchantPage = () => {
                 height={45} 
               />
               <div className="">
-                <h5 className="sub-heading">LTC</h5>
-                <p>Litecoin</p>
+                <h5 className="sub-heading mb-0">LTC</h5>
+                <p className="mb-1">Litecoin</p>
               </div>
             </div>
             <div>
@@ -317,16 +317,16 @@ const merchantPage = () => {
               />
               <div className="">
                 <h5 className="sub-heading">USDT</h5>
-                <p>Tether</p>
+                <p className="mb-1">Tether</p>
               </div>
             </div>
           </div>
-          <div className="d-flex justify-content-between mt-3">
+          <div className="d-flex justify-content-between mt-2 align-items-center">
             <div className="">
-              <div className="">
-                <p>Conversion commission </p>
+         
+                <p className="mb-1">Conversion commission </p>
                 <h5 className="sub-heading">1.000000%</h5>
-              </div>
+           
             </div>
             <div
               className={`toggle-switch ${isSoundOn ? "active" : ""}`}
@@ -367,7 +367,7 @@ const merchantPage = () => {
                 />
                 <div className="">
                   <h5 className="sub-heading">BTC</h5>
-                  <p>Bitcoin</p>
+                  <p className="mb-1">Bitcoin</p>
                 </div>
               </div>
               <div

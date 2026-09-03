@@ -54,7 +54,7 @@ export default function SetPasscode() {
                     </div>
                 </div>
                 <div className="passcode-container">
-                    <h2 className="sub-head txt-gry">Set Up Passcode</h2>
+                    <h2 className="sub-head txt-gry mt-2">Set Up Passcode</h2>
                     <div className="code-boxes mt-4">
                         {code.map((digit, i) => (
                             <div key={i} className="box">

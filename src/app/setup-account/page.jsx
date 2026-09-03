@@ -80,16 +80,17 @@ const addtoken = () => {
                                     <AccountIcon size={22} color='#fff' />
                                 </div>
                             </div>
-                            <div className="wall-set-content">
+                            <Link href="/basic-information" className="wall-set-content">
                                 <h3 className="wall-set-title">Add Personal Data</h3>
-                            </div>
+
+                            </Link>
                         </div>
                     </div>
 
                     <div className="mt-1">
                         <span className="sub-head txt-gry">Account Security</span>
                     </div>
-                    <Link href="#0" className="set-acc-link mt-3">
+                    <Link href="/set-passcode" className="set-acc-link mt-3">
                         <div>
                             <div>
                                 <LockIcon size={24} color="#fff" />

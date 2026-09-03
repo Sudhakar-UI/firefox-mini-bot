@@ -95,19 +95,19 @@ const addtoken = () => {
             <p>Total balance in <span className="txt-clor">USD</span></p>
           </div>
           <div className="d-flex justify-content-around mt-4">
-            <Link href="#0" className="d-flex flex-column align-items-center main-links">
+            <Link href="/withdraw" className="d-flex flex-column align-items-center main-links">
               <div className="trsicon">
                 <SendIcon size={20} />
               </div>
               <span className="txt-clor">Send</span>
             </Link>
-            <Link href="#0" className="d-flex flex-column align-items-center main-links">
+            <Link href="/deposit-qr" className="d-flex flex-column align-items-center main-links">
               <div className="trsicon">
                 <RecieveIcon size={20} />
               </div>
               <span className="txt-clor">Receive</span>
             </Link>
-            <Link href="#0" className="d-flex flex-column align-items-center main-links">
+            <Link href="/swap" className="d-flex flex-column align-items-center main-links">
               <div className="trsicon">
                 <SwapIcon size={20} />
               </div>

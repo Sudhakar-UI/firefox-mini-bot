@@ -64,13 +64,13 @@ const merchantPage = () => {
             Active
           </Badge>
         </div>
-        <div className="d-flex mt-3 mb-2 gap-2">
+        <div className="d-flex mt-3 mb-2 gap-2 blue-card-two">
           <div className="blue-card">
             <div>
               <Image src="/assets/images/total-income.svg" width={50} height={50} alt="" className="loc-cury-iconing" />
             </div>
             <div>
-              <p className="mge-all">Total Income</p>
+              <p className="mge-all mb-2">Total Income</p>
               <h6 className="sub-heading">$5,932.26</h6>
             </div>
           </div>
@@ -79,7 +79,7 @@ const merchantPage = () => {
               <Image src="/assets/images/total-turnover.svg" width={50} height={50} alt="" className="loc-cury-iconing" />
             </div>
             <div>
-              <p className="mge-all">Total Turnover</p>
+              <p className="mge-all mb-2">Total Turnover</p>
               <h6 className="sub-heading">$335,973.80</h6>
             </div>
           </div>
@@ -92,7 +92,7 @@ const merchantPage = () => {
             <div className="d-flex gap-1 align-items-center">
               <div>
                 <h6 className="sub-heading mert">Merchant Settings</h6>
-                <p className="mge-all">Manage your preference</p>
+                <p className="mge-all mb-0">Manage your preference</p>
               </div>
               <div className="arrow-right">
                 <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
@@ -106,8 +106,8 @@ const merchantPage = () => {
             </div>
             <div className="d-flex gap-1 align-items-center">
               <div>
-                <h6 className="sub-heading">Payment by Link</h6>
-                <p className="mge-all">Create & share payment link</p>
+                <h6 className="sub-heading mert">Payment by Link</h6>
+                <p className="mge-all mb-0">Create & share payment link</p>
               </div>
               <div className="arrow-right">
                 <FontAwesomeIcon icon={faChevronRight} className="me-1 wall-circle-icon" />
@@ -119,7 +119,7 @@ const merchantPage = () => {
         </div>
 
         <Tab.Container defaultActiveKey="payment">
-          <Nav className="merchant-tabs mt-2 mb-2">
+          <Nav className="merchant-tabs mt-2 mb-3">
             <Nav.Item>
               <Nav.Link eventKey="payment">Payments</Nav.Link>
             </Nav.Item>
@@ -130,7 +130,7 @@ const merchantPage = () => {
 
           <Tab.Content>
             <Tab.Pane eventKey="payment">
-              <div className="serrch-flt-action">
+              <div className="serrch-flt-action mt-2">
                 <div className="siteformbg">
                   <InputGroup>
                     <InputGroup.Text>
@@ -143,8 +143,11 @@ const merchantPage = () => {
                   <div className="" onClick={() => handleOpenDrawer(true)}>
                     <Image src="/assets/images/mer-filtericon.svg" width={50} height={50} alt="" className="locicons" />
                   </div>
+                  <div>
 
                   <Image src="/assets/images/dow-mericon.svg" width={50} height={50} alt="" className="locicons" />
+                  </div>
+
                 </div>
               </div>
 
@@ -190,7 +193,7 @@ const merchantPage = () => {
                   <div className="paymentandcommission-expired-body">
                     <div className="paymentandcommission-expired-alert">
                       <div className="paymentandcommission-expired-alert-icon">
-                        <FontAwesomeIcon icon={faCircleExclamation} />
+                         <Image src="/assets/images/dan-ioning.svg" width={50} height={50} alt="" className="loc-cury-iconing" />
                       </div>
 
                       <div className="paymentandcommission-expired-alert-content">
@@ -254,7 +257,18 @@ const merchantPage = () => {
                         }}
                         aria-label="Copy payment ID"
                       >
-                        <FontAwesomeIcon icon={faCopy} />
+                       <span>
+                        <Image
+                        src={
+                          isNightMode
+                            ? "/assets/images/fa-copy.svg"
+                            : "/assets/images/fa-copy.svg"
+                        }
+                        alt="TON"
+                        width={45}
+                        height={45} className="fa-copy-icon"
+                      />
+                        </span>  
                       </button>
 
                     </div>
@@ -374,7 +388,18 @@ const merchantPage = () => {
                         }}
                         aria-label="Copy payment ID"
                       >
-                        <FontAwesomeIcon icon={faCopy} />
+                                              <span>
+                        <Image
+                        src={
+                          isNightMode
+                            ? "/assets/images/fa-copy.svg"
+                            : "/assets/images/fa-copy.svg"
+                        }
+                        alt="TON"
+                        width={45}
+                        height={45} className="fa-copy-icon"
+                      />
+                        </span>  
                       </button>
 
                     </div>
@@ -493,7 +518,18 @@ const merchantPage = () => {
                         }}
                         aria-label="Copy payment ID"
                       >
-                        <FontAwesomeIcon icon={faCopy} />
+                                              <span>
+                        <Image
+                        src={
+                          isNightMode
+                            ? "/assets/images/fa-copy.svg"
+                            : "/assets/images/fa-copy.svg"
+                        }
+                        alt="TON"
+                        width={45}
+                        height={45} className="fa-copy-icon"
+                      />
+                        </span>  
                       </button>
 
                     </div>
@@ -612,7 +648,18 @@ const merchantPage = () => {
                         }}
                         aria-label="Copy payment ID"
                       >
-                        <FontAwesomeIcon icon={faCopy} />
+                                               <span>
+                        <Image
+                        src={
+                          isNightMode
+                            ? "/assets/images/fa-copy.svg"
+                            : "/assets/images/fa-copy.svg"
+                        }
+                        alt="TON"
+                        width={45}
+                        height={45} className="fa-copy-icon"
+                      />
+                        </span>  
                       </button>
 
                     </div>
@@ -632,12 +679,15 @@ const merchantPage = () => {
                     <Form.Control placeholder="Search payment id..." />
                   </InputGroup>
                 </div>
-                <div className="d-flex justify-content-between align-items-center gap-1">
+                  <div className="d-flex justify-content-between align-items-center gap-1">
                   <div className="" onClick={() => handleOpenDrawer(true)}>
                     <Image src="/assets/images/mer-filtericon.svg" width={50} height={50} alt="" className="locicons" />
                   </div>
+                  <div>
 
                   <Image src="/assets/images/dow-mericon.svg" width={50} height={50} alt="" className="locicons" />
+                  </div>
+
                 </div>
               </div>
               <div className="paymentandcommission-expired-card">
@@ -1126,7 +1176,7 @@ const merchantPage = () => {
           <Image src={isNightMode ? "/assets/images/filter-iconing.svg" : "/assets/images/filter-iconing.svg"} alt="user" className="mobile-iconing" />
           <h2 className="heading">Filter</h2>
         </div>
-        <div className="mt-2 mb-2 px-2">
+        <div className="mt-2 mb-2">
           <Tab.Container defaultActiveKey="payment">
             <Nav className="merchant-tabs tabs mt-2 mb-2">
               <Nav.Item>
@@ -1247,7 +1297,7 @@ const merchantPage = () => {
             </Tab.Content>
           </Tab.Container>
         </div>
-        <div className="form-group d-flex mb-0 gap-2 mt-2">
+        <div className="form-group d-flex mb-0 gap-2 mt-4">
           <Link href="/" className="borderbtn btn-block text-center text-decoration-none">Clear all</Link>
           <Button type="button" className="sitebtn btn-block" id="submitbtn">Apply filters</Button>
         </div>
