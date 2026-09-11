@@ -60,8 +60,8 @@ const merchantPage = () => {
             <Image src="/assets/images/project-url.svg" width={100} height={100} alt="" className="loc-cury-icon me-3" />
             <div className="">
               <span className="sub-head">Project URL</span>
-              <p className="mb-0">
-                https://t.me/demofirefox_bot
+              <p className="mb-0 wrap-url">
+                https://t.me/demofirefox_bothttps://t.me/demofirefox_botttps://t.me/demofirefox_bothttps://t.me/demofirefox_bot
               </p>
             </div>
           </div>
@@ -71,8 +71,8 @@ const merchantPage = () => {
               <span className="sub-head">Merchant ID
               <Image src="/assets/images/fa-copy.svg" width={100} height={100} alt="" className="fa-copy-icon ms-2" /> 
               </span>
-              <p className="mb-0">
-                4c6a4cdbf06becb2de4f68855ef
+              <p className="mb-0 wrap-url">
+                 https://t.me/demofirefox_bothttps://t.me/demofirefox_botttps://t.me/demofirefox_bothttps://t.me/demofirefox_bot
               </p>
             </div>
           </div>

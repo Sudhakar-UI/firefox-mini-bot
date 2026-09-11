@@ -131,7 +131,7 @@ export default function OrderForm() {
                         </div>
                         <div className="balancewlt">
                             <Image
-                                src="/assets/images/transfer-three.svg"
+                                src="/assets/images/trans.svg"
                                 width={14}
                                 height={14}
                                 alt="hand-icon"

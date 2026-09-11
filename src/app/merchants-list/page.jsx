@@ -35,7 +35,7 @@ const merchantPage = () => {
       <Container>
         <span className="heading txt-gry addbok">Merchants</span>
         <p className="mge-all">Manage all your merchants</p>
-        <div className="d-flex mt-3 mb-2 gap-2">
+        <div className="d-flex mt-3 mb-2 gap-2 blue-card-two">
           <div className="blue-card">
             <div>
               <Image src="/assets/images/total-income.svg" width={50} height={50} alt="" className="loc-cury-iconing" />
@@ -98,12 +98,12 @@ const merchantPage = () => {
                 View
               </span>
             </div>
-            {/* <div>
+            <div>
               <span className="sub-head deleteicon" onClick={() => handleOpenDrawerone(true)}>
                 <FontAwesomeIcon icon={faTrash} className="me-1" />
                 Delete
               </span>
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="mer-set-bot">
@@ -202,12 +202,12 @@ const merchantPage = () => {
             </div>
           </div>
         </div>
-        <div>
+        {/* <div>
               <span className="sub-head deleteicon" onClick={() => handleOpenDrawerthree(true)}>
                 <FontAwesomeIcon icon={faTrash} className="me-1" />
                 Delete
               </span>
-            </div>
+            </div> */}
         <div className="mer-set-bot">
           <Link href="/" className="set-bot-y mt-2">
             <div className="d-flex align-items-center">
@@ -365,7 +365,7 @@ const merchantPage = () => {
         <div className="alert alert-danger mb-2 mt-2" role="alert">
           <div className="d-flex gap-2">
             <Image src={isNightMode ? "/assets/images/danger-icon.svg" : "/assets/images/danger-icon.svg"} alt="user" className="danger-icon" /> <p className="del-text">
-              Deleting this merchant account will remove its Invoice or Static Wallet and API keys. Future deposits to the existing wallet address may not be tracked. Do not send new deposits to associated address.
+              Deleting this merchant account will remove its Invoice or Static Wallet and API keys. Future deposits to the existing wallet address may not be tracked. <span className="send-new-deposit"> send new deposits to associated address.</span> 
             </p>
           </div>
         </div>

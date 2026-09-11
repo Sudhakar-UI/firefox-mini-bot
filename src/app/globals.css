@@ -8837,6 +8837,8 @@ body.has-home-footer .page-content {
 }
 
 .pagination li .page-link {
+  width: 100%;
+  max-width: 46px;
   font-size: 14px;
   color: #000000;
   background-color: #fff;
@@ -8867,8 +8869,9 @@ body.has-home-footer .page-content {
 }
 
 .pagination {
-  border-top: 1px solid #eee;
+  /* border-top: 1px solid #eee; */
   padding-top: 13px;
+  gap: 5px;
 }
 
 .pagination .page-item.active .page-link {
@@ -8877,15 +8880,16 @@ body.has-home-footer .page-content {
   background: #ff6a00 !important;
 }
 
-.nightmode .pagination {
+/* .nightmode .pagination {
   border-color: #2d2d2d;
-}
+} */
 
 .nightmode .pagination li .page-link {
   color: #ffffff;
   border-color: #384452 !important;
   background-color: #202e3b00 !important;
 }
+
 
 .nightmode .pagination .disabled .page-link {
   background-color: #1e1e1e;
@@ -9047,11 +9051,12 @@ body.has-home-footer .page-content {
 
   .del-heading {
     line-height: 24px;
+    margin-top: 10px;
   }
 
   .del-text {
     font-size: 11px !important;
-    margin-bottom: 3px !important;
+    /* margin-bottom: 3px !important; */
   }
 
   .paymentandcommission .merch-ant-cards {
@@ -9073,7 +9078,7 @@ body.has-home-footer .page-content {
   .paymentandcommission .mge-all {
     white-space: nowrap;
     font-size: 14px !important;
-    margin-bottom: 10px !important;
+    /* margin-bottom: 10px !important; */
   }
 
   .innerpagetab.historytab .input-group-text {
@@ -9240,10 +9245,18 @@ body.has-home-footer .page-content {
   } */
 }
 
+@media (max-width: 420px) {
+  .merchantPage.merchantlist .blue-card {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+}
+
 @media (max-width: 380px) {
 
   .loc-cury-iconing {
-    max-width: 30px !important;
+    max-width: 38px !important;
   }
 
   .blue-card-two {
@@ -9280,9 +9293,6 @@ body.has-home-footer .page-content {
 }
 
 @media(max-width: 340px) {
-  .loc-cury-iconing {
-    max-width: 28px !important;
-  }
 
   .loc-cury-iconing {
     width: 100%;
@@ -10806,7 +10816,7 @@ body.has-home-footer .page-content {
 
 .merchantPage .mge-all {
   color: #8f9098 !important;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400 !important;
   line-height: 20px !important;
   margin-bottom: 8px !important;
@@ -11132,6 +11142,7 @@ body.has-home-footer .page-content {
 
 .merchantPage.merchantlist .alert-danger p {
   color: #EB3C49 !important;
+  font-size: 14px !important;
 }
 
 .nightmode .merchantPage.merchantlist .alert-danger {
@@ -11161,6 +11172,14 @@ body.has-home-footer .page-content {
 
 .nightmode .invoice-static-wallet hr {
   border: 1px solid #384452;
+  margin: 6px 0px;
+}
+
+.send-new-deposit {
+  color: #e84550;
+  font-size: 14px;
+  font-weight: 700;
+
 }
 
 .invoice-static-wallet.wall {
@@ -11714,9 +11733,11 @@ body.has-home-footer .page-content {
   margin-bottom: -3px;
   margin-left: 19px;
 }
+
 .mert-sett-step-content.stp-cont {
-padding-left: 40px;
+  padding-left: 40px;
 }
+
 .mert-sett-request-btn:hover {
   background: #ed3508;
 }
@@ -12428,8 +12449,12 @@ padding-left: 40px;
 
 .nightmode .merchant-settings-page.mertn .mertn-project-type-radio .form-check-input:checked {
   background-color: #2b3542;
-  border-color: #ff542f;
-  box-shadow: 0 0 0 2px #ff542f inset;
+  border-color: #44a3dd;
+  box-shadow: inset 0 0 0 2px #44a3dd;
+}
+
+.nightmode .merchant-settings-page.mertn .form-check-input:checked[type="radio"] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2344a3dd'/%3e%3c/svg%3e");
 }
 
 .merchant-settings-page.mertn .form-check-input:checked[type="radio"] {
@@ -12459,7 +12484,7 @@ padding-left: 40px;
   padding: 3px 14px !important;
   font-size: 11px !important;
   width: 100%;
-  max-width: 80px;
+  max-width: 100px;
 }
 
 .clickcheck {
@@ -12681,13 +12706,24 @@ padding-left: 40px;
   background: #222e3c !important;
 }
 
-.paymentandcommission .siteformbg .form-control {
+/* .paymentandcommission .siteformbg .form-control {
   border-left: 0px;
+} */
+/* .paymentandcommission.merchantview-page .siteformbg .form-control {
+    border-left: 1px solid #e8e8e8;
 }
-
+.nightmode .paymentandcommission.merchantview-page .siteformbg .form-control {
+    border-left: 1px solid #384452;
+} */
 .fa-copy-icon {
   width: 20px;
   height: 20px;
+}
+
+.wrap-url {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .met-id {
@@ -12816,26 +12852,40 @@ padding-left: 40px;
 .blue-card-two .blue-card:last-child {
   background-color: #F2F6FE;
 }
+
 .nightmode .blue-card-two .blue-card:last-child {
   background-color: #2b3542
 }
 
 .nightmode .blue-card-two .blue-card:first-child {
-    background-color: #263648;
+  background-color: #2b3542;
 }
 
-.merchant-settings-page.leave-request-chose  .mert-sett-step-inactive {
-color: #C89300 !important;
-    background: #FFF9EA !important;
+.merchant-settings-page.leave-request-chose .mert-sett-step-inactive {
+  color: #C89300 !important;
+  background: #FFF9EA !important;
 }
 
-.all-addresses-page .set-bot-y:after, .set-boted:after {
-    bottom: -5px;
+.all-addresses-page .set-bot-y:after,
+.set-boted:after {
+  bottom: -5px;
 }
 
 .confirm-check-box {
   color: #fff;
 }
+
 .nightmode .confirm-check-box {
   color: #fff;
+}
+
+.cust-inpt {
+  padding-right: 78px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nightmode .merchant-checkbox:checked {
+    background: #44a3dd;
+    border-color: #44a3dd;
 }
