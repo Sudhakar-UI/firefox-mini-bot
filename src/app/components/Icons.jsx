@@ -219,17 +219,19 @@ export const TransferIcon = ({ color = "currentColor", size = 20 }) => (
         xmlns="http://www.w3.org/2000/svg"
     >
         <path
-            d="M7 7H19L16 4M17 17H5L8 20"
+            d="M4 8H17M17 8L14 5M17 8L14 11"
             stroke={color}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
         />
+
         <path
-            d="M19 7V10M5 17V14"
+            d="M20 16H7M7 16L10 13M7 16L10 19"
             stroke={color}
             strokeWidth="2"
             strokeLinecap="round"
+            strokeLinejoin="round"
         />
     </svg>
 );

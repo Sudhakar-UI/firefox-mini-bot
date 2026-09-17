@@ -132,61 +132,97 @@ const addtoken = () => {
           <Carousel
             indicators={true}
             controls={false}
-            interval={3000}
+            interval={null}
             className="swap-carousel mt-3"
           >
             <Carousel.Item>
-          <div className="blue-bg-main-y mt-3">
-            <div className="d-flex gap-3 align-items-center">
-              <div>
-                <Image
-                  src="/assets/images/set-hand.svg"
-                  width={60}
-                  height={60}
-                  alt="hand-icon"
-                  className="hand-icon"
-                />
+              <div className="blue-bg-main-y mt-3">
+                <div className="d-flex gap-3 align-items-center">
+                  <div>
+                    <Image
+                      src="/assets/images/set-hand.svg"
+                      width={60}
+                      height={60}
+                      alt="hand-icon"
+                      className="hand-icon"
+                    />
+                  </div>
+
+                  <div className="d-flex flex-column">
+                    <h6 className="sub-head txt-clor mb-1">
+                      Your account is suspended
+                    </h6>
+
+                    <p className="mb-0 suspend-text">
+                      Your region is not supported,  Your region is not supported,
+                    </p>
+                  </div>
+                </div>
               </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="blue-bg-main-y mt-3">
+                <div className="d-flex gap-3 align-items-center">
 
-              <div className="d-flex flex-column">
-                <h6 className="sub-head txt-clor mb-1">
-                  Your account is suspended
-                </h6>
+                  <div className="swap-icon-wrapper">
+                    <Image
+                      src="/assets/images/swap-gif.gif"
+                      width={60}
+                      height={60}
+                      alt="swap-icon"
+                      className="swap-icongif"
+                    />
+                  </div>
 
-                <p className="mb-0 suspend-text">
-                  Your region is not supported,  Your region is not supported,
-                </p>
+                  <div className="d-flex flex-column">
+                    <h6 className="sub-head txt-clor mb-1">
+                      Your account is suspended
+                    </h6>
+
+                    <p className="suspend-text mb-0">
+                      Your region is not supported
+                    </p>
+                  </div>
+
+                </div>
               </div>
-            </div>
-          </div>
-          </Carousel.Item>
-               <Carousel.Item>
-          <div className="blue-bg-main-y mt-3">
-            <div className="d-flex gap-3 align-items-center">
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="blue-bg-main-y mt-3">
+                <div className="d-flex gap-3 align-items-center w-100">
 
-              <div className="swap-icon-wrapper">
-                <Image
-                  src="/assets/images/swap-gif.gif"
-                  width={60}
-                  height={60}
-                  alt="swap-icon"
-                  className="swap-icongif"
-                />
+                  <div className="swap-icon-wrapper">
+                    <Image
+                      src="/assets/images/spinwheel-gif.gif"
+                      width={60}
+                      height={60}
+                      alt="swap-icon"
+                      className="swap-icongif"
+                    />
+                  </div>
+
+                  <div className="d-flex flex-column">
+                    <h6 className="sub-head txt-clor mb-1">
+                      Spin & Win
+                    </h6>
+
+                    <p className="suspend-text mb-0">
+                      Take your chance and win amazing rewards
+                      with LHU tokens!
+                    </p>
+                  </div>
+
+                  <div className="spnwhl-wrapper">
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className="spnwhl"
+                    />
+                  </div>
+
+                </div>
               </div>
+            </Carousel.Item>
 
-              <div className="d-flex flex-column">
-                <h6 className="sub-head txt-clor mb-1">
-                  Your account is suspended
-                </h6>
-
-                <p className="suspend-text mb-0">
-                  Your region is not supported
-                </p>
-              </div>
-
-            </div>
-          </div>
-          </Carousel.Item>
           </Carousel>
 
           <div className="d-flex justify-content-between align-items-center mt-5">

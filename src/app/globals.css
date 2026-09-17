@@ -124,10 +124,6 @@
   font-weight: 600;
 }
 
-img {
-  /* width: 100%; */
-}
-
 .trsicon {
   background: linear-gradient(#ffc632, #ff6a00);
   color: #fff;
@@ -187,6 +183,10 @@ img {
   margin-top: 10px;
 }
 
+.spnwhl {
+  color: #8f9098;
+}
+
 .fxp-progress {
   background: conic-gradient(#ff5c2e 0% var(--setup-progress, 25%), #e9e9e9 var(--setup-progress, 25%) 100%);
   border-radius: 100%;
@@ -241,7 +241,6 @@ img {
   align-items: center;
   text-decoration: none;
   color: inherit;
-  /* border-bottom: 1px solid #e8e8e8; */
 }
 
 .set-boted {
@@ -1223,7 +1222,8 @@ p {
 
 .swap-icongif {
   width: 100%;
-  max-width: 38px !important;
+  height: 100%;
+  max-width: 69px !important;
 }
 
 .time-icon {
@@ -1248,8 +1248,8 @@ p {
 
 .cry-selt-wra-y {
   width: 150px;
-  min-width: 150px;
-  max-width: 150px;
+  min-width: 130px;
+  max-width: 130px;
   padding: 0 !important;
   margin: 0;
   border: none !important;
@@ -8737,6 +8737,10 @@ body.has-home-footer .page-content {
   padding-bottom: 90px;
 }
 
+.main-page .add-bok {
+  margin-bottom: 25px;
+}
+
 .staticwallet-page .phone-draw {
   z-index: 9999 !important;
 }
@@ -11524,7 +11528,6 @@ body.has-home-footer .page-content {
 }
 
 .nightmode .paymentandcommission-expired-info-row {
-  /* border-bottom: 1px solid #e7e7e7; */
   border-bottom-color: #343943;
 }
 
@@ -11742,8 +11745,6 @@ body.has-home-footer .page-content {
   background: #ed3508;
 }
 
-
-
 .nightmode .mert-sett {
   box-shadow: none;
   background: #2b3542;
@@ -11759,7 +11760,6 @@ body.has-home-footer .page-content {
   margin-bottom: 15px;
 }
 
-/* Dynamic vertical line */
 .merchant-settings-page .mert-sett-steps::before {
   content: "";
   position: absolute;
@@ -11817,12 +11817,10 @@ body.has-home-footer .page-content {
   margin-bottom: 0;
 }
 
-/* Hide old fixed-height line */
 .merchant-settings-page .mert-sett-step-line {
   display: none;
 }
 
-/* Dark mode */
 .nightmode .merchant-settings-page .mert-sett-steps::before {
   background: #68717b;
 }
@@ -11956,14 +11954,11 @@ body.has-home-footer .page-content {
 
 .mert-sett-progress {
   --progress: 32%;
-
   width: 112px;
   height: 112px;
   border-radius: 50%;
-
   background: conic-gradient(#ff3b0a 0 var(--progress),
       #d9d9db var(--progress) 100%);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11975,11 +11970,9 @@ body.has-home-footer .page-content {
   height: 88px;
   border-radius: 50%;
   background: #f7f7f8;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   transform: rotate(90deg);
 }
 
@@ -12038,7 +12031,6 @@ body.has-home-footer .page-content {
   border-radius: 4px;
   background: #fff0ec;
   color: #ff856d;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12251,11 +12243,6 @@ body.has-home-footer .page-content {
   right: 0;
   width: 1px;
   height: 100%;
-  /* background: #ddd; */
-}
-
-.nightmode .merchant-tabs.coinmanagetabs .nav-item:not(:last-child)::after {
-  /* background: #384452; */
 }
 
 .merchant-tabs.coinmanagetabs .nav-link {
@@ -12338,8 +12325,6 @@ body.has-home-footer .page-content {
   max-width: 44px !important;
   height: 100%;
 }
-
-
 
 .merchant-settings-page.mertn .mert-sett-steps {
   position: relative;
@@ -12512,8 +12497,6 @@ body.has-home-footer .page-content {
   max-width: 47px;
 }
 
-
-
 .merchant-settings-page.leave-request-chose .mert-sett-steps {
   position: relative;
   width: 100%;
@@ -12529,11 +12512,6 @@ body.has-home-footer .page-content {
 .merchant-settings-page.leave-request-chose .mert-sett-step:first-child {
   align-items: flex-start !important;
 }
-
-/* .merchant-settings-page.leave-request-chose
-  .mert-sett-step {
-  align-items: end !important;
-} */
 
 .merchant-settings-page.leave-request-chose .mert-sett-step-active {
   background: #3bb486;
@@ -12565,7 +12543,6 @@ body.has-home-footer .page-content {
   height: auto;
   background: #b8b8b9;
   z-index: 1;
-
   transition:
     background-color 0.3s ease,
     height 0.3s ease;
@@ -12662,15 +12639,12 @@ body.has-home-footer .page-content {
 .merchant-checkbox {
   appearance: none;
   -webkit-appearance: none;
-
   cursor: pointer;
   background: #fff;
   border: 1px solid #9A9899;
   border-radius: 25% !important;
-
   width: 20px !important;
   height: 20px !important;
-
   position: relative;
 }
 
@@ -12691,7 +12665,6 @@ body.has-home-footer .page-content {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
-
   color: #fff !important;
   font-size: 13px;
   font-weight: 700;
@@ -12706,15 +12679,6 @@ body.has-home-footer .page-content {
   background: #222e3c !important;
 }
 
-/* .paymentandcommission .siteformbg .form-control {
-  border-left: 0px;
-} */
-/* .paymentandcommission.merchantview-page .siteformbg .form-control {
-    border-left: 1px solid #e8e8e8;
-}
-.nightmode .paymentandcommission.merchantview-page .siteformbg .form-control {
-    border-left: 1px solid #384452;
-} */
 .fa-copy-icon {
   width: 20px;
   height: 20px;
@@ -12885,7 +12849,27 @@ body.has-home-footer .page-content {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .nightmode .merchant-checkbox:checked {
-    background: #44a3dd;
-    border-color: #44a3dd;
+  background: #44a3dd;
+  border-color: #44a3dd;
+}
+
+.coin-list-wrapper {
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.spnwhl-wrapper {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.mer-link-pge-new {
+  padding-bottom: 50px !important;
+}
+.pay-met-det-s {
+  white-space: nowrap !important;
 }

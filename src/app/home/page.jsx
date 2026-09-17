@@ -197,6 +197,7 @@ const addtoken = () => {
                             Hide Small Balances
                         </h6>
                     </div>
+                    <div className="coin-list-wrapper">
                     <div className="d-flex justify-content-between align-items-center coin-row">
                         <div className="d-flex align-items-center gap-2">
                             <Image
@@ -351,6 +352,8 @@ const addtoken = () => {
                             <div className="coin-usd">$0</div>
                         </div>
                     </div>
+                    </div>
+
                     <div className="add-bok">
                         <div className="blue-card">
                             <h6 className="sub-head txt-clor">Address Book</h6>
