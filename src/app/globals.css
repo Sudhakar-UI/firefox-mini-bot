@@ -17941,6 +17941,12 @@ body.has-home-footer .page-content:has(.lhu-page) {
   }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+  .lhu-step-label br {
+    display: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .lhu-step-flip-inner {
     transition: none;
