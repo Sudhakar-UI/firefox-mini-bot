@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Userfooter from '../components/Userfooter';
@@ -43,7 +43,14 @@ const whySlides = [
         title: 'Built for the Community',
         points: ['Join a growing crypto community', 'Trade with a native exchange token', 'Access simple and useful experiences', 'Stay connected to future rewards'],
     },
+    {
+        image: 'why-choose.svg',
+        title: 'Free LHU Claim',
+        points: ['Participate in Spin Wheel', 'Win and claim LHU tokens for free', 'Reward amount varies by spin result', 'Claimed LHU credited to your wallet'],
+    },
 ];
+
+const getDragThreshold = (width) => Math.min(40, Math.max(24, width * 0.08));
 
 export default function LhuPage() {
     const [activeHeroSlide, setActiveHeroSlide] = useState(0);
@@ -53,10 +60,15 @@ export default function LhuPage() {
     const [visibleWhySlides, setVisibleWhySlides] = useState(3);
     const [flippedFeatureCards, setFlippedFeatureCards] = useState({});
     const [flippedStepCards, setFlippedStepCards] = useState({});
+    const heroDragStartX = useRef(null);
+    const heroWasDragged = useRef(false);
+    const whyDragStartX = useRef(null);
 
     useEffect(() => {
         const updateVisibleSlides = () => {
-            setVisibleWhySlides(window.innerWidth <= 480 ? 1 : window.innerWidth <= 767 ? 2 : 3);
+            const nextVisibleSlides = window.innerWidth <= 480 ? 1 : window.innerWidth <= 767 ? 2 : 3;
+            setVisibleWhySlides(nextVisibleSlides);
+            setActiveWhySlide((current) => Math.min(current, Math.max(whySlides.length - nextVisibleSlides, 0)));
         };
 
         updateVisibleSlides();
@@ -89,6 +101,55 @@ export default function LhuPage() {
     const whySlideOffset = Math.min(activeWhySlide, maxWhySlide);
     const activeSteps = stepFlows[activeStepTab];
 
+    const handleHeroPointerDown = (event) => {
+        if (!event.isPrimary || event.button !== 0) return;
+
+        heroDragStartX.current = event.clientX;
+        heroWasDragged.current = false;
+        event.currentTarget.setPointerCapture(event.pointerId);
+    };
+
+    const handleHeroPointerUp = (event) => {
+        if (heroDragStartX.current === null) return;
+
+        const dragDistance = event.clientX - heroDragStartX.current;
+        heroDragStartX.current = null;
+
+        if (Math.abs(dragDistance) < getDragThreshold(event.currentTarget.clientWidth)) return;
+
+        heroWasDragged.current = true;
+        setActiveHeroSlide((current) => (current + (dragDistance > 0 ? 2 : 1)) % 3);
+    };
+
+    const handleHeroClickCapture = (event) => {
+        if (!heroWasDragged.current) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        heroWasDragged.current = false;
+    };
+
+    const handleWhyPointerDown = (event) => {
+        if (!event.isPrimary || event.button !== 0) return;
+
+        whyDragStartX.current = event.clientX;
+        event.currentTarget.setPointerCapture(event.pointerId);
+    };
+
+    const handleWhyPointerUp = (event) => {
+        if (whyDragStartX.current === null) return;
+
+        const dragDistance = event.clientX - whyDragStartX.current;
+        whyDragStartX.current = null;
+
+        if (Math.abs(dragDistance) < getDragThreshold(event.currentTarget.clientWidth)) return;
+
+        setActiveWhySlide((current) => Math.min(
+            Math.max(current + (dragDistance < 0 ? 1 : -1), 0),
+            maxWhySlide,
+        ));
+    };
+
     return (
         <main className="lhu-page">
             <section className="lhu-hero" aria-label="LHU promotional banners" aria-roledescription="carousel">
@@ -96,6 +157,11 @@ export default function LhuPage() {
                     className="lhu-hero-carousel"
                     onMouseEnter={() => setIsHeroPaused(true)}
                     onMouseLeave={() => setIsHeroPaused(false)}
+                    onPointerDown={handleHeroPointerDown}
+                    onPointerUp={handleHeroPointerUp}
+                    onPointerCancel={() => { heroDragStartX.current = null; }}
+                    onClickCapture={handleHeroClickCapture}
+                    onDragStart={(event) => event.preventDefault()}
                 >
                     <div
                         className="lhu-hero-track"
@@ -307,7 +373,13 @@ export default function LhuPage() {
                 <h2 id="why-title">Why Choose LHU?</h2>
                 <p className="lhu-section-intro">LHU offers multiple ways to earn, trade and use within our exchange ecosystem.</p>
                 <div className="lhu-carousel" aria-roledescription="carousel" aria-label="Why choose LHU">
-                    <div className="lhu-carousel-window">
+                    <div
+                        className="lhu-carousel-window"
+                        onPointerDown={handleWhyPointerDown}
+                        onPointerUp={handleWhyPointerUp}
+                        onPointerCancel={() => { whyDragStartX.current = null; }}
+                        onDragStart={(event) => event.preventDefault()}
+                    >
                         <div
                             className="lhu-carousel-track"
                             style={{ '--lhu-slide-index': whySlideOffset, '--lhu-visible-slides': visibleWhySlides }}
@@ -315,7 +387,7 @@ export default function LhuPage() {
                             {whySlides.map((slide, index) => (
                                 <div
                                     className={`lhu-carousel-slide${activeWhySlide === index ? ' is-active' : ''}`}
-                                    key={slide.title}
+                                    key={`${slide.title}-${index}`}
                                 >
                                     <div className="lhu-claim-box">
                                         <Image src={`/assets/images/${slide.image}`} width={486} height={552} alt="" className="lhu-claim-image" />
@@ -330,12 +402,12 @@ export default function LhuPage() {
                     </div>
                 </div>
                 <div className="lhu-slider-dots lhu-carousel-dots" aria-label="Why choose LHU slides">
-                    {whySlides.map((slide, index) => (
+                    {Array.from({ length: maxWhySlide + 1 }, (_, index) => (
                         <button
                             type="button"
-                            key={slide.title}
+                            key={index}
                             className={activeWhySlide === index ? 'is-active' : ''}
-                            aria-label={`Show ${slide.title}`}
+                            aria-label={`Show cards starting with ${whySlides[index].title}`}
                             aria-current={activeWhySlide === index ? 'true' : undefined}
                             onClick={() => setActiveWhySlide(index)}
                         />

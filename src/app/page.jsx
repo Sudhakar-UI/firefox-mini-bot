@@ -257,6 +257,38 @@ const addtoken = () => {
                 </div>
               </div>
             </Carousel.Item>
+              <Carousel.Item>
+  <Link href="/LHU" className="swap-carousel-link">
+    <div className="blue-bg-main-y blue-bg-main-y-five mt-3">
+      <div className="d-flex gap-3 align-items-center w-100">
+
+        <div className="swap-icon-wrapper">
+          <Image
+            src="/assets/images/join-lhu.svg"
+            width={60}
+            height={60}
+            alt="hand-icon"
+            className="hand-icon"
+          />
+        </div>
+
+        <div className="d-flex flex-column">
+          <h6 className="sub-head txt-clor mb-1">LHU</h6>
+
+          <p className="suspend-text mb-0">
+            Take your chance and win amazing rewards
+            with LHU tokens!
+          </p>
+        </div>
+
+        <div className="spnwhl-wrapper">
+          <FontAwesomeIcon icon={faChevronRight} className="spnwhl" />
+        </div>
+
+      </div>
+    </div>
+  </Link>
+</Carousel.Item>
 
           </Carousel>
 
