@@ -73,14 +73,40 @@ const addtoken = () => {
                     </div>
                     <div className="mt-2">
                         <Row>
-                            <Col xl={12} >
+                            <Col xl={12}>
                                 <Form className="siteformbg">
                                     <div className="supportsearch p-0">
                                         <Form.Group className="mb-0">
-                                            <Form.Label>
-                                                BTC Address
-                                            </Form.Label>
-                                            <Form.Control placeholder="" id="search" />
+                                            <Form.Label>BTC Address</Form.Label>
+
+                                            <div className="btc-address-wrap">
+                                                <Form.Control
+                                                    placeholder="Enter recipient address"
+                                                    id="search"
+                                                    className="btc-address-input"
+                                                />
+
+                                                <div className="btc-address-icons">
+                                                    <span className="btc-address-iconbtn" role="button" aria-label="Scan QR">
+                                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M3 3h7v7H3V3zm2 2v3h3V5H5z" fill="currentColor" />
+                                                            <path d="M14 3h7v7h-7V3zm2 2v3h3V5h-3z" fill="currentColor" />
+                                                            <path d="M3 14h7v7H3v-7zm2 2v3h3v-3H5z" fill="currentColor" />
+                                                            <path d="M14 14h3v3h-3zM18 14h3v3h-3zM14 18h3v3h-3zM18 18h3v3h-3z" fill="currentColor" />
+                                                        </svg>
+                                                    </span>
+
+                                                    <span className="btc-address-iconbtn" role="button" aria-label="Address book">
+                                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 6.5C10.5 5.4 8.4 5 6 5H4v13h2c2.4 0 4.5.4 6 1.5 1.5-1.1 3.6-1.5 6-1.5h2V5h-2c-2.4 0-4.5.4-6 1.5z"
+                                                                fill="currentColor"
+                                                            />
+                                                            <path d="M12 6.5v13" stroke="var(--btc-address-icon-cut, #1f2d3d)" strokeWidth="1.2" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </Form.Group>
                                     </div>
                                 </Form>
