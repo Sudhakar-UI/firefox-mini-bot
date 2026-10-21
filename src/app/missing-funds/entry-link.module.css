@@ -1,0 +1,15 @@
+.entryLink {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 0;
+  color: #ff3c00;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.entryLink:hover {
+  color: #e93800;
+  text-decoration: underline;
+}
