@@ -20826,3 +20826,35 @@ body.has-home-footer .page-content:has(.lhu-page) {
     transform: translateY(-1px);
     background: #3aabe7 !important;
 }
+
+/* ==========================================================================
+   Missing Funds Entry Link (Used in paymentpage & staticwallet)
+   ========================================================================== */
+.missing-funds-entry-link {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 0;
+  color: #ff3c00;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.missing-funds-entry-link:hover {
+  color: #e93800;
+  text-decoration: underline;
+}
+
+.nightmode .missing-funds-entry-link {
+  color: #ff5722;
+}
+
+.nightmode .missing-funds-entry-link:hover {
+  color: #ff7043;
+}
+
+.missing-funds-tabs.merchant-tabs .nav-link {
+  text-decoration: none !important;
+}

@@ -1,8 +1,5 @@
 "use client";
 
-import React from "react";
-import MissingFundsView from "../MissingFundsView";
+import MissingFundsInvoicePage from "../../missing-funds-invoice/page";
 
-export default function MissingFundsInvoicePage() {
-  return <MissingFundsView initialTab="invoice" />;
-}
+export default MissingFundsInvoicePage;

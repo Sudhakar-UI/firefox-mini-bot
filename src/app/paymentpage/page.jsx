@@ -9,7 +9,6 @@ import { useTheme } from "../context/ThemeContext";
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import Userfooter from "../components/Userfooter";
-import missingFundsStyles from "../missing-funds/entry-link.module.css";
 
 
 const addtoken = () => {
@@ -143,7 +142,7 @@ const addtoken = () => {
                             className="shared-icon"
                         />Share Invoice</Button>
                     </Form.Group>
-                    <Link href="/missing-funds" className={missingFundsStyles.entryLink}>
+                    <Link href="/missing-funds" className="missing-funds-entry-link">
                         Deposit missing? Submit a request
                     </Link>
                 </Container>
