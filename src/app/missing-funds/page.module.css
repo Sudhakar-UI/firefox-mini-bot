@@ -601,23 +601,23 @@
   }
 }
 
-:global(.panelboxbg:has(.missing-funds-theme)) {
+:global(body:not(.nightmode) .panelboxbg:has(.missing-funds-theme)) {
   gap: 8px;
   padding: 10px 0 0 !important;
   background: #fff;
 }
 
-:global(.blue-bg-main-x:has(.missing-funds-theme)) {
+:global(body:not(.nightmode) .blue-bg-main-x:has(.missing-funds-theme)) {
   background: #fff;
 }
 
-:global(.blue-bg-main-x:has(.missing-funds-theme) .blue-bg-main) {
+:global(body:not(.nightmode) .blue-bg-main-x:has(.missing-funds-theme) .blue-bg-main) {
   background: #fff;
 }
 
-:global(.blue-bg-main-x:has(.missing-funds-theme) .blue-bg-main .heading),
-:global(.blue-bg-main-x:has(.missing-funds-theme) .blue-bg-main .back-btn),
-:global(.blue-bg-main-x:has(.missing-funds-theme) .blue-bg-main p) {
+:global(body:not(.nightmode) .blue-bg-main-x:has(.missing-funds-theme) .blue-bg-main .heading),
+:global(body:not(.nightmode) .blue-bg-main-x:has(.missing-funds-theme) .blue-bg-main .back-btn),
+:global(body:not(.nightmode) .blue-bg-main-x:has(.missing-funds-theme) .blue-bg-main p) {
   color: #25282d !important;
 }
 
@@ -625,10 +625,91 @@
   padding-bottom: 0;
 }
 
-:global(.nightmode) .filterBox,
+:global(.nightmode) .page {
+  background: transparent;
+  color: #f4f5f7;
+}
+
+:global(.nightmode) .pageTitle,
+:global(.nightmode) .sectionTitle,
+:global(.nightmode) .coin strong,
+:global(.nightmode) .detailHeading {
+  color: #ffffff;
+}
+
+:global(.nightmode) .requestCard,
+:global(.nightmode) .historyCard,
 :global(.nightmode) .detailCard {
-  border-color: #313a46;
-  background: #f7f7f8;
+  border-color: #384452;
+  background: #2b3542;
+}
+
+:global(.nightmode) .field input,
+:global(.nightmode) .field textarea,
+:global(.nightmode) .search,
+:global(.nightmode) .filterBox {
+  border-color: #384452;
+  background: #222e3c;
+  color: #ffffff;
+}
+
+:global(.nightmode) .field label {
+  color: #f1f2f4;
+}
+
+:global(.nightmode) .field input::placeholder,
+:global(.nightmode) .field textarea::placeholder,
+:global(.nightmode) .search input::placeholder {
+  color: #6b7787;
+}
+
+:global(.nightmode) .search input {
+  color: #ffffff;
+}
+
+:global(.nightmode) .terms {
+  border-color: #384452;
+  background: #252f3b;
+  color: #c4c9d2;
+}
+
+:global(.nightmode) .tabs {
+  border-bottom-color: #384452;
+}
+
+:global(.nightmode) .tab {
+  color: #9096a2;
+}
+
+:global(.nightmode) .historyMeta strong,
+:global(.nightmode) .detailRow strong {
+  color: #f1f2f4;
+}
+
+:global(.nightmode) .historyMeta span,
+:global(.nightmode) .detailRow span,
+:global(.nightmode) .historyAction > span {
+  color: #9096a2;
+}
+
+:global(.nightmode) .detailRow {
+  border-top-color: #384452;
+}
+
+:global(.nightmode) .detailSubtitle {
+  color: #9096a2;
+}
+
+:global(.nightmode) .activityItem strong {
+  color: #f1f2f4;
+}
+
+:global(.nightmode) .activityItem span {
+  color: #9096a2;
+}
+
+:global(.nightmode) .activity::before {
+  border-left-color: #384452;
 }
 
 .page {

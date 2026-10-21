@@ -219,15 +219,15 @@
 }
 
 .fxp-inner img {
-    width: 100%;
-    height: 100%;
-    max-width: 55px;
-    max-height: 55px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    border-radius: 50% !important;
+  width: 100%;
+  height: 100%;
+  max-width: 55px;
+  max-height: 55px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 50% !important;
 }
 
 .fxp-badge {
@@ -2010,8 +2010,10 @@ p {
 .site-container.container,
 .merchantPage .container,
 .tradehistory-page .container,
-.wallet-page .container {
-  --bs-gutter-x: 2.5rem;
+.wallet-page .container,
+.missing-funds-container .container,
+.missingfunds-page .container {
+  --bs-gutter-x: 2rem;
 }
 
 .local-currency-page .set-bot-y:after,
@@ -9234,7 +9236,9 @@ body.has-home-footer .page-content:has(.lhu-page) {
   .site-container.container,
   .merchantPage .container,
   .tradehistory-page .container,
-  .wallet-page .container {
+  .wallet-page .container,
+  .missing-funds-container .container,
+  .missingfunds-page .container {
     --bs-gutter-x: 2rem;
   }
 
@@ -11312,7 +11316,8 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 .merchantPage.merchantlist .phone-draw-close-btn,
 .paymentandcommission .phone-draw-close-btn,
-.merchant-settings-page .phone-draw-close-btn {
+.merchant-settings-page .phone-draw-close-btn,
+.missingfunds-page .phone-draw-close-btn {
   border-radius: 50%;
   font-size: 16px;
   line-height: 1;
@@ -11324,7 +11329,8 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 .nightmode .merchantPage.merchantlist .phone-draw-close-btn,
 .nightmode .paymentandcommission .phone-draw-close-btn,
-.nightmode .merchant-settings-page .phone-draw-close-btn {
+.nightmode .merchant-settings-page .phone-draw-close-btn,
+.nightmode .missingfunds-page .phone-draw-close-btn {
   color: #9a9899 !important;
   border: 1px solid #384452 !important;
   padding: 9px !important;
@@ -18911,4 +18917,1912 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 .hd-sml-scr-my-asset {
   margin-top: 30px !IMPORTANT;
+}
+
+/* ==========================================================================
+   MISSING FUNDS PAGE STYLES (Light Mode, Night Mode, Responsive 1024px to 320px)
+   Referencing create-new-link and paymentandcommission patterns
+   ========================================================================== */
+
+.missing-funds-container {
+  width: 100%;
+  /* padding-bottom: 110px; */
+}
+
+.missing-funds-container .container,
+.missingfunds-page .container {
+  --bs-gutter-x: 2rem;
+}
+
+.missing-funds-container .heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+/* Navigation Tabs (matches paymentandcommission .merchant-tabs) */
+.missing-funds-tabs.merchant-tabs {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 16px;
+  gap: 8px;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.missing-funds-tabs.merchant-tabs .nav-link {
+  color: #1E1E1E;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 16px 12px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.missing-funds-tabs.merchant-tabs .nav-link:hover {
+  color: #FF3C00 !important;
+}
+
+.missing-funds-tabs.merchant-tabs .nav-link.active {
+  color: #FF3C00 !important;
+  border-bottom: 2px solid #FF3C00 !important;
+  background: transparent !important;
+}
+
+/* Form Card (matches paymentandcommission card sizing & style) */
+.missing-funds-form-card {
+  background: #F7F7F8;
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 4px #0000000a;
+  width: 100%;
+  max-width: 1024px;
+  margin: 15px auto 22px;
+}
+
+.missing-funds-form-card label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e1e1e;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.missing-funds-form-card .form-control {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  color: #1e1e1e;
+  font-size: 14px;
+  height: 43px;
+  padding: 9px 14px;
+  box-shadow: none;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.missing-funds-form-card .form-control:focus {
+  border-color: #ff3c00;
+  box-shadow: 0 0 0 2px rgba(255, 60, 0, 0.15);
+  outline: none;
+}
+
+.missing-funds-form-card .form-control::placeholder {
+  color: #9A9899;
+  font-size: 13px;
+}
+
+.missing-funds-form-card textarea.form-control {
+  min-height: 80px;
+  height: auto;
+  resize: vertical;
+}
+
+/* Terms Checkbox Box (Figma aligned) */
+.missing-funds-terms-box {
+    background: #F7F7F7;
+    border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.missing-funds-terms-box .missing-funds-terms-label,
+.missing-funds-terms-box .form-check {
+  margin: 0 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  width: 100% !important;
+  cursor: pointer;
+}
+
+.missing-funds-terms-box .missing-funds-checkbox,
+.missing-funds-terms-box .form-check-input {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  margin: 0 !important;
+  margin-top: 2px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  float: none !important;
+  position: static !important;
+  flex-shrink: 0 !important;
+  cursor: pointer;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border: 1.5px solid #ced4da !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.15s ease;
+}
+
+.missing-funds-terms-box .missing-funds-checkbox:checked,
+.missing-funds-terms-box .form-check-input:checked {
+  background-color: #ff3c00 !important;
+  border-color: #ff3c00 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 13px !important;
+}
+
+.missing-funds-terms-box .missing-funds-checkbox:focus,
+.missing-funds-terms-box .form-check-input:focus {
+  border-color: #ff3c00 !important;
+  box-shadow: 0 0 0 2px rgba(255, 60, 0, 0.15) !important;
+}
+
+.missing-funds-terms-box .missing-funds-terms-text,
+.missing-funds-terms-box .form-check-label {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #495057 !important;
+  cursor: pointer;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  user-select: none;
+  flex: 1 1 auto;
+}
+
+.missing-funds-terms-box .terms-link {
+  color: #ff3c00 !important;
+  font-weight: 500 !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.missing-funds-terms-box .terms-link:hover {
+  text-decoration: underline;
+  color: #e63600 !important;
+}
+
+/* Submit Button */
+.missing-funds-submit-btn {
+  background: #ff3c00 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+  min-height: 42px !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer;
+}
+
+.missing-funds-submit-btn:hover {
+  background: #e63600 !important;
+  transform: translateY(-1px);
+}
+
+.missing-funds-submit-btn:active {
+  transform: translateY(0);
+}
+
+.missing-funds-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Missing Funds History Section */
+.missing-funds-history-section {
+  margin-top: 24px;
+}
+
+.missing-funds-history-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #202124;
+  margin-bottom: 12px;
+}
+
+/* Search Box */
+.missing-funds-search-box {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto 16px;
+}
+
+.missing-funds-search-box .input-group {
+  border: 1px solid #e0e2e5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 43px;
+}
+
+.missing-funds-search-icon {
+  background: transparent !important;
+  border: none !important;
+  color: #9aa0a6;
+  font-size: 14px;
+  padding: 9px 14px !important;
+}
+
+.missing-funds-search-input {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 14px;
+  color: #202124 !important;
+  padding: 9px 14px 9px 0 !important;
+  height: 41px;
+}
+
+.missing-funds-search-input::placeholder {
+  color: #9aa0a6;
+  font-size: 13px;
+}
+
+/* History Cards List (matches paymentandcommission-expired-card) */
+.missing-funds-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.missing-funds-card {
+  background: #F7F7F8;
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 1px 4px #0000000a;
+  transition: all 0.2s ease;
+}
+
+.missing-funds-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.missing-funds-coin-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.missing-funds-coin-icon-wrapper {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.missing-funds-coin-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.missing-funds-coin-code {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+  color: #202124;
+}
+
+.missing-funds-status-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.missing-funds-status {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0;
+}
+
+.missing-funds-status.completed {
+  color: #28c76f;
+}
+
+.missing-funds-status.pending {
+  color: #DDA208;
+}
+
+.missing-funds-chevron {
+  font-size: 13px;
+  width: 13px;
+  height: 13px;
+  color: #8c8e94;
+  transition: transform 0.2s ease;
+}
+
+/* History Card Body */
+.missing-funds-card-body {
+  padding: 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.missing-funds-detail-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0;
+}
+
+.missing-funds-detail-row>div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.missing-funds-detail-row>div:first-child {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.missing-funds-detail-row>div.text-end {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.missing-funds-detail-row span {
+  font-size: 13px;
+  color: #9A9899;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.missing-funds-detail-row strong {
+  color: #1E1E1E;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+.missing-funds-id-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.missing-funds-copy-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #9A9899;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.missing-funds-copy-btn:hover {
+  color: #555555;
+}
+
+.missing-funds-action-detail-row .missing-funds-action-label {
+  font-size: 13px;
+  color: #9A9899;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.missing-funds-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  border: 1px solid #ff3c00;
+  border-radius: 20px;
+  color: #ff3c00 !important;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.2s ease;
+  line-height: 1.3;
+}
+
+.missing-funds-action-btn:hover {
+  background: #ff3c00;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   NIGHT MODE (.nightmode) CSS FOR MISSING FUNDS
+   Referencing paymentandcommission and create-new-link dark mode
+   ========================================================================== */
+
+.nightmode .missing-funds-container {
+  color: #f4f5f7;
+}
+
+.nightmode .missing-funds-container .heading,
+.nightmode .missing-funds-history-title {
+  color: #ffffff;
+}
+
+/* Nightmode Tabs */
+.nightmode .missing-funds-tabs.merchant-tabs {
+  border-bottom-color: #384452;
+}
+
+.nightmode .missing-funds-tabs.merchant-tabs .nav-link {
+  color: #9096a2;
+}
+
+.nightmode .missing-funds-tabs.merchant-tabs .nav-link:hover {
+  color: #ff3c00 !important;
+}
+
+.nightmode .missing-funds-tabs.merchant-tabs .nav-link.active {
+  color: #44a3dd !important;
+  border-bottom-color: #44a3dd !important;
+}
+
+/* Nightmode Form Card */
+.nightmode .missing-funds-form-card {
+  background: #2b3542;
+  border-color: #384452;
+  box-shadow: none;
+}
+
+.nightmode .missing-funds-terms-box .terms-link {
+  color: #44a3dd !important;
+}
+
+.nightmode .missing-funds-form-card label {
+  color: #f1f2f4;
+}
+
+.nightmode .missing-funds-form-card .form-control {
+  background: #222e3c !important;
+  border-color: #384452 !important;
+  color: #ffffff !important;
+}
+
+.nightmode .missing-funds-form-card .form-control::placeholder {
+  color: #6b7787;
+}
+
+.nightmode .missing-funds-form-card .form-control:focus {
+  border-color: #44a3dd !important;
+  box-shadow: 0 0 0 2px rgba(255, 60, 0, 0.25);
+}
+
+/* Nightmode Terms Box */
+.nightmode .missing-funds-terms-box {
+  background: #252f3b !important;
+  border-color: #384452 !important;
+}
+
+.nightmode .missing-funds-terms-box .missing-funds-terms-text,
+.nightmode .missing-funds-terms-box .form-check-label {
+  color: #c4c9d2 !important;
+}
+
+.nightmode .missing-funds-terms-box .missing-funds-checkbox,
+.nightmode .missing-funds-terms-box .form-check-input {
+  background-color: #222e3c !important;
+  border-color: #4b5868 !important;
+  background-image: none !important;
+}
+
+.nightmode .missing-funds-terms-box .missing-funds-checkbox:checked,
+.nightmode .missing-funds-terms-box .form-check-input:checked {
+  background-color: #ff3c00 !important;
+  border-color: #ff3c00 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
+}
+
+/* Nightmode Search Box */
+.nightmode .missing-funds-search-box .input-group {
+  border-color: #384452;
+  background: #222e3c;
+}
+
+.nightmode .missing-funds-search-icon {
+  color: #9096a2;
+}
+
+.nightmode .missing-funds-search-input {
+  color: #ffffff !important;
+}
+
+.nightmode .missing-funds-search-input::placeholder {
+  color: #6b7787;
+}
+
+/* Nightmode History Cards */
+.nightmode .missing-funds-card {
+  background: #2b3542;
+  border-color: #384452;
+  box-shadow: none;
+}
+
+.nightmode .missing-funds-coin-code,
+.nightmode .missing-funds-coin-name h5 {
+  color: #f4f5f7;
+}
+
+.nightmode .missing-funds-chevron {
+  color: #9096a2;
+}
+
+.nightmode .missing-funds-status.completed {
+  color: #28c76f;
+}
+
+.nightmode .missing-funds-status.pending {
+  color: #ffb400;
+}
+
+.nightmode .missing-funds-detail-row span,
+.nightmode .missing-funds-action-label {
+  color: #9096a2;
+}
+
+.nightmode .missing-funds-detail-row strong {
+  color: #f1f2f4;
+}
+
+.nightmode .missing-funds-copy-btn {
+  color: #9096a2;
+}
+
+.nightmode .missing-funds-copy-btn:hover {
+  color: #ff3c00;
+}
+
+.nightmode .missing-funds-action-btn {
+  border-color: #ff3c00;
+  color: #ff3c00 !important;
+}
+
+.nightmode .missing-funds-action-btn:hover {
+  background: #ff3c00;
+  color: #ffffff !important;
+}
+
+/* Container theme synchronization in night mode */
+.nightmode .panelboxbg:has(.missing-funds-container) {
+  background: #222e3c !important;
+}
+
+.nightmode .blue-bg-main-x:has(.missing-funds-container) {
+  background: #222e3c !important;
+}
+
+.nightmode .blue-bg-main-x:has(.missing-funds-container) .blue-bg-main {
+  background: #222e3c !important;
+}
+
+.nightmode .blue-bg-main-x:has(.missing-funds-container) .blue-bg-main .heading,
+.nightmode .blue-bg-main-x:has(.missing-funds-container) .blue-bg-main .back-btn {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES (1024px to 320px)
+   Referencing paymentandcommission container gutters & responsive typography
+   ========================================================================== */
+
+/* 1024px Breakpoint (Tablet Landscape / Small Desktop) */
+@media (max-width: 1024px) {
+
+  .missing-funds-form-card,
+  .missing-funds-search-box,
+  .missing-funds-card,
+  .missing-funds-tabs.merchant-tabs {
+    max-width: 100%;
+  }
+}
+
+/* 768px Breakpoint (Tablets & Medium Devices) */
+@media (max-width: 768px) {
+  .missing-funds-container .heading {
+    font-size: 18px;
+  }
+
+  .missing-funds-history-title {
+    font-size: 17px;
+  }
+
+  .missing-funds-tabs.merchant-tabs .nav-link {
+    font-size: 16px;
+    padding: 6px 14px 10px;
+  }
+
+  .missing-funds-form-card {
+    padding: 18px;
+  }
+
+  .missing-funds-card-header {
+    padding: 12px 14px;
+  }
+
+  .missing-funds-card-body {
+    padding: 0 14px 14px;
+    gap: 12px;
+  }
+
+  .missing-funds-coin-icon-wrapper {
+    width: 24px;
+    height: 24px;
+  }
+
+  .missing-funds-coin-img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .missing-funds-coin-code,
+  .missing-funds-coin-name h5 {
+    font-size: 15px;
+  }
+}
+
+/* 576px Breakpoint (Small Tablets & Mobile Phones) */
+@media (max-width: 576px) {
+  .missing-funds-container .heading {
+    font-size: 17px;
+    margin-bottom: 10px !important;
+    font-weight: 500;
+  }
+
+  .missing-funds-history-title {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .missing-funds-tabs.merchant-tabs .nav-link {
+    font-size: 14px;
+    padding: 6px 10px 8px;
+  }
+
+  .missing-funds-form-card {
+    padding: 16px 14px;
+    border-radius: 10px;
+  }
+
+  .missing-funds-form-card label {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .missing-funds-form-card .form-control {
+    font-size: 13px;
+    height: 40px;
+    padding: 8px 12px;
+  }
+
+  .missing-funds-terms-box {
+    padding: 10px 12px;
+  }
+
+  .missing-funds-terms-box .form-check-label {
+    font-size: 12px !important;
+  }
+
+  .missing-funds-submit-btn {
+    font-size: 13px;
+    min-height: 40px;
+    padding: 8px;
+  }
+
+  .missing-funds-search-box .input-group {
+    height: 40px;
+  }
+
+  .missing-funds-search-input {
+    font-size: 13px;
+  }
+
+  .missing-funds-card {
+    border-radius: 10px;
+  }
+
+  .missing-funds-card-header {
+    padding: 10px 12px;
+  }
+
+  .missing-funds-card-body {
+    padding: 0 12px 12px;
+    gap: 10px;
+  }
+
+  .missing-funds-coin-icon-wrapper {
+    width: 24px;
+    height: 24px;
+  }
+
+  .missing-funds-coin-img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .missing-funds-coin-code,
+  .missing-funds-coin-name h5 {
+    font-size: 14px;
+  }
+
+  .missing-funds-status {
+    font-size: 13px;
+  }
+
+  .missing-funds-detail-row {
+    gap: 12px;
+  }
+
+  .missing-funds-detail-row span {
+    font-size: 12px;
+  }
+
+  .missing-funds-detail-row strong {
+    font-size: 13px;
+  }
+
+  .missing-funds-action-detail-row .missing-funds-action-label {
+    font-size: 12px;
+  }
+
+  .missing-funds-action-btn {
+    font-size: 12px;
+    padding: 3px 14px;
+  }
+}
+
+/* 480px Breakpoint (Standard Mobile) */
+@media (max-width: 480px) {
+
+  .missing-funds-coin-code,
+  .missing-funds-coin-name h5 {
+    font-size: 13px !important;
+  }
+
+  .missing-funds-status {
+    font-size: 13px;
+  }
+
+  .missing-funds-chevron {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .missing-funds-card-header {
+    padding: 10px 12px;
+  }
+
+  .missing-funds-card-body {
+    padding: 0 10px 10px;
+    gap: 10px;
+  }
+}
+
+/* 375px Breakpoint (Compact Mobile, e.g. iPhone SE / Mini) */
+@media (max-width: 375px) {
+  .missing-funds-tabs.merchant-tabs .nav-link {
+    font-size: 13px;
+    padding: 5px 8px 6px;
+  }
+
+  .missing-funds-form-card {
+    padding: 12px 10px;
+  }
+
+  .missing-funds-coin-icon-wrapper {
+    width: 22px;
+    height: 22px;
+  }
+
+  .missing-funds-coin-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .missing-funds-coin-code,
+  .missing-funds-coin-name h5 {
+    font-size: 13px !important;
+  }
+
+  .missing-funds-detail-row {
+    gap: 8px;
+  }
+
+  /* .missing-funds-detail-row span {
+    font-size: 11px;
+  } */
+
+  /* .missing-funds-detail-row strong {
+    font-size: 12px;
+  } */
+
+  .missing-funds-action-detail-row .missing-funds-action-label {
+    font-size: 11px;
+  }
+
+  .missing-funds-action-btn {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+}
+
+/* 320px Breakpoint (Smallest Mobile Screens) */
+@media (max-width: 320px) {
+  .missing-funds-container .heading {
+    font-size: 16px;
+  }
+
+  .missing-funds-tabs.merchant-tabs .nav-link {
+    font-size: 12px;
+    padding: 4px 6px 6px;
+  }
+
+  .missing-funds-form-card {
+    padding: 10px 8px;
+  }
+
+  .missing-funds-form-card label {
+    font-size: 12px;
+  }
+
+  .missing-funds-form-card .form-control {
+    font-size: 12px;
+    height: 38px;
+    padding: 6px 8px;
+  }
+
+  .missing-funds-terms-box {
+    padding: 8px 10px;
+  }
+
+  .missing-funds-terms-box .form-check-label {
+    font-size: 11px !important;
+  }
+
+  .missing-funds-submit-btn {
+    font-size: 12px;
+    min-height: 38px;
+  }
+
+  .missing-funds-history-title {
+    font-size: 15px;
+  }
+
+  .missing-funds-detail-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .missing-funds-detail-row>div:first-child {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .missing-funds-detail-row>div.text-end {
+    align-items: flex-end;
+    text-align: right !important;
+  }
+}
+
+/* Missing Funds Drawers (Status & Duplicate) */
+.missing-funds-drawer {
+  border-radius: 20px 20px 0 0;
+  padding: 12px 20px 28px;
+  background: #ffffff;
+  max-width: 480px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.missing-funds-drawer .phone-draw-handle {
+  width: 40px;
+  height: 4px;
+  background: #d0d0d0;
+  border-radius: 4px;
+  margin: 0 auto 12px;
+}
+
+.missing-funds-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 14px;
+  margin-bottom: 5px;
+}
+
+.missing-funds-drawer-title {
+  color: #020B09;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.missing-funds-drawer .phone-draw-close {
+  position: static !important;
+  margin: 0 !important;
+}
+
+.missing-funds-drawer .phone-draw-close-btn {
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid #E4E5E8 !important;
+  background: none !important;
+  color: #020B09 !important;
+  padding: 0 !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.missing-funds-drawer .phone-draw-close-btn:hover {
+  background: #f3f4f6 !important;
+}
+
+.missing-funds-drawer-icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px 0 16px;
+}
+
+.missing-funds-drawer-icon-wrap img {
+  width: 100%;
+  max-width: 165px;
+  height: 100%;
+}
+
+.missing-funds-status-text-wrap {
+  text-align: center !important;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.missing-funds-status-highlight {
+  color: #ff3c00;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.35;
+  text-align: center !important;
+  width: 100%;
+}
+
+.missing-funds-status-subtext {
+  color: #111827;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.35;
+  text-align: center !important;
+  width: 100%;
+}
+
+.missing-funds-duplicate-text {
+  color: #020B09;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  display: block;
+  text-align: center !important;
+}
+
+.missing-funds-drawer-field {
+  margin-bottom: 24px;
+}
+
+.missing-funds-drawer-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #1E1E1E;
+  margin-bottom: 6px;
+}
+
+.missing-funds-id-box {
+  background: #ffffff;
+  border: 1px solid #E4E5E8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  min-height: 44px;
+}
+
+.missing-funds-id-text {
+  color: #1E1E1E;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.missing-funds-id-copy-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.missing-funds-id-copy-btn:hover {
+  color: #ff3c00;
+}
+
+.missing-funds-id-copy-btn .copied-text {
+  font-size: 12px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.missing-funds-drawer-done-btn {
+  min-height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .2s;
+  box-shadow: 0 4px 12px #ff3c0040;
+  color: #fff !important;
+  background-color: #ff3c00 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+}
+
+.missing-funds-drawer-done-btn:hover,
+.missing-funds-drawer-done-btn:focus,
+.missing-funds-drawer-done-btn:active {
+  background-color: #e03500 !important;
+  border: none !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(255, 60, 0, 0.35);
+}
+
+/* Nightmode for Missing Funds Drawers */
+.nightmode .missing-funds-drawer {
+  background: #222e3c;
+  color: #f1f1f1;
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.45);
+}
+
+.nightmode .missing-funds-drawer .phone-draw-handle {
+  background: #475569;
+}
+
+.nightmode .missing-funds-drawer-header {
+  border-bottom-color: #384452;
+}
+
+.nightmode .missing-funds-drawer-title {
+  color: #f8fafc;
+}
+
+.nightmode .missing-funds-drawer .phone-draw-close-btn {
+  border-color: #384452 !important;
+  color: #9a9899 !important;
+}
+
+.nightmode .missing-funds-drawer .phone-draw-close-btn:hover {
+  background: #2c3848 !important;
+  color: #ffffff !important;
+}
+
+.nightmode .missing-funds-status-subtext {
+  color: #f8fafc;
+}
+
+.nightmode .missing-funds-duplicate-text {
+  color: #f8fafc;
+}
+
+.nightmode .missing-funds-drawer-label {
+  color: #94a3b8;
+}
+
+.nightmode .missing-funds-id-box {
+  background: #1b2430;
+  border-color: #384452;
+}
+
+.nightmode .missing-funds-id-text {
+  color: #e2e8f0;
+}
+
+.nightmode .missing-funds-id-copy-btn {
+  color: #94a3b8;
+}
+
+@media (max-width: 576px) {
+  .missing-funds-drawer {
+    max-width: 100%;
+    padding: 10px 16px 24px;
+  }
+
+  .missing-funds-status-highlight,
+  .missing-funds-status-subtext {
+    font-size: 18px;
+  }
+
+  .missing-funds-duplicate-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .missing-funds-drawer {
+    padding: 8px 12px 20px;
+  }
+
+  .missing-funds-drawer-title {
+    font-size: 15px;
+  }
+
+  .missing-funds-status-highlight,
+  .missing-funds-status-subtext {
+    font-size: 18px;
+  }
+
+  .missing-funds-duplicate-text {
+    font-size: 14px;
+  }
+
+  .missing-funds-id-text {
+    font-size: 12px;
+  }
+
+  .missing-funds-drawer-done-btn {
+    font-size: 13.5px;
+    min-height: 40px;
+    padding: 8px;
+  }
+}
+
+/* ==========================================================================
+   Missing Funds Details Page Styles
+   ========================================================================== */
+/* 
+.missing-funds-details-page {
+  padding-bottom: 95px;
+} */
+
+/* Filter Controls Row */
+.missing-funds-details-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.missing-funds-details-search-box {
+  flex: 1.25;
+  min-width: 0;
+}
+
+.missing-funds-details-search-box .input-group {
+  background: #ffffff;
+  border: 1px solid #E4E5E8;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 38px;
+  align-items: center;
+}
+
+.missing-funds-details-search-icon {
+  background: transparent !important;
+  border: none !important;
+  color: #9CA3AF !important;
+  font-size: 13px !important;
+  padding: 0 0 0 12px !important;
+}
+
+.missing-funds-details-search-input {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 13px !important;
+  color: #111827 !important;
+  padding: 6px 10px !important;
+  height: 100% !important;
+}
+
+.missing-funds-details-search-input::placeholder {
+  color: #9CA3AF;
+  font-size: 13px;
+}
+
+.missing-funds-details-select-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.missing-funds-details-select {
+  height: 38px !important;
+  border: 1px solid #E4E5E8 !important;
+  border-radius: 8px !important;
+  background-color: #ffffff !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+  padding: 6px 26px 6px 10px !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  background-position: right 8px center !important;
+}
+
+.missing-funds-details-select:focus,
+.missing-funds-details-search-box .input-group:focus-within {
+  border-color: #FF3C00 !important;
+  box-shadow: 0 0 0 1px rgba(255, 60, 0, 0.15) !important;
+}
+
+/* Details Cards */
+.missing-funds-details-card {
+  background: #F7F7F8;
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 12px 14px 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.missing-funds-details-card-header {
+  margin-bottom: 10px;
+  padding: 2px 2px;
+}
+
+.missing-funds-details-header-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.missing-funds-details-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 26px;
+}
+
+.missing-funds-details-card-subtitle {
+  font-size: 12px;
+  color: #9CA3AF;
+  line-height: 14px;
+}
+
+.missing-funds-details-card-inner {
+  background: #FFFFFF;
+  border: 1px solid #ECECEC;
+  border-radius: 10px;
+  padding: 4px 8px;
+}
+
+.missing-funds-detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #F3F4F6;
+  min-height: 40px;
+}
+
+.missing-funds-detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item-label {
+  font-size: 13px;
+  color: #9CA3AF;
+  font-weight: 400;
+}
+
+.detail-item-value {
+  font-size: 13.5px;
+  color: #111827;
+  font-weight: 600;
+  text-align: right;
+}
+
+.detail-value-muted {
+  color: #9CA3AF !important;
+  font-weight: 500;
+}
+
+.detail-copy-btn {
+  background: transparent;
+  border: none;
+  color: #9CA3AF;
+  padding: 2px 4px;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.detail-copy-btn:hover {
+  color: #FF3C00;
+}
+
+.detail-coin-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.missing-funds-pending-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  /* background: #FEF9C3; */
+  border: 1px solid #DDA208;
+  color: #DDA208;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.missing-funds-pending-pill .pill-icon {
+  font-size: 11px;
+}
+
+.missing-funds-completed-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #A7F3D0;
+  color: #059669;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.missing-funds-completed-pill .pill-icon {
+  font-size: 11px;
+}
+
+.missing-funds-rejected-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #FECACA;
+  color: #DC2626;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.missing-funds-rejected-pill .pill-icon {
+  font-size: 11px;
+}
+
+.accepted-icon {
+  color: #10B981;
+  font-size: 13.5px;
+}
+
+/* Timeline in Activity Processing Card */
+.missing-funds-timeline-box {
+  padding: 10px 10px !important;
+}
+
+.timeline-step {
+  display: flex;
+  position: relative;
+}
+
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0px;
+}
+
+.timeline-dot.filled {
+  background-color: #FB7302;
+  ;
+}
+
+.timeline-dot.outline {
+  border: 2px solid #9CA3AF;
+  background-color: #FFFFFF;
+}
+
+.timeline-line.dashed {
+  width: 0;
+  flex-grow: 1;
+  border-left: 2px dashed #D1D5DB;
+  margin: 4px 0;
+}
+
+.timeline-info {
+  flex-grow: 1;
+  padding-bottom: 22px;
+}
+
+.timeline-step.last .timeline-info {
+  padding-bottom: 4px;
+}
+
+.timeline-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.timeline-timestamp {
+  font-size: 11px;
+  color: #000;
+  font-weight: 500;
+}
+
+.timeline-subtext {
+  font-size: 11.5px;
+  color: #9CA3AF;
+  line-height: 1.35;
+}
+
+.timeline-dot.timeline-dot-success {
+  background-color: #10B981;
+}
+
+.timeline-dot.timeline-dot-danger {
+  background-color: #EF4444;
+}
+
+/* Outcome Banners (Success & Error) */
+.missing-funds-outcome-banner {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.missing-funds-outcome-banner.success-banner {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #047857;
+}
+
+.missing-funds-outcome-banner.success-banner .banner-icon {
+  color: #10B981;
+  font-size: 15px;
+}
+
+.missing-funds-outcome-banner.error-banner {
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: #B91C1C;
+}
+
+.missing-funds-outcome-banner.error-banner .banner-icon {
+  color: #EF4444;
+  font-size: 15px;
+}
+
+.missing-funds-outcome-banner .banner-time {
+  font-size: 11px;
+  opacity: 0.8;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+/* Back Link Button */
+.missing-funds-back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #FF3C00;
+  border: 1px solid #FF3C00;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 6px rgba(255, 60, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.missing-funds-back-link:hover {
+  background-color: #e03500;
+  border-color: #e03500;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Night Mode for Missing Funds Details Page
+   ========================================================================== */
+
+.nightmode .missing-funds-details-search-box .input-group,
+.nightmode .missing-funds-details-select {
+  color: #f1f1f1 !important;
+  background-color: #2b3542 !important;
+  border-color: #384452 !important;
+}
+
+.nightmode .missing-funds-details-search-input {
+  color: #f1f1f1 !important;
+}
+
+.nightmode .missing-funds-details-search-input::placeholder {
+  color: #64748b;
+}
+
+.nightmode .missing-funds-details-search-icon {
+  color: #64748b !important;
+}
+
+.nightmode .missing-funds-details-card {
+  background: #2b3542;
+  border-color: #384452;
+  box-shadow: 0 1px 4px #00000059;
+}
+
+.nightmode .missing-funds-details-card-title {
+  color: #f8fafc;
+}
+
+.nightmode .missing-funds-details-card-subtitle {
+  color: #8a99ad;
+}
+
+.nightmode .missing-funds-details-card-inner {
+  background: #222e3c;
+  border-color: #2d3b4e;
+}
+
+.nightmode .missing-funds-detail-item {
+  border-bottom-color: #2b3542;
+}
+
+.nightmode .detail-item-label {
+  color: #8a99ad;
+}
+
+.nightmode .detail-item-value {
+  color: #f1f1f1;
+}
+
+.nightmode .detail-value-muted {
+  color: #64748b !important;
+}
+
+.nightmode .detail-copy-btn {
+  color: #8a99ad;
+}
+
+.nightmode .detail-copy-btn:hover {
+  color: #FF3C00;
+}
+
+.nightmode .missing-funds-pending-pill {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: #d97706;
+  color: #fbbf24;
+}
+
+.nightmode .missing-funds-completed-pill {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #059669;
+  color: #34d399;
+}
+
+.nightmode .missing-funds-rejected-pill {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: #dc2626;
+  color: #f87171;
+}
+
+.nightmode .missing-funds-outcome-banner.success-banner {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: #065f46;
+  color: #6ee7b7;
+}
+
+.nightmode .missing-funds-outcome-banner.success-banner .banner-icon {
+  color: #34d399;
+}
+
+.nightmode .missing-funds-outcome-banner.error-banner {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+.nightmode .missing-funds-outcome-banner.error-banner .banner-icon {
+  color: #f87171;
+}
+
+.nightmode .timeline-heading {
+  color: #f8fafc;
+}
+
+.nightmode .timeline-timestamp,
+.nightmode .timeline-subtext {
+  color: #8a99ad;
+}
+
+.nightmode .timeline-line.dashed {
+  border-left-color: #475569;
+}
+
+.nightmode .timeline-dot.outline {
+  border-color: #64748b;
+  background-color: #222e3c;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints for Missing Funds Details Page (1024px to 320px)
+   ========================================================================== */
+
+@media (max-width: 576px) {
+  .missing-funds-details-filters {
+    gap: 6px;
+  }
+
+  .missing-funds-details-select {
+    font-size: 11.5px !important;
+    padding: 6px 20px 6px 6px !important;
+  }
+
+  .missing-funds-details-search-input {
+    font-size: 12px !important;
+    padding: 6px 4px !important;
+  }
+
+  .missing-funds-details-card {
+    padding: 10px 12px 12px;
+  }
+
+  .detail-item-label {
+    font-size: 12.5px;
+  }
+
+  .detail-item-value {
+    font-size: 13px;
+  }
+
+  .timeline-heading {
+    font-size: 12.5px;
+  }
+
+  .timeline-timestamp {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .missing-funds-details-filters {
+    flex-wrap: wrap;
+  }
+
+  .missing-funds-details-search-box {
+    flex: 1 1 100%;
+    margin-bottom: 4px;
+  }
+
+  .missing-funds-details-select-wrap {
+    flex: 1;
+  }
+}
+
+@media (max-width: 320px) {
+  .missing-funds-details-page .heading {
+    font-size: 17px;
+  }
+
+  .missing-funds-details-card-title {
+    font-size: 14px;
+  }
+
+  .missing-funds-details-card-subtitle {
+    font-size: 11px;
+  }
+
+  .detail-item-label {
+    font-size: 11.5px;
+  }
+
+  .detail-item-value {
+    font-size: 12px;
+  }
+
+  .missing-funds-pending-pill {
+    font-size: 11px;
+    padding: 2px 7px;
+  }
+
+  .timeline-heading {
+    font-size: 12px;
+  }
+
+  .timeline-subtext {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================================================
+   Missing Funds Success & Error Notification Pages
+   ========================================================================== */
+
+/* .missing-funds-notification-page {
+  padding-bottom: 95px;
+} */
+
+.notification-status-banner {
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 11px;
+  line-height: 1.35;
+  margin-top: 8px;
+}
+
+.notification-status-success {
+  background-color: #E0F9EE;
+  border: 1px solid #10B981;
+}
+
+.notification-status-success .notification-banner-icon {
+  color: #10B981;
+  font-size: 12px;
+}
+
+.notification-status-error {
+  background-color: #FFE9E9;
+  border: 1px solid #FF4D4F;
+}
+
+.notification-status-error .notification-banner-icon {
+  color: #FF4D4F;
+  font-size: 12px;
+}
+
+.notification-banner-text {
+  font-size: 9px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.notification-banner-time {
+  font-size: 8px;
+  color: #111827;
+  white-space: nowrap;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+/* Night Mode for Notification Banners */
+.nightmode .notification-status-success {
+  background-color: rgba(16, 185, 129, 0.15);
+  border-color: #059669;
+}
+
+.nightmode .notification-status-success .notification-banner-text {
+  color: #f1f1f1;
+}
+
+.nightmode .notification-status-success .notification-banner-time {
+  color: #a7f3d0;
+}
+
+.nightmode .notification-status-error {
+  background-color: rgba(239, 68, 68, 0.15);
+  border-color: #dc2626;
+}
+
+.nightmode .notification-status-error .notification-banner-text {
+  color: #f1f1f1;
+}
+
+.nightmode .notification-status-error .notification-banner-time {
+  color: #fca5a5;
+}
+
+@media (max-width: 320px) {
+  .notification-status-banner {
+    padding: 5px 8px;
+  }
+
+  .notification-banner-text {
+    font-size: 10px;
+  }
+
+  .notification-banner-time {
+    font-size: 9px;
+  }
+}
+
+.nightmode .missing-funds-submit-btn:hover {
+    transform: translateY(-1px);
+    background: #3aabe7 !important;
 }
