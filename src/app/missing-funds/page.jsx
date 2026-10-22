@@ -9,15 +9,69 @@ import {
   faChevronDown,
   faChevronRight,
   faCopy,
+  faCheck,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "../context/ThemeContext";
 import Userfooter from "../components/Userfooter";
 
+const historyData = [
+  {
+    id: "FF-MF-3223a70067",
+    coin: "BTC",
+    image: "/assets/images/color/btc.svg",
+    status: "Completed",
+    walletType: "Invoice",
+    date: "27/08/2026, 17:18:52",
+    merchantId: "0x9CcC9FF4671....",
+  },
+  {
+    id: "FF-MF-8d0176b127",
+    coin: "ETH",
+    image: "/assets/images/color/eth.svg",
+    status: "Pending",
+    walletType: "Invoice",
+    date: "26/08/2026, 12:40:18",
+    merchantId: "0x8b95c2a11c....",
+  },
+  {
+    id: "FF-MF-9a471a87c2",
+    coin: "SOL",
+    image: "/assets/images/color/sol.svg",
+    status: "Completed",
+    walletType: "Invoice",
+    date: "24/08/2026, 09:15:03",
+    merchantId: "5Jk8VwF2n......",
+  },
+  {
+    id: "FF-MF-62c12e18aa",
+    coin: "TON",
+    image: "/assets/images/color/ton.svg",
+    status: "Completed",
+    walletType: "Invoice",
+    date: "21/08/2026, 14:02:39",
+    merchantId: "EQB3e9Qv......",
+  },
+];
+
 export default function MissingFundsPage() {
   const { isNightMode } = useTheme();
   const [showStatusDrawer, setShowStatusDrawer] = useState(false);
   const [drawerCopied, setDrawerCopied] = useState(false);
+  const [expandedId, setExpandedId] = useState("FF-MF-3223a70067");
+  const [copiedHistoryId, setCopiedHistoryId] = useState(null);
+
+  const toggleExpand = (id) => {
+    setExpandedId((prev) => (prev === id ? null : id));
+  };
+
+  const handleCopyHistory = (text, id) => {
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+      setCopiedHistoryId(id);
+      setTimeout(() => setCopiedHistoryId(null), 2000);
+    }
+  };
 
   const handleCopy = (text) => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
@@ -129,94 +183,96 @@ export default function MissingFundsPage() {
 
           {/* History Cards List */}
           <div className="missing-funds-history-list">
-            {/* BTC Card - Expanded */}
-            <div className="missing-funds-card">
-              <div className="missing-funds-card-header">
-                <div className="missing-funds-coin-info">
-                  <div className="missing-funds-coin-icon-wrapper">
-                    <Image src="/assets/images/color/btc.svg" alt="BTC" width={24} height={24} className="missing-funds-coin-img" />
+            {historyData.map((item) => {
+              const isOpen = expandedId === item.id;
+              return (
+                <div className="missing-funds-card" key={item.id}>
+                  <div
+                    className="missing-funds-card-header"
+                    onClick={() => toggleExpand(item.id)}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <div className="missing-funds-coin-info">
+                      <div className="missing-funds-coin-icon-wrapper">
+                        <Image
+                          src={item.image}
+                          alt={item.coin}
+                          width={24}
+                          height={24}
+                          className="missing-funds-coin-img"
+                        />
+                      </div>
+                      <h5 className="missing-funds-coin-code">{item.coin}</h5>
+                    </div>
+                    <div className="missing-funds-status-box">
+                      <span
+                        className={`missing-funds-status ${item.status.toLowerCase()}`}
+                      >
+                        {item.status}
+                      </span>
+                      <FontAwesomeIcon
+                        icon={isOpen ? faChevronDown : faChevronRight}
+                        className="missing-funds-chevron"
+                      />
+                    </div>
                   </div>
-                  <h5 className="missing-funds-coin-code">BTC</h5>
-                </div>
-                <div className="missing-funds-status-box">
-                  <span className="missing-funds-status completed">Completed</span>
-                  <FontAwesomeIcon icon={faChevronDown} className="missing-funds-chevron" />
-                </div>
-              </div>
-              <div className="missing-funds-card-body">
-                <div className="missing-funds-detail-row">
-                  <div><span>Wallet Type</span><strong>Invoice</strong></div>
-                  <div className="text-end"><span>Submitted On</span><strong>27/08/2026, 17:18:52</strong></div>
-                </div>
-                <div className="missing-funds-detail-row">
-                  <div>
-                    <span>Search ID</span>
-                    <strong className="missing-funds-id-copy">
-                      FF-MF-3223a70067
-                      <button type="button" className="missing-funds-copy-btn" title="Copy Search ID">
-                        <FontAwesomeIcon icon={faCopy} />
-                      </button>
-                    </strong>
-                  </div>
-                  <div className="text-end"><span>Merchant ID</span><strong>0x9CcC9FF4671....</strong></div>
-                </div>
-                <div className="missing-funds-detail-row missing-funds-action-detail-row">
-                  <div></div>
-                  <div className="text-end">
-                    <span className="missing-funds-action-label">Action</span>
-                    <Link href="/missing-funds-details" className="missing-funds-action-btn">View Details</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* ETH Card */}
-            <div className="missing-funds-card">
-              <div className="missing-funds-card-header">
-                <div className="missing-funds-coin-info">
-                  <div className="missing-funds-coin-icon-wrapper">
-                    <Image src="/assets/images/color/eth.svg" alt="ETH" width={24} height={24} className="missing-funds-coin-img" />
-                  </div>
-                  <h5 className="missing-funds-coin-code">ETH</h5>
+                  {isOpen && (
+                    <div className="missing-funds-card-body">
+                      <div className="missing-funds-detail-row">
+                        <div>
+                          <span>Wallet Type</span>
+                          <strong>{item.walletType}</strong>
+                        </div>
+                        <div className="text-end">
+                          <span>Submitted On</span>
+                          <strong>{item.date}</strong>
+                        </div>
+                      </div>
+                      <div className="missing-funds-detail-row">
+                        <div>
+                          <span>Search ID</span>
+                          <strong className="missing-funds-id-copy">
+                            {item.id}
+                            <button
+                              type="button"
+                              className="missing-funds-copy-btn"
+                              title="Copy Search ID"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleCopyHistory(item.id, item.id);
+                              }}
+                            >
+                              <FontAwesomeIcon
+                                icon={copiedHistoryId === item.id ? faCheck : faCopy}
+                                className={copiedHistoryId === item.id ? "text-success" : ""}
+                              />
+                            </button>
+                          </strong>
+                        </div>
+                        <div className="text-end">
+                          <span>Merchant ID</span>
+                          <strong>{item.merchantId}</strong>
+                        </div>
+                      </div>
+                      <div className="missing-funds-detail-row missing-funds-action-detail-row">
+                        <div></div>
+                        <div className="text-end">
+                          <span className="missing-funds-action-label">Action</span>
+                          <Link
+                            href="/missing-funds-details"
+                            className="missing-funds-action-btn"
+                          >
+                            View Details
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div className="missing-funds-status-box">
-                  <span className="missing-funds-status pending">Pending</span>
-                  <FontAwesomeIcon icon={faChevronRight} className="missing-funds-chevron" />
-                </div>
-              </div>
-            </div>
-
-            {/* SOL Card */}
-            <div className="missing-funds-card">
-              <div className="missing-funds-card-header">
-                <div className="missing-funds-coin-info">
-                  <div className="missing-funds-coin-icon-wrapper">
-                    <Image src="/assets/images/color/sol.svg" alt="SOL" width={24} height={24} className="missing-funds-coin-img" />
-                  </div>
-                  <h5 className="missing-funds-coin-code">SOL</h5>
-                </div>
-                <div className="missing-funds-status-box">
-                  <span className="missing-funds-status completed">Completed</span>
-                  <FontAwesomeIcon icon={faChevronRight} className="missing-funds-chevron" />
-                </div>
-              </div>
-            </div>
-
-            {/* TON Card */}
-            <div className="missing-funds-card">
-              <div className="missing-funds-card-header">
-                <div className="missing-funds-coin-info">
-                  <div className="missing-funds-coin-icon-wrapper">
-                    <Image src="/assets/images/color/ton.svg" alt="TON" width={24} height={24} className="missing-funds-coin-img" />
-                  </div>
-                  <h5 className="missing-funds-coin-code">TON</h5>
-                </div>
-                <div className="missing-funds-status-box">
-                  <span className="missing-funds-status completed">Completed</span>
-                  <FontAwesomeIcon icon={faChevronRight} className="missing-funds-chevron" />
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </Container>
