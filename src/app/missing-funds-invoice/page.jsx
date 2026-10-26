@@ -11,6 +11,7 @@ import {
   faCopy,
   faCheck,
   faTimes,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "../context/ThemeContext";
 import Userfooter from "../components/Userfooter";
@@ -163,117 +164,123 @@ export default function MissingFundsInvoicePage() {
         </div>
 
         {/* Missing Funds History Section */}
-        <div className="missing-funds-history-section">
-          <h3 className="missing-funds-history-title">Missing Funds History</h3>
+        <div className="missing-funds-history-section d-flex justify-content-between align-items-center mb-3">
+          <h3 className="missing-funds-history-title">
+            Missing Funds History
+          </h3>
 
-          {/* Search Box */}
-          <div className="missing-funds-search-box mb-3">
-            <InputGroup>
-              <InputGroup.Text className="missing-funds-search-icon">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-              </InputGroup.Text>
-              <Form.Control
-                type="search"
-                placeholder="Search Id here..."
-                className="missing-funds-search-input"
-                readOnly
-              />
-            </InputGroup>
-          </div>
+          <Link href="#" className="missing-funds-back-btn">
+            <FontAwesomeIcon icon={faArrowLeft} /> Back
+          </Link>
+        </div>
 
-          {/* History Cards List */}
-          <div className="missing-funds-history-list">
-            {historyData.map((item) => {
-              const isOpen = expandedId === item.id;
-              return (
-                <div className="missing-funds-card" key={item.id}>
-                  <div
-                    className="missing-funds-card-header"
-                    onClick={() => toggleExpand(item.id)}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <div className="missing-funds-coin-info">
-                      <div className="missing-funds-coin-icon-wrapper">
-                        <Image
-                          src={item.image}
-                          alt={item.coin}
-                          width={24}
-                          height={24}
-                          className="missing-funds-coin-img"
-                        />
-                      </div>
-                      <h5 className="missing-funds-coin-code">{item.coin}</h5>
-                    </div>
-                    <div className="missing-funds-status-box">
-                      <span
-                        className={`missing-funds-status ${item.status.toLowerCase()}`}
-                      >
-                        {item.status}
-                      </span>
-                      <FontAwesomeIcon
-                        icon={isOpen ? faChevronDown : faChevronRight}
-                        className="missing-funds-chevron"
+        {/* Search Box */}
+        <div className="missing-funds-search-box mb-3">
+          <InputGroup>
+            <InputGroup.Text className="missing-funds-search-icon">
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </InputGroup.Text>
+            <Form.Control
+              type="search"
+              placeholder="Search Id here..."
+              className="missing-funds-search-input"
+              readOnly
+            />
+          </InputGroup>
+        </div>
+
+        {/* History Cards List */}
+        <div className="missing-funds-history-list">
+          {historyData.map((item) => {
+            const isOpen = expandedId === item.id;
+            return (
+              <div className="missing-funds-card" key={item.id}>
+                <div
+                  className="missing-funds-card-header"
+                  onClick={() => toggleExpand(item.id)}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <div className="missing-funds-coin-info">
+                    <div className="missing-funds-coin-icon-wrapper">
+                      <Image
+                        src={item.image}
+                        alt={item.coin}
+                        width={24}
+                        height={24}
+                        className="missing-funds-coin-img"
                       />
                     </div>
+                    <h5 className="missing-funds-coin-code">{item.coin}</h5>
                   </div>
+                  <div className="missing-funds-status-box">
+                    <span
+                      className={`missing-funds-status ${item.status.toLowerCase()}`}
+                    >
+                      {item.status}
+                    </span>
+                    <FontAwesomeIcon
+                      icon={isOpen ? faChevronDown : faChevronRight}
+                      className="missing-funds-chevron"
+                    />
+                  </div>
+                </div>
 
-                  {isOpen && (
-                    <div className="missing-funds-card-body">
-                      <div className="missing-funds-detail-row">
-                        <div>
-                          <span>Wallet Type</span>
-                          <strong>{item.walletType}</strong>
-                        </div>
-                        <div className="text-end">
-                          <span>Submitted On</span>
-                          <strong>{item.date}</strong>
-                        </div>
+                {isOpen && (
+                  <div className="missing-funds-card-body">
+                    <div className="missing-funds-detail-row">
+                      <div>
+                        <span>Wallet Type</span>
+                        <strong>{item.walletType}</strong>
                       </div>
-                      <div className="missing-funds-detail-row">
-                        <div>
-                          <span>Search ID</span>
-                          <strong className="missing-funds-id-copy">
-                            {item.id}
-                            <button
-                              type="button"
-                              className="missing-funds-copy-btn"
-                              title="Copy Search ID"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleCopyHistory(item.id, item.id);
-                              }}
-                            >
-                              <FontAwesomeIcon
-                                icon={copiedHistoryId === item.id ? faCheck : faCopy}
-                                className={copiedHistoryId === item.id ? "text-success" : ""}
-                              />
-                            </button>
-                          </strong>
-                        </div>
-                        <div className="text-end">
-                          <span>Merchant ID</span>
-                          <strong>{item.merchantId}</strong>
-                        </div>
-                      </div>
-                      <div className="missing-funds-detail-row missing-funds-action-detail-row">
-                        <div></div>
-                        <div className="text-end">
-                          <span className="missing-funds-action-label">Action</span>
-                          <Link
-                            href="/missing-funds-details"
-                            className="missing-funds-action-btn"
-                          >
-                            View Details
-                          </Link>
-                        </div>
+                      <div className="text-end">
+                        <span>Submitted On</span>
+                        <strong>{item.date}</strong>
                       </div>
                     </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+                    <div className="missing-funds-detail-row">
+                      <div>
+                        <span>Search ID</span>
+                        <strong className="missing-funds-id-copy">
+                          {item.id}
+                          <button
+                            type="button"
+                            className="missing-funds-copy-btn"
+                            title="Copy Search ID"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleCopyHistory(item.id, item.id);
+                            }}
+                          >
+                            <FontAwesomeIcon
+                              icon={copiedHistoryId === item.id ? faCheck : faCopy}
+                              className={copiedHistoryId === item.id ? "text-success" : ""}
+                            />
+                          </button>
+                        </strong>
+                      </div>
+                      <div className="text-end">
+                        <span>Merchant ID</span>
+                        <strong>{item.merchantId}</strong>
+                      </div>
+                    </div>
+                    <div className="missing-funds-detail-row missing-funds-action-detail-row">
+                      <div></div>
+                      <div className="text-end">
+                        <span className="missing-funds-action-label">Action</span>
+                        <Link
+                          href="/missing-funds-details"
+                          className="missing-funds-action-btn"
+                        >
+                          View Details
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </Container>
 

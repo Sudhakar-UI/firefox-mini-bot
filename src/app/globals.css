@@ -1740,9 +1740,9 @@ p {
   color: #fff;
 }
 
-.merchant-tabs .nav-link:hover {
+/* .merchant-tabs .nav-link:hover {
   color: #FF3C00 !important;
-}
+} */
 
 .merchant-tabs .nav-link.active {
   background-color: transparent;
@@ -2437,7 +2437,7 @@ p {
 }
 
 .paymentandcommission .merchant-tabs .nav-link {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 
@@ -18926,7 +18926,7 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 .missing-funds-container {
   width: 100%;
-  /* padding-bottom: 110px; */
+  color: #ff0000;
 }
 
 .missing-funds-container .container,
@@ -18967,9 +18967,10 @@ body.has-home-footer .page-content:has(.lhu-page) {
   white-space: nowrap;
 }
 
+/* 
 .missing-funds-tabs.merchant-tabs .nav-link:hover {
   color: #FF3C00 !important;
-}
+} */
 
 .missing-funds-tabs.merchant-tabs .nav-link.active {
   color: #FF3C00 !important;
@@ -19029,8 +19030,8 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 /* Terms Checkbox Box (Figma aligned) */
 .missing-funds-terms-box {
-    background: #F7F7F7;
-    border: 1px solid #E8E8E8;
+  background: #F7F7F7;
+  border: 1px solid #E8E8E8;
   border-radius: 8px;
   padding: 12px 14px;
   margin-top: 6px;
@@ -19151,14 +19152,40 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 /* Missing Funds History Section */
 .missing-funds-history-section {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
   margin-top: 24px;
+  margin-bottom: 16px;
 }
 
 .missing-funds-history-title {
   font-size: 18px;
   font-weight: 700;
   color: #202124;
-  margin-bottom: 12px;
+  margin-bottom: 0;
+}
+
+.missing-funds-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: #ff3c00;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.missing-funds-back-btn:hover {
+  background: #e8eaed;
+  color: #202124;
+  text-decoration: none;
 }
 
 /* Search Box */
@@ -19206,6 +19233,7 @@ body.has-home-footer .page-content:has(.lhu-page) {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 50px;
 }
 
 .missing-funds-card {
@@ -19276,10 +19304,28 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 .missing-funds-status.completed {
   color: #28c76f;
+  border: 1px solid #28c76f;
+  border-radius: 20px;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  display: inline-flex;
 }
 
 .missing-funds-status.pending {
-  color: #DDA208;
+  color: #dda208;
+  border: 1px solid #dda208;
+  border-radius: 20px;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  display: inline-flex;
 }
 
 .missing-funds-chevron {
@@ -19397,7 +19443,7 @@ body.has-home-footer .page-content:has(.lhu-page) {
    ========================================================================== */
 
 .nightmode .missing-funds-container {
-  color: #f4f5f7;
+  color: #ff0000;
 }
 
 .nightmode .missing-funds-container .heading,
@@ -19414,9 +19460,9 @@ body.has-home-footer .page-content:has(.lhu-page) {
   color: #9096a2;
 }
 
-.nightmode .missing-funds-tabs.merchant-tabs .nav-link:hover {
+/* .nightmode .missing-funds-tabs.merchant-tabs .nav-link:hover {
   color: #ff3c00 !important;
-}
+} */
 
 .nightmode .missing-funds-tabs.merchant-tabs .nav-link.active {
   color: #44a3dd !important;
@@ -19473,8 +19519,8 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 .nightmode .missing-funds-terms-box .missing-funds-checkbox:checked,
 .nightmode .missing-funds-terms-box .form-check-input:checked {
-  background-color: #ff3c00 !important;
-  border-color: #ff3c00 !important;
+  background-color: #44a3dd !important;
+  border-color: #44a3dd !important;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
 }
 
@@ -19496,6 +19542,21 @@ body.has-home-footer .page-content:has(.lhu-page) {
   color: #6b7787;
 }
 
+.nightmode .missing-funds-history-title {
+  color: #f4f5f7;
+}
+
+.nightmode .missing-funds-back-btn {
+  color: #fff;
+  background: #44a3dd;
+  border-color: #44a3dd;
+}
+
+.nightmode .missing-funds-back-btn:hover {
+  background: #44a3dd;
+  color: #ffffff;
+}
+
 /* Nightmode History Cards */
 .nightmode .missing-funds-card {
   background: #2b3542;
@@ -19514,10 +19575,51 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 .nightmode .missing-funds-status.completed {
   color: #28c76f;
+  border-color: #28c76f;
+  background-color: rgba(40, 199, 111, 0.15);
+}
+
+.missing-funds-status.progress {
+  color: #3b9eff !important;
+  border: 1px solid #3b9eff !important;
+  border-radius: 20px !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 12px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  display: inline-flex !important;
+}
+
+.nightmode .missing-funds-status.progress {
+  color: #3b9eff !important;
+  border-color: #3b9eff !important;
+  background-color: #3b9eff26 !important;
+}
+
+.missing-funds-status.rejected {
+  color: #ff737c;
+  border: 1px solid #ff737c;
+  border-radius: 20px;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  display: inline-flex;
+}
+.nightmode .missing-funds-status.rejected {
+  color: #ff2b39;
+  background-color: #ff112126;
+  border-color: #d72632;
 }
 
 .nightmode .missing-funds-status.pending {
-  color: #ffb400;
+  color: #fbbf24;
+  background: #f59e0b26;
+  border-color: #d97706;
 }
 
 .nightmode .missing-funds-detail-row span,
@@ -19538,13 +19640,13 @@ body.has-home-footer .page-content:has(.lhu-page) {
 }
 
 .nightmode .missing-funds-action-btn {
-  border-color: #ff3c00;
-  color: #ff3c00 !important;
+  border-color: #44a3dd;
+  color: #44a3dd !important;
 }
 
 .nightmode .missing-funds-action-btn:hover {
-  background: #ff3c00;
-  color: #ffffff !important;
+  border-color: #44a3dd;
+  color: #44a3dd !important;
 }
 
 /* Container theme synchronization in night mode */
@@ -19891,15 +19993,15 @@ body.has-home-footer .page-content:has(.lhu-page) {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 14px;
+  padding-bottom: 4px;
   margin-bottom: 5px;
 }
 
 .missing-funds-drawer-title {
-  color: #020B09;
+  color: #020b09;
   margin: 0;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -19963,12 +20065,13 @@ body.has-home-footer .page-content:has(.lhu-page) {
 }
 
 .missing-funds-status-subtext {
-  color: #111827;
-  font-weight: 500;
+  color: #020B09;
+  width: 100%;
   font-size: 17px;
+  font-weight: 600;
   line-height: 1.35;
   text-align: center !important;
-  width: 100%;
+  margin-bottom: -15px !important;
 }
 
 .missing-funds-duplicate-text {
@@ -19977,7 +20080,7 @@ body.has-home-footer .page-content:has(.lhu-page) {
   max-width: 330px;
   margin: 0 auto;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.4;
   display: block;
   text-align: center !important;
@@ -19988,11 +20091,11 @@ body.has-home-footer .page-content:has(.lhu-page) {
 }
 
 .missing-funds-drawer-label {
-  display: block;
-  font-size: 12.5px;
-  font-weight: 500;
-  color: #1E1E1E;
+  color: #1e1e1e;
   margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  display: block;
 }
 
 .missing-funds-id-box {
@@ -20004,9 +20107,9 @@ body.has-home-footer .page-content:has(.lhu-page) {
 }
 
 .missing-funds-id-text {
-  color: #1E1E1E;
-  font-size: 12px;
-  font-weight: 500;
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .missing-funds-id-copy-btn {
@@ -20194,13 +20297,19 @@ body.has-home-footer .page-content:has(.lhu-page) {
   box-shadow: none !important;
   font-size: 13px !important;
   color: #111827 !important;
-  padding: 6px 10px !important;
+  padding: 6px 12px 6px 8px !important;
   height: 100% !important;
 }
 
 .missing-funds-details-search-input::placeholder {
   color: #9CA3AF;
   font-size: 13px;
+}
+
+.missing-funds-details-search-input::-webkit-search-cancel-button {
+  cursor: pointer;
+  margin-left: 8px;
+  margin-right: 6px;
 }
 
 .missing-funds-details-select-wrap {
@@ -20225,6 +20334,12 @@ body.has-home-footer .page-content:has(.lhu-page) {
 .missing-funds-details-select:focus,
 .missing-funds-details-search-box .input-group:focus-within {
   border-color: #FF3C00 !important;
+  box-shadow: 0 0 0 1px rgba(255, 60, 0, 0.15) !important;
+}
+
+.nightmode .missing-funds-details-select:focus,
+.nightmode .missing-funds-details-search-box .input-group:focus-within {
+  border-color: #44a3dd !important;
   box-shadow: 0 0 0 1px rgba(255, 60, 0, 0.15) !important;
 }
 
@@ -20347,7 +20462,7 @@ body.has-home-footer .page-content:has(.lhu-page) {
   border: 1px solid #A7F3D0;
   color: #059669;
   border-radius: 20px;
-  padding: 2px 10px;
+  padding: 4px 10px;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
@@ -20364,7 +20479,7 @@ body.has-home-footer .page-content:has(.lhu-page) {
   border: 1px solid #FECACA;
   color: #DC2626;
   border-radius: 20px;
-  padding: 2px 10px;
+  padding: 4px 10px;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
@@ -20538,6 +20653,10 @@ body.has-home-footer .page-content:has(.lhu-page) {
   color: #64748b;
 }
 
+.nightmode .missing-funds-details-search-input::-webkit-search-cancel-button {
+  filter: invert(0.85);
+}
+
 .nightmode .missing-funds-details-search-icon {
   color: #64748b !important;
 }
@@ -20657,7 +20776,7 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
   .missing-funds-details-search-input {
     font-size: 12px !important;
-    padding: 6px 4px !important;
+    padding: 6px 10px 6px 6px !important;
   }
 
   .missing-funds-details-card {
@@ -20697,6 +20816,10 @@ body.has-home-footer .page-content:has(.lhu-page) {
 }
 
 @media (max-width: 320px) {
+    .missing-funds-pending-pill {
+    font-size: 11px;
+    padding: 2px 7px;
+  }
   .missing-funds-details-page .heading {
     font-size: 17px;
   }
@@ -20717,10 +20840,7 @@ body.has-home-footer .page-content:has(.lhu-page) {
     font-size: 12px;
   }
 
-  .missing-funds-pending-pill {
-    font-size: 11px;
-    padding: 2px 7px;
-  }
+
 
   .timeline-heading {
     font-size: 12px;
@@ -20823,8 +20943,8 @@ body.has-home-footer .page-content:has(.lhu-page) {
 }
 
 .nightmode .missing-funds-submit-btn:hover {
-    transform: translateY(-1px);
-    background: #3aabe7 !important;
+  transform: translateY(-1px);
+  background: #3aabe7 !important;
 }
 
 /* ==========================================================================
@@ -20857,4 +20977,53 @@ body.has-home-footer .page-content:has(.lhu-page) {
 
 .missing-funds-tabs.merchant-tabs .nav-link {
   text-decoration: none !important;
-}
+}
+
+.nightmode .missing-fund-history-page .text-center.py-4.text-muted {
+  color: #fff !important;
+}
+
+.nightmode .missing-funds-action-btn:hover {
+  background: #44a3dd !important;
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.nightmode .missing-funds-details-search-box:focus {
+  border-color: #44a3dd !important;
+}
+
+.missing-funds-details-search-box:focus {
+  border-color: #ff3c00 !important;
+}
+
+.missing-funds-pending-pill.progress {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #3b9eff26;
+  border: 1px solid #3b9eff;
+  color: #3b9eff;
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.missing-funds-pending-pill.progress .pill-icon {
+  font-size: 11px;
+}
+
+.nightmode .missing-funds-pending-pill.progress {
+  background: #3b9eff26;
+  border-color: #3b9eff;
+  color: #3b9eff;
+}
+
+@media (max-width: 320px) {
+  .missing-funds-pending-pill.progress {
+    font-size: 11px;
+    padding: 2px 7px;
+  }
+}
