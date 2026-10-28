@@ -21027,3 +21027,35 @@ body.has-home-footer .page-content:has(.lhu-page) {
     padding: 2px 7px;
   }
 }
+
+.tok-pge .deposit-currency-page,
+.tok-pge .withdraw-currency-page {
+  padding-bottom: 50px !important;
+}
+
+.missing-funds-btn {
+    background-color: #FF3C00 !important;
+    color: #ffffff !important;
+    padding: 5px 10px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    width: auto !important;
+    border: 1px solid #FF3C00 !important;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nightmode .missing-funds-btn {
+    background-color: #44A3DD !important;
+    border: 1px solid #44A3DD !important;
+    color: #ffffff !important;
+}
+.missing-funds-btn svg {
+    margin-right: 4px;
+}
+.missing-funds-iconing {
+  width: 14px;
+  height:14px;
+}
