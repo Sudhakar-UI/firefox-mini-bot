@@ -21059,3 +21059,11 @@ body.has-home-footer .page-content:has(.lhu-page) {
   width: 14px;
   height:14px;
 }
+.trade-page .tradehistory-page {
+    padding-bottom: 110px !important;
+}
+@media(max-width:400px) {
+  .bottomTabs .nav-link {
+    font-size: 12px !important;
+  }
+}
