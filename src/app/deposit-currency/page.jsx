@@ -1,7 +1,7 @@
 "use client";
 import { Image, Container, Form, InputGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faSearch, faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const addtoken = () => {
@@ -10,7 +10,14 @@ const addtoken = () => {
         <>
             <div className='deposit-currency-page'>
                 <Container>
-                    <span className="sub-head txt-gry">Deposit Cryptocurrency</span>
+                    <div className="d-flex justify-content-between align-items-center">
+                        <span className="sub-head txt-gry">Deposit Cryptocurrency</span>
+
+                        <Link href="#" className="missing-funds-btn">
+                            <FontAwesomeIcon icon={faCircleQuestion} className="missing-funds-iconing"/>
+                            Missing funds
+                        </Link>
+                    </div>
                     <div className="supportsearch">
                         <Form className="siteformbg">
                             <Form.Group className="form-group mb-0">
